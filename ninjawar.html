@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Great Ninja Wars - Naruto Fan Site</title>
+  <link rel="stylesheet" href="css/ninjawar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <!-- Simple Shuriken Image Animation -->
+            <div class="shuriken-container">
+                <img src="shuriken.png" alt="Shuriken" class="shuriken-image">
+            </div>
+            
+            <!-- Loading Dots Only -->
+            <div class="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="coverpage.html" onclick="startApp(event, 'coverpage.html')">></a></li>
+      <li><a href="lore.html" onclick="startApp(event, 'coverpage.html')">Naruto Lore</a></li>
+      <li><a href="index.html" onclick="startApp(event, 'index.html')">Home</a></li>
+      <li><a href="character.html" onclick="startApp(event, 'character.html')">Characters</a></li>
+      <li><a href="clans.html" onclick="startApp(event, 'clans.html')">Clans</a></li>
+      <li><a href="beast.html" onclick="startApp(event, 'beast.html')">Tailed Beasts</a></li>
+      <li><a href="villages.html" onclick="startApp(event, 'villages.html')">Villages</a></li>
+      <li><a href="jutsus.html" onclick="startApp(event, 'jutsus.html')">Jutsu</a></li>
+      <li><a href="legendary.html" onclick="startApp(event, 'legendary.html')">Legendary Kage</a></li>
+      <li><a href="ninjawar.html" onclick="startApp(event, 'ninjawar.html')">The Great Ninja War</a></li>
+      <li><a href="about.html" onclick="startApp(event, 'about.html')">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    
+    <!-- Overview -->
+    <section class="overview-section">
+      <h1>The Great Ninja Wars</h1>
+      <div class="dramatic-quote">
+        <p>"The Shinobi World was shaped by four devastating wars that carved their legacy in blood, forged legends in fire, and ultimately brought peace through the greatest sacrifices..."</p>
+      </div>
+      <p>Four monumental conflicts that defined the shinobi world across generations, each escalating in scale and changing the course of history forever.</p>
+    </section>
+
+    <!-- FIRST GREAT NINJA WAR -->
+    <section class="war-section first-war">
+      <div class="war-header">
+        <h2>First Great Ninja War</h2>
+        <span class="war-period">Early Village Era</span>
+      </div>
+      
+      <div class="war-content">
+        <div class="war-overview">
+          <h3>The Dawn of Village Warfare</h3>
+          <p>In the years following the establishment of the hidden village system, tensions that had been brewing since the Warring States Period finally erupted into the first large-scale inter-village conflict. The dream of Hashirama Senju and Madara Uchiha to end the constant clan warfare had succeeded in creating powerful village alliances, but it also concentrated military might in ways that made conflicts more devastating than ever before.</p>
+          
+          <p>The war began not with a single dramatic event, but as a series of escalating border disputes and resource conflicts. The newly formed villages, still learning to govern large populations of shinobi from different clans, struggled with internal politics while external pressures mounted. Each village sought to establish its dominance and secure its borders, leading to a complex web of alliances and betrayals that would set the tone for all future great wars.</p>
+          
+          <p>What made this conflict particularly significant was that it was the first time the world witnessed the true military potential of organized shinobi villages. Where once battles had been fought between individual clans with perhaps dozens of warriors, now thousands of skilled ninja could be mobilized under unified command structures. The psychological impact on the civilian populations was immense, as entire regions could be devastated by battles between superhuman warriors wielding techniques that defied natural law.</p>
+          
+          <p>The First Hokage, Hashirama Senju, found himself in the difficult position of leading his village into a war that contradicted his fundamental beliefs about peace and cooperation. His Wood Release techniques became legendary during this conflict, not just for their power, but for their ability to reshape entire battlefields. Stories tell of forests springing up overnight to provide strategic advantages, and of Hashirama's reluctance to use his full power against enemies he had once hoped to call friends.</p>
+          
+          <p>The war's resolution came not through decisive military victory, but through exhaustion and the realization that continued conflict would lead to mutual destruction. The peace treaties signed at the war's end established many of the diplomatic protocols that would govern inter-village relations for generations. Most importantly, it demonstrated that even the most powerful villages had limits to their military capabilities, setting the stage for the more complex political maneuvering that would characterize future conflicts.</p>
+          
+          <div class="war-details">
+            <div class="detail-item">
+              <h4>🔥 Root Causes</h4>
+              <p>Territorial expansion ambitions, competition for natural resources, testing of village military capabilities, unresolved clan feuds within the new village system</p>
+            </div>
+            <div class="detail-item">
+              <h4>⚔️ Major Campaigns</h4>
+              <p>Border conflicts across Fire-Earth country boundaries, naval engagements in Water country territories, mountain warfare in Lightning country, desert campaigns in Wind country</p>
+            </div>
+            <div class="detail-item">
+              <h4>🏆 Long-term Consequences</h4>
+              <p>Established village military hierarchies, created diplomatic precedents, identified vulnerabilities in village defense systems, set foundation for future alliance structures</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="war-characters">
+          <h3>Key Figures</h3>
+          <div class="character-grid">
+            <div class="character-card">
+              <img src="img.kage/Hashirama Senju.webp" alt="Hashirama">
+              <h4>Hashirama Senju</h4>
+              <p>First Hokage - The God of Shinobi</p>
+            </div>
+            <div class="character-card">
+              <img src="img.kage/First_Mizukage.webp" alt="First Mizukage">
+              <h4>First Mizukage</h4>
+              <p>Mist Village Founder</p>
+            </div>
+            <div class="character-card">
+              <img src="img.kage/Ishikawa – First Tsuchikage,.webp" alt="First Tsuchikage">
+              <h4>First Tsuchikage</h4>
+              <p>Stone Village Leader</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="war-impact">
+          <h3>Historical Impact</h3>
+          <p>The First Great Ninja War fundamentally transformed the shinobi world from a collection of feuding clans into a structured system of nation-states. It established the hidden village as the dominant military and political unit, created the first international treaties governing shinobi warfare, and demonstrated that even the most powerful villages had limits. The lessons learned from this conflict would influence military strategy, diplomatic relations, and village governance for generations to come.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECOND GREAT NINJA WAR -->
+    <section class="war-section second-war">
+      <div class="war-header">
+        <h2>Second Great Ninja War</h2>
+        <span class="war-period">Rise of Legends</span>
+      </div>
+      
+      <div class="war-content">
+        <div class="war-overview">
+          <h3>The Era of Legendary Shinobi</h3>
+          <p>Twenty years after the First Great Ninja War, the shinobi world had evolved dramatically. The second generation of village leaders faced new challenges as the idealistic founders gave way to more pragmatic rulers. The war began in the Rain Country, a small nation caught between the great powers, whose leader Hanzo of the Salamander sought to elevate his village's status through strategic alliances and military might.</p>
+          
+          <p>This conflict was characterized by significant technological and tactical innovations. Villages had spent decades refining their military capabilities, developing new jutsu, and training specialized forces. Medical jutsu reached new heights of sophistication, largely due to advances made in the Leaf Village. Simultaneously, the Sand Village perfected their puppet techniques, turning individual shinobi into one-person armies capable of controlling multiple combat units simultaneously.</p>
+          
+          <p>The war's most defining moment came when three young Konoha shinobi - Jiraiya, Tsunade, and Orochimaru - faced Hanzo of the Salamander in single combat. What should have been their deaths became instead their greatest triumph, as they managed to survive against one of the era's most feared warriors. Hanzo, impressed by their skill and determination, granted them the title "Sannin" - Legendary Three - a name that would echo through history.</p>
+          
+          <p>The conflict saw the first widespread use of poison-based warfare, with Hanzo's salamander poison and the Sand Village's puppet poison techniques claiming thousands of lives. This led to rapid advances in medical treatment and antidote development, particularly in Konoha where Tsunade began developing the medical techniques that would revolutionize battlefield care. The psychological warfare tactics employed during this period would also influence how future conflicts were conducted.</p>
+          
+          <p>Perhaps most significantly, this war demonstrated that individual skill could still triumph over overwhelming odds. The emergence of the Sannin, Hanzo's domination of the Rain Country battlefield, and various legendary individual performances showed that while villages provided structure and resources, exceptional shinobi could still change the course of entire campaigns. This realization would drive villages to invest heavily in identifying and training elite warriors.</p>
+          
+          <p>The war's conclusion came through a combination of exhaustion, strategic stalemate, and the recognition that the smaller nations were bearing disproportionate costs. The peace negotiations established the Rain Country as a neutral buffer zone and created new protocols for conflicts involving smaller nations. Most importantly, it marked the beginning of the era where individual legendary shinobi became as important as village politics in determining the balance of power.</p>
+          
+          <div class="war-details">
+            <div class="detail-item">
+              <h4>🔥 Escalating Factors</h4>
+              <p>Rain Country's bid for great nation status, resource disputes in neutral territories, testing of new military technologies, generational leadership changes in major villages</p>
+            </div>
+            <div class="detail-item">
+              <h4>⚔️ Technological Advances</h4>
+              <p>Perfection of puppet jutsu, advanced poison warfare, medical jutsu breakthroughs, strategic use of summoning techniques, development of specialized team formations</p>
+            </div>
+            <div class="detail-item">
+              <h4>🏆 Revolutionary Outcomes</h4>
+              <p>Birth of the Legendary Sannin legend, establishment of medical ninja protocols, creation of neutral zone agreements, advancement of individual elite warrior concepts</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="war-characters">
+          <h3>Key Figures</h3>
+          <div class="character-grid">
+            <div class="character-card">
+              <img src="img.characters/hanzo.jpg" alt="Hanzo">
+              <h4>Hanzo of the Salamander</h4>
+              <p>Rain Village Leader - The Demigod</p>
+            </div>
+            <div class="character-card">
+              <img src="img.characters/jiraiya.jpg" alt="Jiraiya">
+              <h4>Jiraiya</h4>
+              <p>Toad Sage of Mount Myoboku</p>
+            </div>
+            <div class="character-card">
+              <img src="img.characters/Tsunade.jpg" alt="Tsunade">
+              <h4>Tsunade</h4>
+              <p>Slug Princess - Medical Pioneer</p>
+            </div>
+            <div class="character-card">
+              <img src="img.characters/Orochimaru.jpg" alt="Orochimaru">
+              <h4>Orochimaru</h4>
+              <p>Snake Sannin - Jutsu Researcher</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="war-battles">
+          <h3>Legendary Encounters</h3>
+          <div class="battle-item">
+            <h4>The Sannin vs Hanzo</h4>
+            <p>The legendary battle in the Rain Country where three young Konoha shinobi faced the demigod Hanzo and not only survived but earned his respect. This encounter created the legend of the Sannin and established them as the most famous shinobi of their generation.</p>
+          </div>
+          <div class="battle-item">
+            <h4>The Siege of Hidden Rain</h4>
+            <p>A prolonged conflict where multiple village forces attempted to capture the strategically important Rain Village, only to be repelled by Hanzo's superior knowledge of the terrain and weather patterns.</p>
+          </div>
+        </div>
+
+        <div class="war-impact">
+          <h3>Historical Impact</h3>
+          <p>The Second Great Ninja War marked the transition from the founder generation to a new era of legendary individual warriors. It established the importance of medical jutsu in warfare, created the concept of neutral buffer zones, and demonstrated that exceptional skill could overcome numerical disadvantages. The war's legacy lived on through the Legendary Sannin, whose individual achievements during and after the conflict would shape the shinobi world for decades to come.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THIRD GREAT NINJA WAR -->
+    <section class="war-section third-war">
+      <div class="war-header">
+        <h2>Third Great Ninja War</h2>
+        <span class="war-period">The Yellow Flash Era</span>
+      </div>
+      
+      <div class="war-content">
+        <div class="war-overview">
+          <h3>The Most Devastating Conflict</h3>
+          <p>The Third Great Ninja War erupted during a period of unprecedented tension between the major villages. Unlike previous conflicts, this war was characterized by its massive scale, devastating casualties, and the widespread deployment of Tailed Beasts as weapons of mass destruction. The conflict spanned multiple theaters across the entire shinobi world, with battles raging simultaneously in desert, mountain, forest, and ocean environments.</p>
+          
+          <p>What set this war apart was the full mobilization of each village's military capabilities. The Hidden Stone Village, under the leadership of the Third Tsuchikage Onoki, launched coordinated offensives against both the Leaf and Cloud Villages simultaneously. The Sand Village, still recovering from the losses of the Second War, formed strategic alliances while the Mist Village pursued its own aggressive expansion policies. The complexity of these multi-front conflicts pushed military strategy to new heights of sophistication.</p>
+          
+          <p>The war's most tragic aspects were embodied in the experiences of young shinobi thrust into combat. Teams of children, barely into their teens, were sent on missions that would have challenged experienced warriors. The psychological trauma inflicted on this generation would have lasting consequences for the shinobi world. Among these young warriors was Kakashi Hatake, whose promotion to Jonin at age 13 symbolized the war's demand for rapid advancement and early responsibility.</p>
+          
+          <p>The conflict's turning point came with the rise of Minato Namikaze, whose mastery of the Flying Thunder God technique earned him the title "Yellow Flash of the Leaf." His ability to appear anywhere on the battlefield instantaneously, combined with his devastating Rasengan technique, made him a one-man army capable of changing the tide of entire battles. Enemy villages issued flee-on-sight orders for their troops when encountering Minato, recognizing that conventional tactics were useless against his unique abilities.</p>
+          
+          <p>The war's most devastating personal tragedy occurred during the Kannabi Bridge mission, where Obito Uchiha was apparently killed while saving his teammates. This event had far-reaching consequences that wouldn't be fully understood for years. Kakashi's receipt of Obito's Sharingan eye created one of the most formidable shinobi of his generation, while the trauma of losing his teammate would shape his approach to leadership and mentorship for the rest of his life.</p>
+          
+          <p>The war's conclusion came not through negotiated peace but through the complete exhaustion of all participating villages. The costs had become unsustainable - entire clan bloodlines were nearly wiped out, village economies were devastated, and the psychological toll on survivors created a generation scarred by trauma. Minato's decisive actions in the final battles, including his legendary defeat of a thousand Stone shinobi single-handedly, forced the enemy villages to accept that continuing the war would lead only to mutual destruction.</p>
+          
+          <div class="war-details">
+            <div class="detail-item">
+              <h4>🔥 Complex Origins</h4>
+              <p>Multi-village power struggles, Tailed Beast arms race, generational leadership transitions, economic competition for resources, unresolved territorial disputes from previous wars</p>
+            </div>
+            <div class="detail-item">
+              <h4>⚔️ Unprecedented Scale</h4>
+              <p>First use of Tailed Beasts as strategic weapons, multi-front warfare across all major nations, deployment of child soldiers, development of space-time ninjutsu, massive infrastructure destruction</p>
+            </div>
+            <div class="detail-item">
+              <h4>🏆 Transformative Results</h4>
+              <p>Minato's rise to Hokage, establishment of Yellow Flash legend, creation of traumatized warrior generation, advancement of medical and support techniques, political realignment of village relationships</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="war-characters">
+          <h3>Key Figures</h3>
+          <div class="character-grid">
+            <div class="character-card">
+              <img src="img.characters/Minato.jpg" alt="Minato">
+              <h4>Minato Namikaze</h4>
+              <p>The Yellow Flash - Fourth Hokage</p>
+            </div>
+            <div class="character-card">
+              <img src="img.characters/youngkakashi.webp" alt="Young Kakashi">
+              <h4>Kakashi Hatake</h4>
+              <p>Copy Ninja - Youngest Jonin</p>
+            </div>
+            <div class="character-card">
+              <img src="img.characters/obito.jpg" alt="Young Obito">
+              <h4>Obito Uchiha</h4>
+              <p>The Sacrifice - Sharingan Hero</p>
+            </div>
+            <div class="character-card">
+              <img src="img.characters/Rin.jpg" alt="Rin">
+              <h4>Rin Nohara</h4>
+              <p>Medical Ninja - Three-Tails Jinchuriki</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="war-battles">
+          <h3>Defining Battles</h3>
+          <div class="battle-item">
+            <h4>The Kannabi Bridge Mission</h4>
+            <p>The most tragic and consequential mission of the war. Team Minato's assault on the strategic Kannabi Bridge resulted in Obito Uchiha's apparent death and Kakashi receiving the Sharingan. This mission's true consequences would only be revealed years later when Obito's survival and transformation into the masked man became known.</p>
+          </div>
+          <div class="battle-item">
+            <h4>Minato vs One Thousand Stone Shinobi</h4>
+            <p>The legendary battle that effectively ended the war. Minato's single-handed defeat of a thousand Stone Village shinobi using his Flying Thunder God technique became the stuff of legend and forced the enemy villages to recognize the futility of continued resistance.</p>
+          </div>
+          <div class="battle-item">
+            <h4>The Battle of Kikyo Pass</h4>
+            <p>A massive engagement where multiple village forces clashed in one of the war's bloodiest battles. The strategic importance of this mountain pass led to repeated assaults and counter-assaults, with control changing hands multiple times over several months.</p>
+          </div>
+        </div>
+
+        <div class="war-impact">
+          <h3>Historical Impact</h3>
+          <p>The Third Great Ninja War created the modern shinobi world through trauma and transformation. It established Minato as the Fourth Hokage, created the legend of Kakashi the Copy Ninja, and set in motion the events that would eventually lead to the Fourth War through Obito's survival and corruption. The war's devastating psychological impact on its young participants would influence shinobi education and training for generations, while its technological innovations in space-time ninjutsu would reshape combat forever.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOURTH GREAT NINJA WAR -->
+    <section class="war-section fourth-war">
+      <div class="war-header">
+        <h2>Fourth Great Ninja War</h2>
+        <span class="war-period">The Final Conflict</span>
+      </div>
+      
+      <div class="war-content">
+        <div class="war-overview">
+          <h3>The Ultimate Test of the Shinobi World</h3>
+          <p>The Fourth Great Ninja War represented the culmination of decades of hidden tensions, secret machinations, and unresolved conflicts. Unlike previous wars that arose from territorial disputes or resource competition, this conflict was orchestrated by forces that sought to fundamentally remake the world itself. The mysterious masked man, later revealed to be Obito Uchiha, had spent years manipulating events to create the conditions for this ultimate confrontation.</p>
+          
+          <p>What made this war unprecedented was the unity it forged among former enemies. For the first time in history, all five great shinobi villages put aside their differences to face a common threat. The formation of the Allied Shinobi Forces represented a political revolution as significant as any military victory. Under the supreme command of Gaara of the Sand, over eighty thousand shinobi from every village worked together with unprecedented coordination and trust.</p>
+          
+          <p>The war's supernatural elements distinguished it from all previous conflicts. The deployment of the Edo Tensei technique by Kabuto Yakushi brought legendary warriors back from the dead, forcing the living to confront their own history in the most literal sense possible. Heroes and villains from previous wars returned to the battlefield, bringing with them not just their formidable abilities but also the unresolved conflicts and relationships from their lifetimes.</p>
+          
+          <p>The conflict escalated beyond anything the shinobi world had ever experienced with the resurrection of the Ten-Tails, the original source of all chakra. This ancient being's power dwarfed even the individual Tailed Beasts, threatening to destroy not just the current political order but all life itself. The battles against the Ten-Tails pushed the Allied Forces to their absolute limits and forced innovations in cooperative combat techniques that had never been attempted before.</p>
+          
+          <p>The war's climax revealed truths that recontextualized the entire history of the shinobi world. The emergence of Kaguya Otsutsuki, the originator of chakra, revealed that the conflicts between villages and clans were merely the latest chapters in a cosmic struggle that had begun centuries earlier. The final battles took place not just on Earth but in alternate dimensions, expanding the scope of shinobi warfare beyond anything previously imagined.</p>
+          
+          <p>Perhaps most significantly, this war marked the end of the cycle of hatred that had driven conflicts since the Warring States Period. Naruto Uzumaki's ability to understand and ultimately redeem his enemies, including the masked man who had orchestrated the war, represented a fundamental shift in how conflicts could be resolved. The war's resolution through understanding and forgiveness rather than victory and defeat created a new model for international relations.</p>
+          
+          <div class="war-details">
+            <div class="detail-item">
+              <h4>🔥 Orchestrated Crisis</h4>
+              <p>Akatsuki's Tailed Beast collection plan, Obito's Eye of the Moon scheme, manipulation of previous conflicts' trauma, exploitation of international tensions, resurrection of ancient threats</p>
+            </div>
+            <div class="detail-item">
+              <h4>⚔️ Supernatural Warfare</h4>
+              <p>Edo Tensei army of legendary dead warriors, Ten-Tails resurrection and Jinchuriki transformations, Six Paths power manifestation, interdimensional combat, reality-altering techniques</p>
+            </div>
+            <div class="detail-item">
+              <h4>🏆 World Transformation</h4>
+              <p>End of the cycle of hatred, establishment of permanent village alliance, creation of new era of peace, technological and technique advancement, resolution of historical conflicts</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="war-characters">
+          <h3>Key Figures</h3>
+          <div class="character-grid">
+            <div class="character-card">
+              <img src="img.characters/naruto.jpg" alt="Naruto">
+              <h4>Naruto Uzumaki</h4>
+              <p>Hero of the War - Seventh Hokage</p>
+            </div>
+            <div class="character-card">
+              <img src="img.characters/sasuke.jpg" alt="Sasuke">
+              <h4>Sasuke Uchiha</h4>
+              <p>Last Uchiha - Six Paths Warrior</p>
+            </div>
+            <div class="character-card">
+              <img src="img.characters/gaara.jpg" alt="Gaara">
+              <h4>Gaara</h4>
+              <p>Supreme Allied Commander</p>
+            </div>
+            <div class="character-card">
+              <img src="img.characters/madara.jpg" alt="Madara">
+              <h4>Madara Uchiha</h4>
+              <p>Legendary Uchiha - Ten-Tails Jinchuriki</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="war-battles">
+          <h3>Epic Confrontations</h3>
+          <div class="battle-item">
+            <h4>Five Kage vs Madara Uchiha</h4>
+            <p>The unprecedented battle where all five village leaders united to face the legendary Madara Uchiha. Despite their combined efforts and perfect coordination, they were systematically defeated, demonstrating the vast gap between ordinary shinobi and those who had transcended normal limitations.</p>
+          </div>
+          <div class="battle-item">
+            <h4>The Ten-Tails Rampage</h4>
+            <p>The ultimate battle where 80,000 Allied Shinobi Forces faced the original source of all chakra. This conflict pushed cooperative warfare to its absolute limits and required sacrifices and innovations that redefined what was possible through unity and determination.</p>
+          </div>
+          <div class="battle-item">
+            <h4>Naruto and Sasuke vs Kaguya Otsutsuki</h4>
+            <p>The final confrontation against the originator of chakra herself. Fighting across multiple dimensions with powers granted by the Sage of Six Paths, Naruto and Sasuke's victory required not just their individual strength but their ability to work together despite their fundamental differences.</p>
+          </div>
+        </div>
+
+        <div class="war-impact">
+          <h3>Historical Impact</h3>
+          <p>The Fourth Great Ninja War represented the end of one era and the beginning of another. It conclusively ended the cycle of hatred that had driven conflicts since the Warring States Period, established permanent cooperation between the great villages, and created a new understanding of what it meant to be a shinobi. The war's resolution through understanding and redemption rather than conquest created a new model for resolving conflicts that would influence the shinobi world for generations to come.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section class="legacy-section">
+      <h2>The Legacy of War</h2>
+      <div class="legacy-content">
+        <p>From isolated village conflicts to world-threatening catastrophes, the Great Ninja Wars shaped every aspect of the shinobi world. Each war brought technological advances, legendary heroes, and costly lessons that ultimately led to the peaceful era we know today.</p>
+        
+        <div class="legacy-quote">
+          <p>"If you don't like your destiny, don't accept it. Instead, have the courage to change it the way you want it to be."</p>
+          <cite>- Naruto Uzumaki</cite>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 This website is for project purposes only.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/19cEEx5z1D/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/theycallme.maxx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/esplago_ivory/communities/explore" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script>
+      function startApp(event, url) {
+        event.preventDefault(); // Prevent default link navigation
+        const loadingScreen = document.getElementById('loadingScreen');
+        
+        // Show loading screen
+        loadingScreen.style.display = 'flex';
+        
+        // Navigate to the specified page after 3 seconds
+        setTimeout(() => {
+            window.location.href = url;
+        }, 3000);
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.querySelector('.hamburger');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (event) {
+      const isClickInsideSidebar = sidebar.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+
+      if (!isClickInsideSidebar && !isClickOnHamburger) {
+        sidebar.classList.remove('active');
+      }
+    });
+
+    hamburger.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  </script>
+
+</body>
+</html>
