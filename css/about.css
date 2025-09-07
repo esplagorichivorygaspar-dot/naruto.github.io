@@ -1,0 +1,567 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+  background: url(../img/naruto.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.8) 0%, 
+    rgba(20, 20, 20, 0.7) 50%, 
+    rgba(0, 0, 0, 0.9) 100%);
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography */
+p, li {
+  font-family: 'Times New Roman';
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: clamp(200px, 50vw, 220px);
+  height: 100vh;
+  background-color: rgba(26, 26, 26, 0.95);
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.5);
+  padding-top: clamp(50px, 8vh, 60px);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: clamp(8px, 2vh, 10px) 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: clamp(10px, 2vh, 12px) clamp(15px, 4vw, 20px);
+  color: #ff9900;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #333;
+  padding-left: clamp(20px, 6vw, 30px);
+  color: #ffb84d;
+}
+
+/* Hamburger */
+.hamburger {
+  position: fixed;
+  top: clamp(10px, 2vh, 15px);
+  left: clamp(10px, 2vw, 15px);
+  font-size: clamp(20px, 5vw, 30px);
+  background: rgba(26, 26, 26, 0.8);
+  border: 2px solid #ff9900;
+  color: #ff9900;
+  padding: clamp(6px, 2vw, 10px) clamp(8px, 2vw, 12px);
+  border-radius: 6px;
+  z-index: 1001;
+  cursor: pointer;
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: rgba(255, 153, 0, 0.2);
+  color: #ffb84d;
+}
+
+/* Loading Screen Styles - Fixed and Fully Responsive */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+  padding: clamp(10px, 3vw, 20px);
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-container {
+  text-align: center;
+  color: #ff9900;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Responsive Shuriken Design */
+.shuriken-container {
+  position: relative;
+  width: clamp(80px, 20vw, 150px);
+  height: clamp(80px, 20vw, 150px);
+  margin: 0 auto clamp(20px, 5vh, 30px);
+}
+
+.shuriken-image {
+  width: 100%;
+  height: 100%;
+  animation: shurikenSpin 1.5s linear infinite;
+  filter: drop-shadow(0 0 clamp(15px, 4vw, 25px) rgba(255, 153, 0, 0.9))
+          drop-shadow(0 0 clamp(30px, 8vw, 50px) rgba(255, 153, 0, 0.7));
+}
+
+/* Loading Dots - Fully Responsive */
+.loading-dots {
+  font-size: clamp(1.5em, 6vw, 3.5em);
+  letter-spacing: clamp(0.1em, 1vw, 0.2em);
+}
+
+.loading-dots span {
+  animation: dotPulse 1.8s ease-in-out infinite;
+  color: #ffb84d;
+  text-shadow: 0 0 clamp(8px, 2vw, 12px) rgba(255, 184, 77, 0.8);
+}
+
+.loading-dots span:nth-child(1) { animation-delay: 0s; }
+.loading-dots span:nth-child(2) { animation-delay: 0.4s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.8s; }
+
+/* Enhanced Animations */
+@keyframes shurikenSpin {
+  from { 
+    transform: rotate(0deg);
+    filter: drop-shadow(0 0 clamp(15px, 4vw, 25px) rgba(255, 153, 0, 0.9))
+            drop-shadow(0 0 clamp(30px, 8vw, 50px) rgba(255, 153, 0, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 clamp(20px, 5vw, 35px) rgba(255, 153, 0, 1))
+            drop-shadow(0 0 clamp(40px, 10vw, 70px) rgba(255, 153, 0, 0.9));
+  }
+  to { 
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 clamp(15px, 4vw, 25px) rgba(255, 153, 0, 0.9))
+            drop-shadow(0 0 clamp(30px, 8vw, 50px) rgba(255, 153, 0, 0.7));
+  }
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% { 
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  40% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Main Content */
+.about-content {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: clamp(60px, 10vh, 80px) clamp(15px, 5vw, 30px) clamp(20px, 5vh, 40px);
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  margin-bottom: clamp(40px, 8vh, 60px);
+}
+
+.page-title {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  color: #ff9900;
+  margin-bottom: clamp(8px, 2vh, 10px);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  letter-spacing: clamp(1px, 0.5vw, 3px);
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: #ffb84d;
+  font-style: italic;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: clamp(30px, 6vh, 50px);
+  background: rgba(26, 26, 26, 0.7);
+  padding: clamp(20px, 4vw, 30px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 153, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: clamp(15px, 4vh, 25px);
+  gap: clamp(10px, 2vw, 15px);
+}
+
+.section-header i {
+  color: #ff9900;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.section-header h2 {
+  color: #ff9900;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+}
+
+.intro-text {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #f0f0f0;
+  margin-bottom: clamp(15px, 3vh, 20px);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: clamp(20px, 4vw, 30px);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: clamp(10px, 2vw, 15px);
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #ff9900, #ff6600);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: clamp(20px, 4vh, 30px);
+  padding-left: clamp(25px, 5vw, 40px);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: clamp(-8px, -1.5vw, -7px);
+  top: 8px;
+  width: 15px;
+  height: 15px;
+  background: #ff9900;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
+}
+
+.timeline-year {
+  color: #ff9900;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  margin-bottom: 5px;
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+}
+
+.timeline-content h3 {
+  color: #ffb84d;
+  margin: 5px 0 10px 0;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+}
+
+/* Themes Grid */
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 40vw, 220px), 1fr));
+  gap: clamp(15px, 3vw, 25px);
+  margin-top: clamp(15px, 3vh, 20px);
+}
+
+.theme-card {
+  background: rgba(40, 40, 40, 0.8);
+  padding: clamp(15px, 4vw, 25px) clamp(15px, 3vw, 20px);
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.theme-card:hover {
+  border-color: #ff9900;
+  box-shadow: 0 8px 25px rgba(255, 153, 0, 0.3);
+}
+
+.theme-card i {
+  color: #ff9900;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: clamp(10px, 2vh, 15px);
+}
+
+.theme-card h3 {
+  color: #ffb84d;
+  margin: clamp(8px, 2vh, 10px) 0;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+}
+
+.theme-card p {
+  text-align: center;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #ccc;
+}
+
+/* Facts Container */
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 50vw, 280px), 1fr));
+  gap: clamp(15px, 3vw, 20px);
+  margin-top: clamp(15px, 3vh, 20px);
+}
+
+.fact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(10px, 2vw, 15px);
+  background: rgba(40, 40, 40, 0.6);
+  padding: clamp(15px, 3vw, 20px);
+  border-radius: 10px;
+  border-left: 4px solid #ff9900;
+}
+
+.fact-icon {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  min-width: clamp(30px, 6vw, 40px);
+}
+
+.fact-item p {
+  margin: 0;
+  text-align: left;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #e0e0e0;
+}
+
+/* Creator Info */
+.creator-info {
+  background: rgba(40, 40, 40, 0.6);
+  padding: clamp(20px, 4vw, 25px);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 153, 0, 0.3);
+}
+
+/* Final Section */
+.final-section {
+  background: linear-gradient(135deg, 
+    rgba(255, 153, 0, 0.1) 0%, 
+    rgba(26, 26, 26, 0.8) 100%);
+  border: 2px solid #ff9900;
+}
+
+.closing-message {
+  text-align: center;
+}
+
+.closing-message i {
+  color: #ff9900;
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-bottom: clamp(15px, 3vh, 20px);
+}
+
+.closing-message h2 {
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+}
+
+.closing-text {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: #f0f0f0;
+  margin-bottom: clamp(15px, 3vh, 20px);
+  text-align: center;
+}
+
+.signature {
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  color: #ff9900;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(26, 26, 26, 0.95);
+  text-align: center;
+  padding: clamp(6px, 2vh, 8px) 0;
+  font-size: clamp(0.7rem, 2.5vw, 0.875rem);
+  color: white;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 153, 0, 0.3);
+}
+
+.p {
+  text-align: center;
+}
+
+.footer .social-icons {
+  margin-top: clamp(8px, 2vh, 10px);
+}
+
+.footer .social-icons a {
+  margin: 0 clamp(8px, 2vw, 12px);
+  color: #ff9900;
+  text-decoration: none;
+  font-size: clamp(16px, 4vw, 20px);
+  padding: clamp(6px, 1.5vh, 8px);
+  border-radius: 4px;
+  background-color: rgba(255, 153, 0, 0.1);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #ffb84d;
+  background-color: rgba(255, 153, 0, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 70px 20px 20px;
+  }
+  
+  .page-title {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+  }
+  
+  .content-section {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8em;
+  }
+  
+  .themes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .facts-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline {
+    padding-left: 20px;
+  }
+  
+  .sidebar {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 200px;
+  }
+  
+  .hamburger {
+    font-size: 18px;
+    padding: 6px 8px;
+  }
+  
+  .themes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .facts-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .fact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sidebar {
+    width: 180px;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+  }
+  
+  .hamburger {
+    font-size: 16px;
+    padding: 5px 7px;
+  }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) and (max-height: 500px) {
+  .about-content {
+    padding: 50px 15px 20px;
+  }
+  
+  .about-hero {
+    margin-bottom: 30px;
+  }
+  
+  .content-section {
+    margin-bottom: 25px;
+    padding: 20px;
+  }
+}

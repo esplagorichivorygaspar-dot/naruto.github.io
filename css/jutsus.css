@@ -1,0 +1,627 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Ninja Naruto', Arial, sans-serif;
+  background: url(../img/jutsu_bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 80px 20px 40px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100vh;
+  background-color: rgba(26, 26, 26, 0.95);
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.5);
+  padding-top: 60px;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: #ff9900;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #333;
+  padding-left: 30px;
+  color: #ffb84d;
+}
+
+/* Hamburger */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background: rgba(26, 26, 26, 0.9);
+  border: 2px solid #ff9900;
+  color: #ff9900;
+  padding: 8px 12px;
+  border-radius: 6px;
+  z-index: 1001;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger:hover {
+  background-color: rgba(255, 153, 0, 0.2);
+  color: #ffb84d;
+}
+
+
+/* Loading Screen Styles - Fixed and Fully Responsive */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+  padding: clamp(10px, 3vw, 20px);
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-container {
+  text-align: center;
+  color: #ff9900;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Responsive Shuriken Design */
+.shuriken-container {
+  position: relative;
+  width: clamp(80px, 20vw, 150px);
+  height: clamp(80px, 20vw, 150px);
+  margin: 0 auto clamp(20px, 5vh, 30px);
+}
+
+.shuriken-image {
+  width: 100%;
+  height: 100%;
+  animation: shurikenSpin 1.5s linear infinite;
+  filter: drop-shadow(0 0 clamp(15px, 4vw, 25px) rgba(255, 153, 0, 0.9))
+          drop-shadow(0 0 clamp(30px, 8vw, 50px) rgba(255, 153, 0, 0.7));
+}
+
+/* Loading Dots - Fully Responsive */
+.loading-dots {
+  font-size: clamp(1.5em, 6vw, 3.5em);
+  letter-spacing: clamp(0.1em, 1vw, 0.2em);
+}
+
+.loading-dots span {
+  animation: dotPulse 1.8s ease-in-out infinite;
+  color: #ffb84d;
+  text-shadow: 0 0 clamp(8px, 2vw, 12px) rgba(255, 184, 77, 0.8);
+}
+
+.loading-dots span:nth-child(1) { animation-delay: 0s; }
+.loading-dots span:nth-child(2) { animation-delay: 0.4s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.8s; }
+
+/* Enhanced Animations */
+@keyframes shurikenSpin {
+  from { 
+    transform: rotate(0deg);
+    filter: drop-shadow(0 0 clamp(15px, 4vw, 25px) rgba(255, 153, 0, 0.9))
+            drop-shadow(0 0 clamp(30px, 8vw, 50px) rgba(255, 153, 0, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 clamp(20px, 5vw, 35px) rgba(255, 153, 0, 1))
+            drop-shadow(0 0 clamp(40px, 10vw, 70px) rgba(255, 153, 0, 0.9));
+  }
+  to { 
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 clamp(15px, 4vw, 25px) rgba(255, 153, 0, 0.9))
+            drop-shadow(0 0 clamp(30px, 8vw, 50px) rgba(255, 153, 0, 0.7));
+  }
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% { 
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  40% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+
+/* Title Section */
+.title-section {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.title-section h1 {
+  color: #ff9900;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  word-wrap: break-word;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 30px;
+  padding: 0 20px;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px 50px 14px 20px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid rgba(255, 153, 0, 0.4);
+  border-radius: 30px;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-box input:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 12px rgba(255, 153, 0, 0.6);
+}
+
+.search-box input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.search-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff9900;
+  font-size: 1.2em;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.search-box input:focus + .search-icon {
+  color: #ffcc66;
+}
+
+/* Category Filters */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background: rgba(26, 26, 26, 0.8);
+  color: #ff9900;
+  border: 2px solid #ff9900;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: #ff9900;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Jutsu Cards Container */
+.jutsu-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.jutsu-card {
+  background: rgba(26, 26, 26, 0.9);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 153, 0, 0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.jutsu-card:hover {
+  border-color: #ff9900;
+  background: rgba(26, 26, 26, 0.95);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 153, 0, 0.2);
+}
+
+.jutsu-card video,
+.jutsu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 153, 0, 0.3);
+  flex-shrink: 0;
+}
+
+.card-content {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  color: #ff9900;
+  margin: 0 0 15px 0;
+  font-size: 1.2em;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 153, 0, 0.3);
+  padding-bottom: 10px;
+}
+
+.jutsu-details {
+  margin-top: 15px;
+  flex: 1;
+}
+
+.jutsu-details p {
+  margin: 6px 0;
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #e0e0e0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.jutsu-details strong {
+  color: #ff9900;
+  font-weight: bold;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: rgba(26, 26, 26, 0.95);
+  margin: 5% auto;
+  padding: 20px;
+  border: 2px solid #ff9900;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close {
+  color: #ff9900;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ffb84d;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(26, 26, 26, 0.95);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: white;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 153, 0, 0.3);
+}
+
+.footer .social-icons {
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  margin: 0 12px;
+  color: #ff9900;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: rgba(255, 153, 0, 0.1);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #ffb84d;
+  background-color: rgba(255, 153, 0, 0.2);
+}
+
+/* Responsive Design */
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .jutsu-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+    padding: 40px;
+  }
+  
+  .jutsu-card video,
+  .jutsu-card img {
+    height: 250px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .title-section {
+    padding: 50px 15px 15px;
+  }
+  
+  .title-section h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+  
+  .search-container {
+    padding: 0 15px;
+    margin: 15px 0 20px;
+  }
+  
+  .category-filters {
+    padding: 15px 10px;
+    gap: 6px;
+  }
+  
+  .filter-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    min-height: 40px;
+  }
+  
+  .jutsu-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .jutsu-card video,
+  .jutsu-card img {
+    height: 180px;
+  }
+  
+  .card-content {
+    padding: 12px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.1em;
+  }
+  
+  .jutsu-details p {
+    font-size: 0.8em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hamburger {
+    font-size: 20px;
+    padding: 6px 10px;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .sidebar {
+    width: 200px;
+    left: -200px;
+  }
+  
+  .title-section {
+    padding: 40px 10px 10px;
+  }
+  
+  .title-section h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .search-container {
+    padding: 0 10px;
+    margin: 10px 0 15px;
+  }
+  
+  .category-filters {
+    padding: 10px 5px;
+    gap: 4px;
+  }
+  
+  .filter-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    min-height: 36px;
+  }
+  
+  .jutsu-cards-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 10px;
+  }
+  
+  .jutsu-card {
+    min-height: 350px;
+  }
+  
+  .jutsu-card video,
+  .jutsu-card img {
+    height: 160px;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .card-content h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .jutsu-details p {
+    font-size: 0.75em;
+    margin: 4px 0;
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 95%;
+    padding: 15px;
+    max-height: 70vh;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 320px) {
+  .jutsu-cards-container {
+    padding: 8px;
+  }
+  
+  .jutsu-card video,
+  .jutsu-card img {
+    height: 140px;
+  }
+  
+  .filter-btn {
+    padding: 5px 8px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .title-section {
+    padding: 30px 10px 5px;
+  }
+  
+  .title-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .jutsu-card video,
+  .jutsu-card img {
+    height: 120px;
+  }
+}
+
+/* Hide elements for better mobile experience */
+@media (max-width: 768px) {
+  .jutsu-card:hover {
+    transform: none;
+  }
+}
+
+/* Ensure touch targets are adequate */
+@media (hover: none) and (pointer: coarse) {
+  .filter-btn,
+  .hamburger {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
