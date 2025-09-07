@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naruto Fan Site - Villages</title>
+  <link rel="stylesheet" href="css/villages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <!-- Simple Shuriken Image Animation -->
+            <div class="shuriken-container">
+                <img src="shuriken.png" alt="Shuriken" class="shuriken-image">
+            </div>
+            
+            <!-- Loading Dots Only -->
+            <div class="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="coverpage.html" onclick="startApp(event, 'coverpage.html')">></a></li>    
+      <li><a href="lore.html" onclick="startApp(event, 'coverpage.html')">Naruto Lore</a></li>
+      <li><a href="index.html" onclick="startApp(event, 'index.html')">Home</a></li>
+      <li><a href="character.html" onclick="startApp(event, 'character.html')">Characters</a></li>
+      <li><a href="clans.html" onclick="startApp(event, 'clans.html')">Clans</a></li>
+      <li><a href="beast.html" onclick="startApp(event, 'beast.html')">Tailed Beasts</a></li>
+      <li><a href="villages.html" onclick="startApp(event, 'villages.html')">Villages</a></li>
+      <li><a href="jutsus.html" onclick="startApp(event, 'jutsus.html')">Jutsu</a></li>
+      <li><a href="legendary.html" onclick="startApp(event, 'legendary.html')">Legendary Kage</a></li>
+      <li><a href="ninjawar.html" onclick="startApp(event, 'ninjawar.html')">The Great Ninja War</a></li>
+      <li><a href="about.html" onclick="startApp(event, 'about.html')">About</a></li>
+    </ul>
+  </nav>
+  <!-- Village Navigation -->
+  <div class="village-navigation">
+    <button class="nav-btn prev-btn" onclick="previousVillage()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="nav-btn next-btn" onclick="nextVillage()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Village Counter -->
+  <div class="village-counter">
+    <span id="currentVillage">1</span> / <span id="totalVillages">14</span>
+  </div>
+
+  <!-- Village Image Modal -->
+<div class="village-modal" id="villageModal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="Village Full View">
+    <div class="modal-caption" id="modalCaption"></div>
+  </div>
+</div>
+
+  <!-- Village Content -->
+  <div class="village-container">
+    
+    <!-- Konohagakure -->
+    <div class="village-slide active">
+      <div class="village-header">
+        <h1 class="village-name">Konohagakure</h1>
+        <h2 class="village-subtitle">Hidden Leaf Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Konohavillage.webp', 'Konohagakure - Hidden Leaf Village')">Land of Fire</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Founded by Hashirama Senju and Madara Uchiha, Konohagakure was the first shinobi village and served as a model for others. The village was built on the ideals of peace and cooperation between clans. Home to legendary shinobi including the First through Seventh Hokage, Naruto Uzumaki, Sasuke Uchiha, Sakura Haruno, Kakashi Hatake, Might Guy, Rock Lee, Neji Hyuga, Hinata Hyuga, and Shikamaru Nara. Throughout history, Konohagakure has been central to all major conflicts, from the Warring States period through the Fourth Great Ninja War, always fighting to protect peace and uphold the Will of Fire philosophy.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Sunagakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Sunagakure</h1>
+        <h2 class="village-subtitle">Hidden Sand Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Sunagakure.webp','Sunagakure-Hidden Sand Village')">Land of Wind</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Built in the harsh desert environment, Sunagakure developed unique survival techniques and became masters of wind-based jutsu and puppet techniques. The village has produced notable shinobi including Gaara (Fifth Kazekage), Temari, Kankuro, Chiyo, Sasori, the Third Kazekage, Fourth Kazekage (Rasa), and the legendary puppet masters of the desert. Initially allied with Orochimaru against Konoha during the Chunin Exams, Sunagakure later became a strong ally and participated in the Fourth Great Ninja War as part of the Allied Shinobi Forces.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kirigakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Kirigakure</h1>
+        <h2 class="village-subtitle">Hidden Mist Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Kirigakure.webp', 'Kirigakure - Hidden Mist Village')">Land of Water</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Known for the brutal "Bloody Mist" era where graduation required students to kill their classmates, Kirigakure was later reformed under progressive leadership. The village produced the fearsome Seven Ninja Swordsmen, including Zabuza Momochi and Kisame Hoshigaki, along with leaders like Mei Terumi (Fifth Mizukage), Chojuro (Sixth Mizukage), and Yagura (Fourth Mizukage). Due to internal strife, the village remained isolated during most major conflicts but eventually joined the Allied Shinobi Forces in the Fourth Great Ninja War after overcoming the Bloody Mist period.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kumogakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Kumogakure</h1>
+        <h2 class="village-subtitle">Hidden Cloud Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Kumogakure.webp', 'Kumogakure - Hidden Cloud Village')">Land of Lightning</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Built high in the mountains among clouds, Kumogakure is known for its military might and lightning-based techniques, maintaining one of the strongest military forces among the hidden villages. The village has been home to powerful shinobi including A (Third & Fourth Raikage), Killer B (Eight-Tails Jinchūriki), Darui (Fifth Raikage), C, and many skilled lightning users. Historically, their aggressive military policies led to conflicts with other villages as they attempted to capture jinchūriki, but they later joined the Allied Shinobi Forces in the Fourth Great Ninja War.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Iwagakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Iwagakure</h1>
+        <h2 class="village-subtitle">Hidden Stone Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Iwagakure.webp', 'Iwagakure - Hidden Stone Village')">Land of Earth</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Built into rocky terrain, Iwagakure values determination and stubborn resilience, becoming renowned for earth-based jutsu and defensive capabilities. The village has produced legendary shinobi such as Onoki (Third Tsuchikage), Kurotsuchi (Fourth Tsuchikage), Deidara, Akatsuchi, Kitsuchi, and numerous master earth users. Throughout the ninja wars, Iwagakure participated in multiple conflicts, often serving as mercenaries and maintaining complex relationships with other villages before ultimately joining the Allied Shinobi Forces in the Fourth Great Ninja War.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amegakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Amegakure</h1>
+        <h2 class="village-subtitle">Hidden Rain Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Amegakure.jpg', 'Amegakure - Hidden Rain Village')">Land of Rain</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Constantly caught between larger nations during wars, Amegakure has endured perpetual conflict and suffering, with the endless rain symbolizing the village's sorrow. The village became home to significant figures including Nagato (Pain), Yahiko, Konan, Hanzo the Salamander, and the original Akatsuki members who desperately sought to bring peace to their war-torn homeland. Serving as the battlefield for the Second Great Ninja War, Amegakure later became the base for the Akatsuki organization under Pain's leadership, as they pursued their goal of ending all wars through fear and absolute power.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Otogakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Otogakure</h1>
+        <h2 class="village-subtitle">Hidden Sound Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Otogakure.jpg', 'Otogakure - Hidden Sound Village')">Land of Sound</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Founded by Orochimaru as his personal base of operations and research facility, Otogakure functions not as a traditional village but rather as a collection of hideouts and laboratories. The village harbored dangerous shinobi including Orochimaru himself, the Sound Four (Kidomaru, Jirobo, Sakon/Ukon, Tayuya), Kimimaro, Kabuto Yakushi, and various test subjects and followers. Serving as Orochimaru's base for his attack on Konoha during the Chunin Exams, the village later became involved in various schemes and played a role in the Fourth Great Ninja War through Kabuto's necromantic actions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Takigakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Takigakure</h1>
+        <h2 class="village-subtitle">Hidden Waterfall Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Takigakure.webp', 'Takigakure - Hidden Waterfall Village')">Land of Waterfalls</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Hidden behind massive waterfalls, Takigakure remained relatively isolated and peaceful, with natural protection allowing them to avoid major conflicts for much of their history. The village was home to notable shinobi including Fū (Seven-Tails Jinchūriki), Shibuki (village leader), and various waterfall ninja skilled in water-based techniques and aerial combat. Despite their neutrality during major conflicts due to their isolation, the village became involved in larger events when Fū was targeted by the Akatsuki for the Seven-Tails she carried within her.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kusagakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Kusagakure</h1>
+        <h2 class="village-subtitle">Hidden Grass Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Kusagakure.jpg', 'Kusagakure - Hidden Grass Village')">Land of Grass</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Strategically located between major nations, Kusagakure often serves as a buffer zone and is known for its healing techniques and nature-based jutsu. The village has produced various grass ninja who participated in Chunin Exams and shinobi with unique healing abilities, though many have been caught in political struggles between larger powers. Due to their position between major nations, the village has frequently found itself involved in conflicts as a strategic location, often having to navigate carefully between opposing forces to maintain their independence.</p>
+        </div>
+      </div>
+    </div>
+
+  <!-- Getsugakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Getsugakure</h1>
+        <h2 class="village-subtitle">Hidden Moon Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Getsugakure.jpg','Getsugakure - Hidden Moon Village')">Land of Moon</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Featured in a Naruto movie, Getsugakure is a mysterious village that operates under the cover of moonlight, 
+            developing unique techniques that harness lunar energy and nighttime combat strategies. The village has produced 
+            skilled ninja who specialize in stealth operations and moon-based jutsu, utilizing the darkness and lunar cycles 
+            to enhance their abilities. Their secretive nature and nocturnal operations have allowed them to remain hidden 
+            from major conflicts while developing their own distinct ninja culture centered around lunar worship and 
+            nighttime mastery.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hoshigakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Hoshigakure</h1>
+        <h2 class="village-subtitle">Hidden Star Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Hoshigakure.webp','Hoshigakure - Hidden Star Village')">Land of Bears</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Built around a mysterious meteorite called the "Star," Hoshigakure developed unique 
+            training methods using the meteorite's chakra-enhancing properties, though at great cost to their shinobi's health. 
+            The village produced notable figures including Akahoshi, Sumaru, Hokuto, and various star-trained ninja who 
+            could manipulate peacock-like chakra constructs. Despite the star's power allowing rapid advancement in abilities, 
+            the village eventually had to abandon its use due to the severe health consequences, leading to internal conflict 
+            and the eventual sealing of the dangerous meteorite.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yugakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Yugakure</h1>
+        <h2 class="village-subtitle">Hidden Hot Water Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Yugakure.webp','Yugakure - Hidden Hot Water Village')">Land of Hot Water</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Once a village of skilled shinobi, Yugakure made the extraordinary decision to abandon their ninja ways 
+            and become completely pacifist, transforming into a peaceful hot springs resort destination. The village 
+            was once home to capable ninja who specialized in steam and hot water techniques, but chose to renounce 
+            violence entirely. This unique transformation from a military village to a pacifist community represents 
+            one of the most radical changes in shinobi history, as they now focus solely on healing and providing 
+            sanctuary for travelers seeking peace and recovery.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shimogakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Shimogakure</h1>
+        <h2 class="village-subtitle">Hidden Frost Village</h2>
+        <div class="village-badge" onclick="openModal('./img.vilage/Shimogakure.webp','Shimogakure - Hidden Frost Village')">Land of Frost</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>Located in the frigid northern regions, Shimogakure is a minor village that developed specialized techniques 
+            for surviving and fighting in extreme cold conditions, becoming masters of ice and frost-based jutsu. 
+            Though mentioned only briefly in the series, the village has produced skilled frost ninja who can manipulate 
+            ice formations and create frozen defensive barriers, adapting their combat style to their harsh environment. 
+            Due to their remote location and harsh climate, the village has remained relatively isolated from major conflicts, 
+            focusing on survival and maintaining their unique frost-based ninja traditions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Uzugakure -->
+    <div class="village-slide">
+      <div class="village-header">
+        <h1 class="village-name">Uzugakure</h1>
+        <h2 class="village-subtitle">Hidden Eddy Village</h2>
+        <div class="village-badge destroyed" onclick="openModal('./img.vilage/Uzushiogakure.webp','Uzugakure - Hidden Eddy Village')">Land of Whirlpools</div>
+      </div>
+      <div class="village-content">
+        <div class="village-section">
+          <h3>Lore</h3>
+          <p>The former home of the legendary Uzumaki clan, Uzugakure was renowned for its powerful sealing techniques 
+            and the incredible longevity and chakra reserves of its inhabitants. The village was home to notable figures 
+            including Mito Uzumaki (First Hokage's wife), Kushina Uzumaki (Naruto's mother), and various master seal specialists 
+            whose techniques were feared across the ninja world. Tragically, the village was destroyed during the Third Great 
+            Ninja War by multiple nations who feared the Uzumaki clan's sealing abilities, scattering the survivors across 
+            the world and leaving only ruins of what was once a proud and powerful hidden village.</p>
+        </div>
+      </div>
+    </div>
+
+
+  <script>
+      function startApp(event, url) {
+        event.preventDefault(); // Prevent default link navigation
+        const loadingScreen = document.getElementById('loadingScreen');
+        
+        // Show loading screen
+        loadingScreen.style.display = 'flex';
+        
+        // Navigate to the specified page after 3 seconds
+        setTimeout(() => {
+            window.location.href = url;
+        }, 3000);
+    }
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.village-slide');
+    const totalVillages = slides.length;
+    
+    document.getElementById('totalVillages').textContent = totalVillages;
+    
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+      document.getElementById('currentVillage').textContent = index + 1;
+    }
+    
+    function nextVillage() {
+      currentSlide = (currentSlide + 1) % totalVillages;
+      showSlide(currentSlide);
+    }
+    
+    function previousVillage() {
+      currentSlide = (currentSlide - 1 + totalVillages) % totalVillages;
+      showSlide(currentSlide);
+    }
+    
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+    
+    function openModal(imageSrc, caption) {
+      const modal = document.getElementById('villageModal');
+      const modalImg = document.getElementById('modalImage');
+      const modalCaption = document.getElementById('modalCaption');
+      
+      modal.style.display = 'block';
+      modalImg.src = imageSrc;
+      modalCaption.textContent = caption;
+    }
+    
+    function closeModal() {
+      document.getElementById('villageModal').style.display = 'none';
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight') nextVillage();
+      if (e.key === 'ArrowLeft') previousVillage();
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
