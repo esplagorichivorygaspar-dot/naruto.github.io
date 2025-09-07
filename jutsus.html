@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naruto Fan Site</title>
+  <link rel="stylesheet" href="css/jutsus.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+   <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <!-- Simple Shuriken Image Animation -->
+            <div class="shuriken-container">
+                <img src="shuriken.png" alt="Shuriken" class="shuriken-image">
+            </div>
+            
+            <!-- Loading Dots Only -->
+            <div class="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="coverpage.html" onclick="startApp(event, 'coverpage.html')">></a></li>
+      <li><a href="index.html" onclick="startApp(event, 'index.html')">Home</a></li>
+      <li><a href="character.html" onclick="startApp(event, 'character.html')">Characters</a></li>
+      <li><a href="clans.html" onclick="startApp(event, 'clans.html')">Clans</a></li>
+      <li><a href="beast.html" onclick="startApp(event, 'beast.html')">Tailed Beasts</a></li>
+      <li><a href="villages.html" onclick="startApp(event, 'villages.html')">Villages</a></li>
+      <li><a href="jutsus.html" onclick="startApp(event, 'jutsus.html')">Jutsu</a></li>
+      <li><a href="legendary.html" onclick="startApp(event, 'legendary.html')">Legendary Kage</a></li>
+      <li><a href="ninjawar.html" onclick="startApp(event, 'ninjawar.html')">The Great Ninja War</a></li>
+      <li><a href="about.html" onclick="startApp(event, 'about.html')">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Jutsu Modal -->
+  <div class="modal" id="jutsuModal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalBody">
+        <!-- Modal content will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div class="title-section">
+    <h1>JUTSU'S ENCYCLOPEDIA</h1>
+  </div>
+  
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search Jutsu..." onkeyup="searchCharacters()">
+      <i class="fas fa-search search-icon"></i>
+    </div>
+  </div>
+
+  <!-- Category Filters -->
+  <div class="category-filters">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="ninjutsu">Ninjutsu</button>
+    <button class="filter-btn" data-category="taijutsu">Taijutsu</button>
+    <button class="filter-btn" data-category="genjutsu">Genjutsu</button>
+    <button class="filter-btn" data-category="kekei">Kekkei Genkai / Kekkei Tōta</button>
+    <button class="filter-btn" data-category="forbidden">Forbidden Jutsu</button>
+    <button class="filter-btn" data-category="sealing">Sealing Jutsu</button>
+    <button class="filter-btn" data-category="senjutsu">Senjutsu</button>
+    <button class="filter-btn" data-category="tailedbeast">Tailed Beast Jutsu</button>
+    <button class="filter-btn" data-category="unique">Unique Techniques</button>
+  </div>
+
+  <!-- Jutsu Cards Container -->
+  <div class="jutsu-cards-container">
+    
+    <!-- === Basic Academy Jutsu === -->
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="NINJUTSU/CLONE TECHNIQUE.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Clone Technique</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 分身の術 (Bunshin no Jutsu – Clone Technique)</p>
+        <p><strong>Type:</strong> Ninjutsu (Basic)</p>
+        <p><strong>Rank:</strong> E</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> All academy students (Naruto, Sasuke, Sakura, etc.)</p>
+        <p><strong>Village:</strong> All villages</p>
+        <p><strong>Lore:</strong> A basic illusionary technique that creates intangible copies of the user. Though ineffective in real combat, it is the first step in molding chakra.</p>
+      </div>
+    </div>
+  </div>
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid_ninjutsu/TransformationTechnique.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Transformation Technique</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 変化の術 (Henge no Jutsu – Transformation Technique)</p>
+        <p><strong>Type:</strong> Ninjutsu (Basic)</p>
+        <p><strong>Rank:</strong> E</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> All academy students (Naruto, Konohamaru Corps, etc.)</p>
+        <p><strong>Village:</strong> All villages</p>
+        <p><strong>Lore:</strong> The art of disguising oneself as another person, object, or illusion. Vital for espionage, though Naruto often used it for pranks.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <img src="vid_ninjutsu/Substitution_Technique.jpg" alt="False Darkness">
+    <div class="card-content">
+      <h3>Substitution Technique</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 変わり身の術 (Kawarimi no Jutsu – Substitution Technique)</p>
+        <p><strong>Type:</strong> Ninjutsu (Basic)</p>
+        <p><strong>Rank:</strong> E</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Most shinobi (Naruto, Kakashi, Sasuke, etc.)</p>
+        <p><strong>Village:</strong> All villages</p>
+        <p><strong>Lore:</strong> The user switches themselves with a nearby object like a log or animal to evade attacks. A lifesaving trick mastered early by shinobi.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="NINJUTSU/Body Flicker Technique.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Body Flicker Technique</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 瞬身の術 (Shunshin no Jutsu – Body Flicker Technique)</p>
+        <p><strong>Type:</strong> Ninjutsu (Movement)</p>
+        <p><strong>Rank:</strong> D–B</p>
+        <p><strong>Element:</strong> Varies by user</p>
+        <p><strong>Users:</strong> Kakashi, Itachi, Shisui, many jonin</p>
+        <p><strong>Village:</strong> All villages</p>
+        <p><strong>Lore:</strong> By infusing chakra into their body, shinobi can move at blinding speeds. Shisui mastered it so well he was feared as 'Shisui of the Body Flicker'.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Fire Release (Katon) === -->
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/FireballJutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Fireball Jutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 火遁・豪火球の術 (Katon: Gōkakyū no Jutsu – Fireball Jutsu)</p>
+        <p><strong>Type:</strong> Ninjutsu (Fire Release)</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> Fire</p>
+        <p><strong>Users:</strong> Sasuke, Itachi, Madara, Obito, Uchiha Clan</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> The signature Uchiha rite of passage. The user exhales a massive sphere of fire, symbolizing their mastery of Fire Release.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/PhoenixSageFireJutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Phoenix Sage Fire Jutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 火遁・鳳仙火の術 (Katon: Hōsenka no Jutsu – Phoenix Sage Fire Jutsu)</p>
+        <p><strong>Type:</strong> Ninjutsu (Fire Release)</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> Fire</p>
+        <p><strong>Users:</strong> Sasuke, Itachi</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> The user launches a rapid volley of small fireballs, often hiding shuriken inside them for deadly precision and trickery.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="NINJUTSU/DragonFireJutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Dragon Fire Jutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 火遁・龍火の術 (Katon: Ryūka no Jutsu – Dragon Fire Jutsu)</p>
+        <p><strong>Type:</strong> Ninjutsu (Fire Release)</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> Fire</p>
+        <p><strong>Users:</strong> Sasuke, Itachi</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> Flames surge down a wire or channel, engulfing enemies like a dragon's breath. A deadly combo with ninja tools.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/great breakthrough.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Great Fire Annihilation</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 火遁・豪火滅却 (Katon: Gōka Mekkyaku – Great Fire Annihilation)</p>
+        <p><strong>Type:</strong> Ninjutsu (Fire Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Fire</p>
+        <p><strong>Users:</strong> Madara, Itachi</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> A wall of fire spreads wide enough to burn entire armies. Madara's version required multiple Water Release masters to counter.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="NINJUTSU/AshPileBurning.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Ash Pile Burning</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 灰積焼 (Haisekishō – Ash Pile Burning)</p>
+        <p><strong>Type:</strong> Ninjutsu (Fire Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Fire</p>
+        <p><strong>Users:</strong> Asuma Sarutobi</p>
+        <p><strong>Village:</strong> Konohagakure (Sarutobi Clan)</p>
+        <p><strong>Lore:</strong> The user exhales a cloud of flammable ash that ignites with a spark, creating a fiery explosion that consumes everything nearby.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Water Release (Suiton) === -->
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid_ninjutsu/WaterDragonJutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Water Dragon Jutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 水遁・水龍弾の術 (Suiton: Suiryūdan no Jutsu – Water Dragon Jutsu)</p>
+        <p><strong>Type:</strong> Ninjutsu (Water Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Water</p>
+        <p><strong>Users:</strong> Zabuza, Kakashi, Tobirama, Kisame</p>
+        <p><strong>Village:</strong> Kirigakure, Konohagakure</p>
+        <p><strong>Lore:</strong> The user creates a massive dragon of water that crashes down on the enemy with destructive force. A signature jutsu of Tobirama Senju.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid_ninjutsu/Water Shark Bomb Jutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Water Shark Bomb Jutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 水遁・水鮫弾の術 (Suiton: Suikōdan no Jutsu – Water Shark Bomb Jutsu)</p>
+        <p><strong>Type:</strong> Ninjutsu (Water Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Water</p>
+        <p><strong>Users:</strong> Kisame Hoshigaki</p>
+        <p><strong>Village:</strong> Kirigakure</p>
+        <p><strong>Lore:</strong> The user shapes water into a giant shark that rushes toward the enemy, devouring their chakra as it strikes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid_ninjutsu/Water Prison Jutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Water Prison Jutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 水遁・水牢の術 (Suiton: Suirō no Jutsu – Water Prison Jutsu)</p>
+        <p><strong>Type:</strong> Ninjutsu (Water Release)</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> Water</p>
+        <p><strong>Users:</strong> Zabuza, Kisame</p>
+        <p><strong>Village:</strong> Kirigakure</p>
+        <p><strong>Lore:</strong> The user traps their opponent inside a sphere of water, immobilizing them completely. Requires the user's hand to maintain the prison.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/Exploding Water Colliding Wave.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Exploding Water Colliding Wave</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 水遁・爆水衝波 (Suiton: Bakusui Shōha – Exploding Water Colliding Wave)</p>
+        <p><strong>Type:</strong> Ninjutsu (Water Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Water</p>
+        <p><strong>Users:</strong> Kisame Hoshigaki</p>
+        <p><strong>Village:</strong> Kirigakure</p>
+        <p><strong>Lore:</strong> Kisame spits out a massive volume of water, flooding the battlefield and giving him an advantage in aquatic combat.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid_ninjutsu/Water Encampment Wall.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Water Encampment Wall</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 水遁・水陣壁 (Suiton: Suijinheki – Water Encampment Wall)</p>
+        <p><strong>Type:</strong> Ninjutsu (Water Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Water</p>
+        <p><strong>Users:</strong> Tobirama, Kakashi</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A defensive technique that creates a powerful wall of water to block enemy attacks such as fire techniques.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/Hidden Mist Jutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Hidden Mist Jutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 霧隠れの術 (Kirigakure no Jutsu – Hidden Mist Jutsu)</p>
+        <p><strong>Type:</strong> Ninjutsu (Water Release)</p>
+        <p><strong>Rank:</strong> D</p>
+        <p><strong>Element:</strong> Water</p>
+        <p><strong>Users:</strong> Zabuza, Kirigakure shinobi</p>
+        <p><strong>Village:</strong> Kirigakure</p>
+        <p><strong>Lore:</strong> The battlefield is covered in thick mist, obscuring vision. Zabuza used it to terrify opponents as the 'Demon of the Hidden Mist'.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid_ninjutsu/Water Clone Jutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Water Clone Jutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 水分身の術 (Mizu Bunshin no Jutsu – Water Clone Technique)</p>
+        <p><strong>Type:</strong> Ninjutsu (Water Release, Clone)</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> Water</p>
+        <p><strong>Users:</strong> Zabuza, Kisame</p>
+        <p><strong>Village:</strong> Kirigakure</p>
+        <p><strong>Lore:</strong> Creates physical clones made of water. Unlike normal clones, they can attack but disappear if struck.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Wind Release (Fūton) === -->
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/great breakthrough.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Great Breakthrough</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 風遁・大突破 (Fūton: Daitoppa – Great Breakthrough)</p>
+        <p><strong>Type:</strong> Ninjutsu (Wind Release)</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> Wind</p>
+        <p><strong>Users:</strong> Orochimaru</p>
+        <p><strong>Village:</strong> Konohagakure (missing-nin)</p>
+        <p><strong>Lore:</strong> A powerful gust of wind sweeps forward, blowing away targets and projectiles. Orochimaru used it for area disruption.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="vid.ninjutsu/Rasenshuriken.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Rasenshuriken</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 風遁・螺旋手裏剣 (Fūton: Rasenshuriken – Wind Release: Rasenshuriken)</p>
+        <p><strong>Type:</strong> Ninjutsu (Wind Release)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> Wind</p>
+        <p><strong>Users:</strong> Naruto Uzumaki</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> An advanced Rasengan infused with Wind Release. It slices enemies at a cellular level, causing devastating internal damage.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <img src="NINJUTSU/Beast Tearing Palm.jpg" alt="False Darkness">
+    <div class="card-content">
+      <h3>Beast Tearing Palm</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 風遁・真空破 (Fūton: Shinkūha – Beast Tearing Palm / Vacuum Wave)</p>
+        <p><strong>Type:</strong> Ninjutsu (Wind Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Wind</p>
+        <p><strong>Users:</strong> Danzō Shimura</p>
+        <p><strong>Village:</strong> Konohagakure (Root)</p>
+        <p><strong>Lore:</strong> The user exhales a powerful wind blade that cuts through anything in its path. A deadly technique used by Danzō.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid_ninjutsu/Vacuum Sphere in naruto.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Vacuum Sphere</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 風遁・真空玉 (Fūton: Shinkūgyoku – Vacuum Sphere)</p>
+        <p><strong>Type:</strong> Ninjutsu (Wind Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Wind</p>
+        <p><strong>Users:</strong> Danzō Shimura</p>
+        <p><strong>Village:</strong> Konohagakure (Root)</p>
+        <p><strong>Lore:</strong> The user fires compressed spheres of wind from their mouth, striking enemies with sharp pressure bullets.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/pressure damage.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Pressure Damage</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 風遁・圧害 (Fūton: Atsugai – Pressure Damage)</p>
+        <p><strong>Type:</strong> Ninjutsu (Wind Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Wind</p>
+        <p><strong>Users:</strong> Danzō Shimura</p>
+        <p><strong>Village:</strong> Konohagakure (Root)</p>
+        <p><strong>Lore:</strong> A massive wind blast that devastates the battlefield. Danzō used it to wipe out groups of enemies at once.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Lightning Release (Raiton) === -->
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="NINJUTSU/chidori.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Chidori</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 千鳥 (Chidori – One Thousand Birds)</p>
+        <p><strong>Type:</strong> Ninjutsu (Lightning Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Lightning</p>
+        <p><strong>Users:</strong> Kakashi Hatake, Sasuke Uchiha</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A concentrated thrust of lightning chakra in the hand, piercing through anything. Known for the sound of birds chirping.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="NINJUTSU/chidorisendon.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Chidori Senbon</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 千鳥千本 (Chidori Senbon – One Thousand Birds: Needles)</p>
+        <p><strong>Type:</strong> Ninjutsu (Lightning Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Lightning</p>
+        <p><strong>Users:</strong> Sasuke Uchiha</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A variation of Chidori that fires needle-like projectiles of lightning, precise enough to hit vital points.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="NINJUTSU/chidoricurrent.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Chidori Current</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 千鳥流し (Chidori Nagashi – Chidori Current)</p>
+        <p><strong>Type:</strong> Ninjutsu (Lightning Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Lightning</p>
+        <p><strong>Users:</strong> Sasuke Uchiha</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Instead of focusing Chidori in one hand, the lightning spreads around the user's body, shocking all nearby opponents.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/KIRIN.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Kirin</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 麒麟 (Kirin)</p>
+        <p><strong>Type:</strong> Ninjutsu (Lightning Release)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> Lightning</p>
+        <p><strong>Users:</strong> Sasuke Uchiha</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A lightning dragon summoned from natural thunderclouds. Faster than any defense, it strikes with the wrath of nature.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/Lightning Beast Tracking Fang.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Lightning Beast Tracking Fang</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 雷遁・雷獣追牙 (Raiton: Raijū Tsuiga – Lightning Beast Tracking Fang)</p>
+        <p><strong>Type:</strong> Ninjutsu (Lightning Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Lightning</p>
+        <p><strong>Users:</strong> Kakashi Hatake</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A lightning beast shaped from chakra that hunts down targets like a hound. Useful for pursuit and mid-range combat.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <img src="vid.ninjutsu/False Darkness.jpg" alt="False Darkness">
+    <div class="card-content">
+      <h3>False Darkness</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 雷遁・偽暗 (Raiton: Gian – False Darkness)</p>
+        <p><strong>Type:</strong> Ninjutsu (Lightning Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Lightning</p>
+        <p><strong>Users:</strong> Kakuzu</p>
+        <p><strong>Village:</strong> Takigakure (missing-nin, Akatsuki)</p>
+        <p><strong>Lore:</strong> A spear of lightning fired from the mouth, able to split into multiple bolts. Kakuzu used it during his deadly battles.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Earth Release (Doton) === -->
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/Earth Style Wall.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Earth Style Wall</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 土遁・土流壁 (Doton: Doryūheki – Earth Style Wall)</p>
+        <p><strong>Type:</strong> Ninjutsu (Earth Release)</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> Earth</p>
+        <p><strong>Users:</strong> Kakashi, Hiruzen, many shinobi</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A defensive wall of earth rises to protect against attacks. Masters can carve faces into the wall for intimidation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <img src="vid.ninjutsu/Earth Dragon Bullet.jpg" alt="False Darkness">
+    <div class="card-content">
+      <h3>Earth Dragon Bullet</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 土遁・土龍弾 (Doton: Doryūdan – Earth Dragon Bullet)</p>
+        <p><strong>Type:</strong> Ninjutsu (Earth Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Earth</p>
+        <p><strong>Users:</strong> Hiruzen Sarutobi</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A dragon head of mud emerges from the ground and fires projectiles at the enemy. Shows mastery of earth manipulation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <img src="vid.ninjutsu/Light-Weight Rock Technique.jpg"lt="Light-Weight Rock Technique">
+    <div class="card-content">
+      <h3>Light-Weight Rock Technique</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 土遁・軽重岩の術 (Doton: Keijūgan no Jutsu – Light-Weight Rock Technique)</p>
+        <p><strong>Type:</strong> Ninjutsu (Earth Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Earth</p>
+        <p><strong>Users:</strong> Ōnoki</p>
+        <p><strong>Village:</strong> Iwagakure</p>
+        <p><strong>Lore:</strong> Reduces the weight of objects or people, allowing for flight and enhanced mobility. Ōnoki's signature ability.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <img src="vid.ninjutsu/Heavy-Weight Rock Technique.jpg"lt="Light-Weight Rock Technique">
+    <div class="card-content">
+      <h3>Heavy-Weight Rock Technique</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 土遁・加重岩の術 (Doton: Kajūgan no Jutsu – Heavy-Weight Rock Technique)</p>
+        <p><strong>Type:</strong> Ninjutsu (Earth Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Earth</p>
+        <p><strong>Users:</strong> Ōnoki</p>
+        <p><strong>Village:</strong> Iwagakure</p>
+        <p><strong>Lore:</strong> Dramatically increases the weight of objects or people, crushing enemies under immense pressure.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="vid.ninjutsu/Hiding Like a Mole.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Hiding Like a Mole</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 土遁・隠れ蝦蟇の術 (Doton: Mogura Gakure no Jutsu – Hiding Like a Mole)</p>
+        <p><strong>Type:</strong> Ninjutsu (Earth Release)</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> Earth</p>
+        <p><strong>Users:</strong> Various earth users</p>
+        <p><strong>Village:</strong> Multiple villages</p>
+        <p><strong>Lore:</strong> Allows the user to travel underground undetected, emerging for surprise attacks from below.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <img src="vid.ninjutsu/Rock Golem.jpg" alt="Rock Golem">
+    <div class="card-content">
+      <h3>Rock Golem</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 土遁・岩隠れの術 (Doton: Iwagakure no Jutsu – Rock Golem)</p>
+        <p><strong>Type:</strong> Ninjutsu (Earth Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Earth</p>
+        <p><strong>Users:</strong> Iwagakure shinobi</p>
+        <p><strong>Village:</strong> Iwagakure</p>
+        <p><strong>Lore:</strong> Creates a massive humanoid construct of stone for combat and construction purposes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Taijutsu === -->
+  <div class="jutsu-card" data-category="taijutsu">
+    <video src="TAIJUTSU/Leaf Hurricane.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Leaf Hurricane</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 木ノ葉旋風 (Konoha Senpū – Leaf Hurricane)</p>
+        <p><strong>Type:</strong> Taijutsu</p>
+        <p><strong>Rank:</strong> D</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Rock Lee, Might Guy, Naruto</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A spinning heel kick that can knock down multiple enemies. Part of the Strong Fist fighting style.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+    <video src="TAIJUTSU/Leaf Whirlwind.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Leaf Whirlwind</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 木ノ葉大旋風 (Konoha Daisenpū – Leaf Whirlwind)</p>
+        <p><strong>Type:</strong> Taijutsu</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Rock Lee, Might Guy</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> An upgraded version of Leaf Hurricane with more power and range, capable of sending enemies flying.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+    <video src="TAIJUTSU/Rising Wind.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Rising Wind</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 昇風 (Shōfū – Rising Wind)</p>
+        <p><strong>Type:</strong> Taijutsu</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Might Guy, Rock Lee</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> An uppercut that launches enemies into the air, setting them up for aerial combinations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+    <video src="TAIJUTSU/primarylotus.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Primary Lotus</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 表蓮華 (Omote Renge – Primary Lotus)</p>
+        <p><strong>Type:</strong> Taijutsu (Forbidden)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Rock Lee, Might Guy, Kakashi</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Opens the first gate to perform a high-speed combo ending in a devastating pile driver. Dangerous to the user.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+    <video src="TAIJUTSU/morningpeacock.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Morning Peacock</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 朝孔雀 (Asa Kujaku – Morning Peacock)</p>
+        <p><strong>Type:</strong> Taijutsu (Forbidden)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Might Guy</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Rapid punches create friction fireballs that resemble a peacock's tail. A beautiful yet deadly technique.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+    <img src="TAIJUTSU/Daytime Tiger.jpg" alt="Daytime Tiger">
+    <div class="card-content">
+      <h3>Daytime Tiger</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 昼虎 (Hirudora – Daytime Tiger)</p>
+        <p><strong>Type:</strong> Taijutsu (Forbidden)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Might Guy</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A punch so fast it compresses air into a tiger-shaped projectile. Requires the Seventh Gate.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+    <img src="TAIJUTSU/Night Guy.jpg" alt="Night Guy">
+    <div class="card-content">
+      <h3>Night Guy</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 夜ガイ (Yagai – Night Guy)</p>
+        <p><strong>Type:</strong> Taijutsu (Forbidden)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Might Guy</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> The ultimate taijutsu technique using the Eighth Gate. Creates a dragon of compressed air that nearly killed Madara.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+    <video src="TAIJUTSU/eight gate.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Eight Gates</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 八門遁甲 (Hachimon Tonkō – Eight Gates)</p>
+        <p><strong>Type:</strong> Taijutsu (Forbidden)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Might Guy, Rock Lee, Might Duy</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Removes the body's limiters by opening chakra gates. The final gate grants godlike power but results in death.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+    <video src="TAIJUTSU/gentlefirst.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Gentle Fist</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 柔拳 (Jūken – Gentle Fist)</p>
+        <p><strong>Type:</strong> Taijutsu (Kekkei Genkai)</p>
+        <p><strong>Rank:</strong> Varies</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Hyūga Clan (Hinata, Neji, Hiashi)</p>
+        <p><strong>Village:</strong> Konohagakure (Hyūga Clan)</p>
+        <p><strong>Lore:</strong> Fighting style that attacks the chakra network directly, bypassing external defenses to cause internal damage.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+    <div class="card-content">   
+       <video src="TAIJUTSU/8 tiagrams 64 palms.mp4" muted loop controls></video>
+      <h3>Eight Trigrams 64 Palms</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 八卦六十四掌 (Hakke Rokujūyon Shō – Eight Trigrams 64 Palms)</p>
+        <p><strong>Type:</strong> Taijutsu (Kekkei Genkai)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Neji Hyūga, Hiashi Hyūga</p>
+        <p><strong>Village:</strong> Konohagakure (Hyūga Clan)</p>
+        <p><strong>Lore:</strong> Strikes 64 chakra points in rapid succession, completely shutting down the opponent's chakra system.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="taijutsu">
+       <video src="TAIJUTSU/8 tiagrams rotation.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Eight Trigrams Rotation</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 八卦掌回天 (Hakkeshō Kaiten – Eight Trigrams Rotation)</p>
+        <p><strong>Type:</strong> Taijutsu (Kekkei Genkai)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Neji Hyūga, Hiashi Hyūga</p>
+        <p><strong>Village:</strong> Konohagakure (Hyūga Clan)</p>
+        <p><strong>Lore:</strong> The user spins rapidly while releasing chakra, creating an absolute defense that deflects all attacks.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Genjutsu === -->
+  <div class="jutsu-card" data-category="genjutsu">
+    <video src="genjutsu/treebindingdeath.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Tree Binding Death</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 木ノ葉隠れの術 (Konoha-gakure no Jutsu – Tree Binding Death)</p>
+        <p><strong>Type:</strong> Genjutsu</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Yuhi Kurenai</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> The target sees themselves bound to a tree while the user approaches for a killing blow. A signature illusion of Kurenai.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="genjutsu">
+    <img src="genjutsu/False Surroundings.jpg" alt="False Surroundings">
+    <div class="card-content">
+      <h3>False Surroundings</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 偽りの景色 (Itsuwari no Keshiki – False Surroundings)</p>
+        <p><strong>Type:</strong> Genjutsu</p>
+        <p><strong>Rank:</strong> C</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Various genjutsu specialists</p>
+        <p><strong>Village:</strong> Multiple villages</p>
+        <p><strong>Lore:</strong> Makes the surrounding environment appear different than it actually is, useful for hiding or misdirection.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="genjutsu">
+    <img src="genjutsu/Bringer of Darkness.jpg" alt="Bringer of Darkness">
+    <div class="card-content">
+      <h3>Bringer of Darkness</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 黒暗行の術 (Kokuangyo no Jutsu – Bringer of Darkness)</p>
+        <p><strong>Type:</strong> Genjutsu</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Tobirama Senju</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Creates an area of absolute darkness around enemies, removing their sight completely while the user retains vision.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="genjutsu">
+    <video src="genjutsu/tsukuyomi.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Tsukuyomi</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 月読 (Tsukuyomi)</p>
+        <p><strong>Type:</strong> Genjutsu (Mangekyō Sharingan)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Itachi Uchiha</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> Traps the target in an illusion where time is completely controlled. 72 hours of torture in an instant.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="genjutsu">
+    <img src="genjutsu/Kotoamatsukami.jpg" alt="Kotoamatsukami">
+    <div class="card-content">
+      <h3>Kotoamatsukami</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 別天神 (Kotoamatsukami)</p>
+        <p><strong>Type:</strong> Genjutsu (Mangekyō Sharingan)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Shisui Uchiha</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> The ultimate genjutsu that manipulates thoughts without the target knowing they're under an illusion.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="genjutsu">
+    <video src="genjutsu/sharigan genjutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Sharingan Genjutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 写輪眼幻術 (Sharingan Genjutsu)</p>
+        <p><strong>Type:</strong> Genjutsu (Sharingan)</p>
+        <p><strong>Rank:</strong> C-A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Uchiha Clan (Sasuke, Itachi, Kakashi)</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> Various illusions cast through the Sharingan's hypnotic power, from simple suggestions to complex scenarios.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="senjutsu">
+    <video src="senjutsu/frog song.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Frog Song</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 蝦蟇唄 (Gama Uta – Frog Song)</p>
+        <p><strong>Type:</strong> Genjutsu (Senjutsu)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Fukasaku, Shima (Toad Sages)</p>
+        <p><strong>Village:</strong> Mount Myōboku</p>
+        <p><strong>Lore:</strong> A sound-based genjutsu sung by the Two Great Sage Toads that completely paralyzes all who hear it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Kekkei Genkai / Kekkei Tōta === -->
+
+  <!-- Wood Release -->
+  <div class="jutsu-card" data-category="kekei">
+    <video src="kekei/wood clone.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Wood Clone</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 木遁・木分身の術 (Mokuton: Moku Bunshin no Jutsu – Wood Clone)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Wood Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Earth + Water</p>
+        <p><strong>Users:</strong> Hashirama Senju, Yamato</p>
+        <p><strong>Village:</strong> Konohagakure (Senju Clan)</p>
+        <p><strong>Lore:</strong> Creates solid clones from wood that can use jutsu and don't disappear from a single hit, superior to normal clones.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="kekei">
+    <video src="kekei/wooddragon.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Wood Dragon</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 木遁・木龍の術 (Mokuton: Mokuryū no Jutsu – Wood Dragon)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Wood Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Earth + Water</p>
+        <p><strong>Users:</strong> Hashirama Senju</p>
+        <p><strong>Village:</strong> Konohagakure (Senju Clan)</p>
+        <p><strong>Lore:</strong> A massive wooden dragon that can bind enemies and absorb their chakra, showcasing the God of Shinobi's power.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="jutsu-card" data-category="kekei">
+    <video src="kekei/Deep Forest Emergence.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Deep Forest Emergence</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 木遁・樹海降誕 (Mokuton: Jukai Kōtan – Deep Forest Emergence)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Wood Release)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> Earth + Water</p>
+        <p><strong>Users:</strong> Hashirama Senju</p>
+        <p><strong>Village:</strong> Konohagakure (Senju Clan)</p>
+        <p><strong>Lore:</strong> Creates an entire forest that can entangle and crush armies. Changed the landscape at the Valley of the End.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="kekei">
+    <video src="NINJUTSU/Advent of World of Trees.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Advent of World of Trees</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 木遁・花樹界降誕 (Mokuton: Kajukai Kōtan – Advent of World of Trees)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Wood Release)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> Earth + Water</p>
+        <p><strong>Users:</strong> Hashirama Senju</p>
+        <p><strong>Village:</strong> Konohagakure (Senju Clan)</p>
+        <p><strong>Lore:</strong> An enhanced version that creates a flowering forest. The pollen puts enemies to sleep while trees bind them.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ice Release -->
+  <div class="jutsu-card" data-category="kekei">
+    <video src="kekei/Crystal Ice Mirrors.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Crystal Ice Mirrors</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 氷遁・魔鏡氷晶 (Hyōton: Makyō Hyōshō – Crystal Ice Mirrors)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Ice Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Wind + Water</p>
+        <p><strong>Users:</strong> Haku</p>
+        <p><strong>Village:</strong> Kirigakure (Yuki Clan)</p>
+        <p><strong>Lore:</strong> Creates mirrors of ice for near-light speed movement and attacks. Haku's signature technique.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="kekei">
+    <img src="kekei/Ice Needles.jpg" alt="Ice Needles">
+    <div class="card-content">
+      <h3>Ice Needles</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 氷遁・千殺水翔 (Hyōton: Sensatsu Suishō – Ice Needles)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Ice Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Wind + Water</p>
+        <p><strong>Users:</strong> Haku</p>
+        <p><strong>Village:</strong> Kirigakure (Yuki Clan)</p>
+        <p><strong>Lore:</strong> Sharp needles of ice rain down on enemies with deadly precision, showcasing Haku's mastery of ice manipulation.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lava Release -->
+  <div class="jutsu-card" data-category="kekei">
+    <video src="kekei/Lava Release.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Lava Release</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 熔遁・灼河流岩 (Yōton: Shakugaryūgan – Lava Release)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Lava Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Earth + Fire</p>
+        <p><strong>Users:</strong> Rōshi, Kurotsuchi, Son Goku (Four-Tails)</p>
+        <p><strong>Village:</strong> Iwagakure</p>
+        <p><strong>Lore:</strong> Manipulates molten lava for devastating attacks. Can melt through almost any defense.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Boil Release -->
+  <div class="jutsu-card" data-category="kekei">
+    <video src="kekei/boil releast.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Boil Release Mist</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 沸遁・巧霧の術 (Futton: Kōmu no Jutsu – Boil Release Mist)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Boil Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Fire + Water</p>
+        <p><strong>Users:</strong> Mei Terumi, Han (Five-Tails)</p>
+        <p><strong>Village:</strong> Kirigakure</p>
+        <p><strong>Lore:</strong> Creates corrosive mist that can melt through any material. Mei's signature technique as the Fifth Mizukage.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Magnet Release -->
+  <div class="jutsu-card" data-category="kekei">
+    <video src="kekei/Iron Sand.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Iron Sand</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 磁遁・砂鉄 (Jiton: Satetsu – Iron Sand)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Magnet Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Earth + Wind</p>
+        <p><strong>Users:</strong> Third Kazekage, Sasori (Third Kazekage puppet)</p>
+        <p><strong>Village:</strong> Sunagakure</p>
+        <p><strong>Lore:</strong> Controls iron sand with magnetism for versatile attack and defense. Made the Third Kazekage the strongest.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="kekei">
+    <img src="kekei/Gold Dust.jpg" alt="Gold Dust">
+    <div class="card-content">
+      <h3>Gold Dust</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 磁遁・砂金 (Jiton: Sakin – Gold Dust)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Magnet Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Earth + Wind</p>
+        <p><strong>Users:</strong> Fourth Kazekage (Rasa)</p>
+        <p><strong>Village:</strong> Sunagakure</p>
+        <p><strong>Lore:</strong> Manipulates gold dust with magnetic powers. Heavier than regular sand, making it more devastating in combat.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="kekei">
+    <img src="kekei/Magnet Shuriken Control.jpg" alt="Magnet Shuriken Control">
+    <div class="card-content">
+      <h3>Magnet Shuriken Control</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 磁遁・手裏剣操作 (Jiton: Shuriken Sōsa – Magnet Shuriken Control)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Magnet Release)</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> Earth + Wind</p>
+        <p><strong>Users:</strong> Fourth Kazekage (Rasa)</p>
+        <p><strong>Village:</strong> Sunagakure</p>
+        <p><strong>Lore:</strong> Uses magnetism to control metal weapons remotely, turning any battlefield into a minefield of flying blades.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explosion Release -->
+  <div class="jutsu-card" data-category="kekei">
+    <img src="TAIJUTSU/Explosion Fist.jpg" alt="Explosion Fist">
+    <div class="card-content">
+      <h3>Explosion Fist</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 爆遁・地雷拳 (Bakuton: Jirai Ken – Explosion Fist)</p>
+        <p><strong>Type:</strong> Taijutsu (Kekkei Genkai - Explosion Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Earth + Lightning</p>
+        <p><strong>Users:</strong> Gari</p>
+        <p><strong>Village:</strong> Iwagakure</p>
+        <p><strong>Lore:</strong> Any physical contact creates explosive blasts. A deadly close-combat technique that turns fists into bombs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="kekei">
+    <video src="kekei/explosive clay.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Explosive Clay</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 爆遁・起爆粘土 (Bakuton: Kibaku Nendo – Explosive Clay)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Explosion Release)</p>
+        <p><strong>Rank:</strong> A-S</p>
+        <p><strong>Element:</strong> Earth + Lightning</p>
+        <p><strong>Users:</strong> Deidara</p>
+        <p><strong>Village:</strong> Iwagakure (Akatsuki)</p>
+        <p><strong>Lore:</strong> Clay infused with explosive chakra through mouths on the user's hands. 'Art is an explosion!' - Deidara's philosophy.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Storm Release -->
+  <div class="jutsu-card" data-category="kekei">
+    <video src="kekei/LASER CIRCUS.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Laser Circus</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 嵐遁・励挫鎖苛素 (Ranton: Reiza Sākasu – Laser Circus)</p>
+        <p><strong>Type:</strong> Ninjutsu (Kekkei Genkai - Storm Release)</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Lightning + Water</p>
+        <p><strong>Users:</strong> Darui</p>
+        <p><strong>Village:</strong> Kumogakure</p>
+        <p><strong>Lore:</strong> Multiple laser-like beams of light that can bend and change direction to strike enemies from any angle.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rinnegan Abilities -->
+  <div class="jutsu-card" data-category="unique">
+    <video src="vid.jutsu/Shinra Tensei.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Shinra Tensei</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 神羅天征 (Shinra Tensei – Heavenly Subjugation of the Omnipresent God)</p>
+        <p><strong>Type:</strong> Ninjutsu (Rinnegan - Deva Path)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Nagato (Pain), Madara, Sasuke</p>
+        <p><strong>Village:</strong> Amegakure, Various</p>
+        <p><strong>Lore:</strong> Manipulates gravitational forces to repel anything away from the user. Can level entire villages.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="NINJUTSU/Chibaku Tensei.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Chibaku Tensei</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 地爆天星 (Chibaku Tensei – Planetary Devastation)</p>
+        <p><strong>Type:</strong> Ninjutsu (Rinnegan - Deva Path)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Nagato (Pain), Madara, Sasuke</p>
+        <p><strong>Village:</strong> Amegakure, Various</p>
+        <p><strong>Lore:</strong> Creates a massive gravitational sphere that pulls everything into it, forming a miniature moon to seal enemies.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="vid.jutsu/Asura path.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Asura Path</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 修羅道 (Shura-dō – Asura Path)</p>
+        <p><strong>Type:</strong> Rinnegan Ability</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Nagato (Pain)</p>
+        <p><strong>Village:</strong> Amegakure</p>
+        <p><strong>Lore:</strong> Grants the ability to summon mechanical weaponry from the body, including missiles and laser cannons.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="vid.jutsu/Human path.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Human Path</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 人間道 (Ningen-dō – Human Path)</p>
+        <p><strong>Type:</strong> Rinnegan Ability</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Nagato (Pain)</p>
+        <p><strong>Village:</strong> Amegakure</p>
+        <p><strong>Lore:</strong> Can read minds and extract souls through physical contact, instantly killing the target.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="vid.jutsu/Animal Path.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Animal Path</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 畜生道 (Chikushō-dō – Animal Path)</p>
+        <p><strong>Type:</strong> Rinnegan Ability</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Nagato (Pain)</p>
+        <p><strong>Village:</strong> Amegakure</p>
+        <p><strong>Lore:</strong> Summons various animals and creatures for battle, including giant multi-headed dogs and birds.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="sealing/Outer Path [Naruto AMVEdit].mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Outer Path</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 外道 (Gedō – Outer Path)</p>
+        <p><strong>Type:</strong> Rinnegan Ability</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Nagato (Pain), Madara</p>
+        <p><strong>Village:</strong> Amegakure, Various</p>
+        <p><strong>Lore:</strong> Controls life and death, can revive the dead and summon the Gedo Statue.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Forbidden Jutsu === -->
+  <div class="jutsu-card" data-category="forbidden">
+    <video src="forbidden/Reanimation Jutsu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Reanimation Jutsu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 穢土転生 (Edo Tensei – Reanimation Jutsu)</p>
+        <p><strong>Type:</strong> Forbidden Ninjutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Tobirama Senju, Orochimaru, Kabuto</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Brings the dead back to life as immortal warriors. Banned for violating the natural order.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="forbidden">
+    <video src="forbidden/Dead Demon Consuming Seal.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Dead Demon Consuming Seal</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 屍鬼封尽 (Shiki Fūjin – Dead Demon Consuming Seal)</p>
+        <p><strong>Type:</strong> Forbidden Sealing Jutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Third Hokage, Fourth Hokage</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Summons the Death God to seal away enemies at the cost of the user's life.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="forbidden">
+    <video src="forbidden/MULTI SHADOW TECHNIQUE.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Multi-Shadow Clone</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 多重影分身の術 (Tajū Kage Bunshin no Jutsu – Multi-Shadow Clone)</p>
+        <p><strong>Type:</strong> Forbidden Ninjutsu</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Naruto Uzumaki</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Creates hundreds or thousands of shadow clones, dividing chakra equally among them. Can kill the user.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="forbidden">
+    <img src="TAIJUTSU/eight gatedeath of gate.webp" alt="Eight Gates: Gate of Death">
+    <div class="card-content">
+      <h3>Eight Gates: Gate of Death</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 八門遁甲・死門 (Hachimon Tonkō: Shimon – Eight Gates: Gate of Death)</p>
+        <p><strong>Type:</strong> Forbidden Taijutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Might Guy, Might Duy</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Opens the final gate, granting power beyond the Kage but guaranteeing death.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="forbidden">
+    <video src="forbidden/Cursed Seal Transformation.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Cursed Seal Transformation</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 呪印変化 (Juin Henka – Cursed Seal Transformation)</p>
+        <p><strong>Type:</strong> Forbidden Jutsu</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> Varies</p>
+        <p><strong>Users:</strong> Sasuke, Sound Four, Orochimaru test subjects</p>
+        <p><strong>Village:</strong> Otogakure</p>
+        <p><strong>Lore:</strong> Enhances power at the cost of the user's humanity. Orochimaru's method of corrupting shinobi.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="forbidden">
+    <video src="forbidden/Strength of a Hundred Seal.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Strength of a Hundred Seal</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 百豪の術 (Byakugō no Jutsu – Strength of a Hundred Seal)</p>
+        <p><strong>Type:</strong> Forbidden Medical Ninjutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Tsunade, Sakura Haruno</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Stores chakra over years for instant regeneration and enhanced strength. The ultimate medical technique.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Sealing Jutsu === -->
+
+  <div class="jutsu-card" data-category="sealing">
+    <img src="sealing/Eight Trigrams Seal.png" alt="Eight Trigrams Seal">
+    <div class="card-content">
+      <h3>Eight Trigrams Seal</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 八卦封印 (Hakke Fūin – Eight Trigrams Seal)</p>
+        <p><strong>Type:</strong> Sealing Jutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Minato Namikaze</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> The seal containing the Nine-Tails within Naruto, allowing controlled access to its power.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="sealing">
+    <video src="sealing/5 sealing.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Five Elements Seal</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 五行封印 (Gogyō Fūin – Five Elements Seal)</p>
+        <p><strong>Type:</strong> Sealing Jutsu</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Orochimaru</p>
+        <p><strong>Village:</strong> Konohagakure (missing-nin)</p>
+        <p><strong>Lore:</strong> Disrupts the chakra flow of seals, preventing Jinchūriki from accessing their Tailed Beast's power.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="sealing">
+    <video src="genjutsu/Evil Sealing Method.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Evil Sealing Method</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 邪封尽 (Ja Fūjin – Evil Sealing Method)</p>
+        <p><strong>Type:</strong> Sealing Jutsu</p>
+        <p><strong>Rank:</strong> B</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Kakashi Hatake</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Seals cursed marks and evil chakra, though it requires the target's will to be effective.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="jutsu-card" data-category="sealing">
+    <video src="sealing/Adamantine Sealing Chains.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Adamantine Sealing Chains</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 金剛封鎖 (Kongō Fūsa – Adamantine Sealing Chains)</p>
+        <p><strong>Type:</strong> Sealing Jutsu (Kekkei Genkai)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Kushina Uzumaki, Karin</p>
+        <p><strong>Village:</strong> Konohagakure (Uzumaki Clan)</p>
+        <p><strong>Lore:</strong> Chakra chains that can bind even Tailed Beasts. The Uzumaki clan's ultimate sealing technique.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="sealing">
+    <video src="sealing/Reaper Death Seal.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Reaper Death Seal</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 屍鬼封尽 (Shiki Fūjin – Reaper Death Seal)</p>
+        <p><strong>Type:</strong> Forbidden Sealing Jutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Third Hokage, Fourth Hokage</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Summons the Death God to seal away enemies at the cost of the user's life.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Senjutsu === -->
+  <div class="jutsu-card" data-category="senjutsu">
+    <video src="senjutsu/sagemode.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Sage Mode</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 仙人モード (Sennin Mōdo – Sage Mode)</p>
+        <p><strong>Type:</strong> Senjutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Naruto, Jiraiya, Hashirama, Kabuto</p>
+        <p><strong>Village:</strong> Mount Myōboku, Various</p>
+        <p><strong>Lore:</strong> Balances natural energy with chakra for enhanced abilities. Requires perfect stillness to gather nature energy.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="senjutsu">
+    <img src="senjutsu/Snake Sage Mode.jpg" alt="Snake Sage Mode">
+    <div class="card-content">
+      <h3>Snake Sage Mode</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 蛇仙人モード (Hebi Sennin Mōdo – Snake Sage Mode)</p>
+        <p><strong>Type:</strong> Senjutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Kabuto Yakushi</p>
+        <p><strong>Village:</strong> Ryūchi Cave</p>
+        <p><strong>Lore:</strong> Sage Mode learned from the White Snake Sage, granting enhanced perception and snake-like abilities.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="senjutsu">
+    <img src="kekei/Wood Sage Mode.jpg" alt="Wood Sage Mode">
+    <div class="card-content">
+      <h3>Wood Sage Mode</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 木遁仙人モード (Mokuton Sennin Mōdo – Wood Sage Mode)</p>
+        <p><strong>Type:</strong> Senjutsu (Kekkei Genkai)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> Earth + Water</p>
+        <p><strong>Users:</strong> Hashirama Senju</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Combines Sage Mode with Wood Release for unparalleled power. Only Hashirama could master this combination.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Tailed Beast Jutsu === -->
+  <div class="jutsu-card" data-category="tailedbeast">
+    <video src="beast/Tailed Beast Bomb.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Tailed Beast Bomb</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 尾獣玉 (Bijūdama – Tailed Beast Bomb)</p>
+        <p><strong>Type:</strong> Tailed Beast Technique</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> All Tailed Beasts, Jinchūriki</p>
+        <p><strong>Village:</strong> Various</p>
+        <p><strong>Lore:</strong> A sphere of concentrated chakra that can destroy mountains. The signature attack of all Tailed Beasts.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="tailedbeast">
+    <img src="vid.jutsu/Full Transformation.jpg" alt="Full Transformation">
+    <div class="card-content">
+      <h3>Full Transformation</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 完全変化 (Kanzen Henka – Full Transformation)</p>
+        <p><strong>Type:</strong> Tailed Beast Transformation</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> Varies by beast</p>
+        <p><strong>Users:</strong> Jinchūriki who lose control</p>
+        <p><strong>Village:</strong> Various</p>
+        <p><strong>Lore:</strong> Complete manifestation of the Tailed Beast, often occurring when the Jinchūriki loses control.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="tailedbeast">
+    <img src="beast/Kurama Chakra Mode.jpg" alt="Kurama Chakra Mode">
+    <div class="card-content">
+      <h3>Kurama Chakra Mode</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 九喇嘛チャクラモード (Kurama Chakura Mōdo – Kurama Chakra Mode)</p>
+        <p><strong>Type:</strong> Tailed Beast Cooperation</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Naruto Uzumaki</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Perfect cooperation between Naruto and Kurama, granting immense power without losing control.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Summoning Techniques === -->
+  <div class="jutsu-card" data-category="ninjutsu">
+    <video src="sealing/Summoning Gamabunta.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Summoning: Gamabunta</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 口寄せの術・ガマブン太 (Kuchiyose no Jutsu: Gamabunta – Summoning: Gamabunta)</p>
+        <p><strong>Type:</strong> Summoning Jutsu</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Naruto, Jiraiya, Minato</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Summons the boss toad of Mount Myōboku, a massive warrior with sword and pipe.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="ninjutsu">
+    <img src="sealing/Summoning Manda.jpg" alt="Summoning: Manda">
+    <div class="card-content">
+      <h3>Summoning: Manda</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 口寄せの術・マンダ (Kuchiyose no Jutsu: Manda – Summoning: Manda)</p>
+        <p><strong>Type:</strong> Summoning Jutsu</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Orochimaru, Sasuke</p>
+        <p><strong>Village:</strong> Ryūchi Cave</p>
+        <p><strong>Lore:</strong> Summons the boss snake of Ryūchi Cave, a massive serpent with an arrogant personality.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Unique Techniques === -->
+  <div class="jutsu-card" data-category="unique">
+    <video src="vid.ninjutsu/Rasengan.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Rasengan</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 螺旋丸 (Rasengan – Spiraling Sphere)</p>
+        <p><strong>Type:</strong> Ninjutsu</p>
+        <p><strong>Rank:</strong> A</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Minato, Jiraiya, Naruto, Kakashi</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> A sphere of rotating chakra. Minato's incomplete technique, perfected by his son Naruto.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="vid.jutsu/Flying Thunder God.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Flying Thunder God</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 飛雷神の術 (Hiraishin no Jutsu – Flying Thunder God)</p>
+        <p><strong>Type:</strong> Space-Time Ninjutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Tobirama Senju, Minato Namikaze</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Instant teleportation to marked locations. Made Minato the fastest shinobi in history.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="senjutsu/amaterasu.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Amaterasu</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 天照 (Amaterasu)</p>
+        <p><strong>Type:</strong> Ninjutsu (Mangekyō Sharingan)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> Fire</p>
+        <p><strong>Users:</strong> Itachi Uchiha, Sasuke Uchiha</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> Black flames that burn everything and never extinguish. Named after the Goddess of the Sun.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="vid_ninjutsu/Susanoo.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Susanoo</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 須佐能乎 (Susanoo)</p>
+        <p><strong>Type:</strong> Ninjutsu (Mangekyō Sharingan)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Itachi, Sasuke, Madara, Kakashi</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> A massive chakra avatar that protects and fights for the user. The ultimate defense and offense.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="vid.jutsu/KAMUI.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Kamui</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 神威 (Kamui)</p>
+        <p><strong>Type:</strong> Space-Time Ninjutsu (Mangekyō Sharingan)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Kakashi Hatake, Obito Uchiha</p>
+        <p><strong>Village:</strong> Konohagakure</p>
+        <p><strong>Lore:</strong> Warps objects to another dimension. Obito's version grants intangibility, Kakashi's fires projectiles.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <img src="forbidden/izinami.jpg" alt="Izanagi">
+    <div class="card-content">
+      <h3>Izanagi</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> イザナギ (Izanagi)</p>
+        <p><strong>Type:</strong> Forbidden Dōjutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Danzō, Madara, Obito</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> Turns illusion into reality, negating death itself. Costs the user's eyesight.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="forbidden/Izanami.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Izanami</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> イザナミ (Izanami)</p>
+        <p><strong>Type:</strong> Forbidden Dōjutsu</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> None</p>
+        <p><strong>Users:</strong> Itachi Uchiha</p>
+        <p><strong>Village:</strong> Konohagakure (Uchiha Clan)</p>
+        <p><strong>Lore:</strong> Traps opponents in a loop of fate until they accept their destiny. The counter to Izanagi.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jutsu-card" data-category="unique">
+    <video src="senjutsu/Truth-Seeking Balls.mp4" muted loop controls></video>
+    <div class="card-content">
+      <h3>Truth-Seeking Balls</h3>
+      <div class="jutsu-details">
+        <p><strong>Name:</strong> 求道玉 (Gudōdama – Truth-Seeking Balls)</p>
+        <p><strong>Type:</strong> Senjutsu (Six Paths)</p>
+        <p><strong>Rank:</strong> S</p>
+        <p><strong>Element:</strong> All Five Elements + Yin-Yang</p>
+        <p><strong>Users:</strong> Six Paths Sage Mode users (Naruto, Obito, Madara)</p>
+        <p><strong>Village:</strong> Various</p>
+        <p><strong>Lore:</strong> Orbs containing all chakra natures that can nullify ninjutsu and reshape matter itself.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <footer class="footer">
+    <p>&copy; 2025 This website is for project purposes only.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/19cEEx5z1D/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/theycallme.maxx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/esplago_ivory/communities/explore" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  </div>
+
+  <script>
+     function startApp(event, url) {
+        event.preventDefault(); // Prevent default link navigation
+        const loadingScreen = document.getElementById('loadingScreen');
+        
+        // Show loading screen
+        loadingScreen.style.display = 'flex';
+        
+        // Navigate to the specified page after 3 seconds
+        setTimeout(() => {
+            window.location.href = url;
+        }, 3000);
+    }
+    
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+
+    function searchCharacters() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      const jutsuCards = document.querySelectorAll('.jutsu-card');
+      
+      jutsuCards.forEach(card => {
+        const cardText = card.textContent.toLowerCase();
+        if (cardText.includes(searchInput)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Category filtering
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        const category = this.getAttribute('data-category');
+        const jutsuCards = document.querySelectorAll('.jutsu-card');
+        
+        jutsuCards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    function closeModal() {
+      document.getElementById('jutsuModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html> 

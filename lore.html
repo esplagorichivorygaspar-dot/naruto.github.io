@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naruto Fan Site</title>
+  <link rel="stylesheet" href="css/lore.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <!-- Simple Shuriken Image Animation -->
+            <div class="shuriken-container">
+                <img src="shuriken.png" alt="Shuriken" class="shuriken-image">
+            </div>
+            
+            <!-- Loading Dots Only -->
+            <div class="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="coverpage.html" onclick="startApp(event, 'coverpage.html')">></a></li>
+      <li><a href="index.html" onclick="startApp(event, 'index.html')">Home</a></li>
+      <li><a href="character.html" onclick="startApp(event, 'character.html')">Characters</a></li>
+      <li><a href="clans.html" onclick="startApp(event, 'clans.html')">Clans</a></li>
+      <li><a href="beast.html" onclick="startApp(event, 'beast.html')">Tailed Beasts</a></li>
+      <li><a href="villages.html" onclick="startApp(event, 'villages.html')">Villages</a></li>
+      <li><a href="jutsus.html" onclick="startApp(event, 'jutsus.html')">Jutsu</a></li>
+      <li><a href="legendary.html" onclick="startApp(event, 'legendary.html')">Legendary Kage</a></li>
+      <li><a href="ninjawar.html" onclick="startApp(event, 'ninjawar.html')">The Great Ninja War</a></li>
+      <li><a href="about.html" onclick="startApp(event, 'about.html')">About</a></li>
+    </ul>
+  </nav>
+
+
+  <footer class="footer">
+    <p>&copy; 2025 This website is for project purposes only.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/19cEEx5z1D/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/theycallme.maxx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/esplago_ivory/communities/explore" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    function startApp(event, url) {
+        event.preventDefault(); // Prevent default link navigation
+        const loadingScreen = document.getElementById('loadingScreen');
+        
+        // Show loading screen
+        loadingScreen.style.display = 'flex';
+        
+        // Navigate to the specified page after 3 seconds
+        setTimeout(() => {
+            window.location.href = url;
+        }, 3000);
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.querySelector('.hamburger');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (event) {
+      const isClickInsideSidebar = sidebar.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+
+      if (!isClickInsideSidebar && !isClickOnHamburger) {
+        sidebar.classList.remove('active');
+      }
+    });
+
+    hamburger.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  </script>
+
+</body>
+</html>

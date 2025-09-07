@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Legendary Kage - Naruto Fan Site</title>
+  <link rel="stylesheet" href="css/legendary.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+ <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <!-- Simple Shuriken Image Animation -->
+            <div class="shuriken-container">
+                <img src="shuriken.png" alt="Shuriken" class="shuriken-image">
+            </div>
+            
+            <!-- Loading Dots Only -->
+            <div class="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="coverpage.html" onclick="startApp(event, 'coverpage.html')">></a></li>
+      <li><a href="index.html" onclick="startApp(event, 'index.html')">Home</a></li>
+      <li><a href="character.html" onclick="startApp(event, 'character.html')">Characters</a></li>
+      <li><a href="clans.html" onclick="startApp(event, 'clans.html')">Clans</a></li>
+      <li><a href="beast.html" onclick="startApp(event, 'beast.html')">Tailed Beasts</a></li>
+      <li><a href="villages.html" onclick="startApp(event, 'villages.html')">Villages</a></li>
+      <li><a href="jutsus.html" onclick="startApp(event, 'jutsus.html')">Jutsu</a></li>
+      <li><a href="legendary.html" onclick="startApp(event, 'legendary.html')">Legendary Kage</a></li>
+      <li><a href="ninjawar.html" onclick="startApp(event, 'ninjawar.html')">The Great Ninja War</a></li>
+      <li><a href="about.html" onclick="startApp(event, 'about.html')">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    
+    <!-- Introduction -->
+    <section class="intro-section">
+      <h1>The Legendary Kage</h1>
+      <div class="dramatic-quote">
+        <p>"The Kage are the strongest shinobi and leaders of their respective villages, whose power and leadership shaped the ninja world throughout history..."</p>
+      </div>
+      <p>These legendary figures stood above all others, wielding unimaginable power while bearing the responsibility of protecting their people and maintaining the balance of the shinobi world.</p>
+    </section>
+
+    <!-- Hidden Leaf Village -->
+    <section class="village-section leaf-village">
+      <div class="village-header">
+        <h2>🍃 Hokage - Hidden Leaf Village (Konohagakure)</h2>
+        <p>The Village Hidden in the Leaves - Birthplace of Legends</p>
+      </div>
+      
+      <div class="village-lore">
+        <p>The Hokage title represents the Will of Fire, passed down through generations of leaders who embody the village's core values of protection, sacrifice, and unity. Each Hokage earned their position through exceptional strength, unwavering dedication to the village, and the ability to inspire others during the darkest times.</p>
+      </div>
+      
+      <div class="kage-grid">
+        <div class="kage-card">
+          <img src="./img.kage/Hashirama Senju.webp" alt="Hashirama Senju">
+          <h3>Hashirama Senju</h3>
+          <h4>First Hokage</h4>
+          <p>Co-founded Konoha with his dream of ending the endless clan wars. His unmatched Wood Release and compassionate leadership made him the natural choice to lead the newly formed village.</p>
+          <div class="kage-ability">🌳 Wood Release Master</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His vision of peace and unrivaled power united the clans under Konoha's banner.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="./img.kage/Tobirama Senju.webp" alt="Tobirama Senju">
+          <h3>Tobirama Senju</h3>
+          <h4>Second Hokage</h4>
+          <p>Inherited leadership after Hashirama's death. His strategic mind and innovative jutsu creation established the governmental structure that Konoha still uses today.</p>
+          <div class="kage-ability">⚡ Flying Thunder God</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> Chosen by Hashirama for his tactical brilliance and dedication to village stability.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="./img.kage/Hiruzen_Sarutobi.webp" alt="Hiruzen Sarutobi">
+          <h3>Hiruzen Sarutobi</h3>
+          <h4>Third Hokage</h4>
+          <p>Selected by Tobirama in his final moments for his wisdom and mastery of all jutsu types. Served the longest term, protecting Konoha through multiple wars.</p>
+          <div class="kage-ability">📚 Master of All Natures</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> Chosen by the Second Hokage for his exceptional talent and strong will to protect the village.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="./img.kage/Minato_Namikaze.webp" alt="Minato Namikaze">
+          <h3>Minato Namikaze</h3>
+          <h4>Fourth Hokage</h4>
+          <p>Rose to prominence during the Third Great Ninja War with his legendary speed. His heroic nature and tactical genius made him the obvious successor to Hiruzen.</p>
+          <div class="kage-ability">⚡ Yellow Flash Speed</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His heroic deeds in war and unmatched speed earned him the respect and nomination of the entire village.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/Tsunade.webp" alt="Tsunade Senju">
+          <h3>Tsunade Senju</h3>
+          <h4>Fifth Hokage</h4>
+          <p>Reluctantly accepted the position after Orochimaru's attack left Konoha leaderless. Her legendary medical skills and Senju bloodline made her the ideal choice for rebuilding.</p>
+          <div class="kage-ability">⚕️ Medical Master</div>
+          <div class="kage-reason">
+            <strong>Why She Became Kage:</strong> The village elders and Jiraiya convinced her to return, as her healing abilities and leadership were crucial for Konoha's recovery.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/Kakashi_Hatake.webp" alt="Kakashi Hatake">
+          <h3>Kakashi Hatake</h3>
+          <h4>Sixth Hokage</h4>
+          <p>Stepped up when Tsunade fell into a coma after Pain's attack. His experience as a team leader and analytical mind helped guide Konoha through the Fourth War and beyond.</p>
+          <div class="kage-ability">👁️ Copy Ninja</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His proven leadership during crisis and deep understanding of the ninja way made him the natural interim and then permanent choice.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/Naruto.webp" alt="Naruto Uzumaki">
+          <h3>Naruto Uzumaki</h3>
+          <h4>Seventh Hokage</h4>
+          <p>Achieved his lifelong dream after becoming the hero of the Fourth War. His ability to unite enemies as friends and bring peace to the world fulfilled the ultimate Hokage ideal.</p>
+          <div class="kage-ability">🦊 Nine-Tails Chakra</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His heroic actions in the Fourth War and unwavering dedication to protecting everyone made him the unanimous choice of the village.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hidden Sand Village -->
+    <section class="village-section sand-village">
+      <div class="village-header">
+        <h2>☀️ Kazekage - Hidden Sand Village (Sunagakure)</h2>
+        <p>The Village Hidden in the Sand - Masters of Desert Warfare</p>
+      </div>
+      
+      <div class="village-lore">
+        <p>The Kazekage title is earned through mastery of the desert's harsh conditions and the strength to protect Suna from the constant threats of the unforgiving landscape. Each leader has faced unique challenges in maintaining the village's survival in the barren wasteland.</p>
+      </div>
+      
+      <div class="kage-grid">
+        <div class="kage-card">
+          <img src="img.kage/First_Kazekage.webp" alt="Reto">
+          <h3>Reto</h3>
+          <h4>First Kazekage</h4>
+          <p>United the scattered desert clans through his exceptional leadership and understanding of desert warfare, founding Sunagakure during the village formation era.</p>
+          <div class="kage-ability">🏜️ Desert Unifier</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His ability to bring together the fractured desert tribes and establish a sustainable settlement in the harsh environment.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/2ndkazekage.webp" alt="Shamon">
+          <h3>Shamon</h3>
+          <h4>Second Kazekage</h4>
+          <p>Pioneered jinchūriki research to give Suna military advantages. His scientific approach to tailed beast power helped the village compete with larger nations.</p>
+          <div class="kage-ability">🔬 Jinchūriki Researcher</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His innovative research and strategic thinking were essential for Suna's military development and survival.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="./img.kage/Third_Kazekage_Reincarnated.webp" alt="Third Kazekage">
+          <h3>Third Kazekage</h3>
+          <h4>Third Kazekage</h4>
+          <p>Possessed the rare ability to control Iron Sand, making him the strongest Kazekage in history. His power alone deterred many potential invaders of Suna.</p>
+          <div class="kage-ability">⚫ Iron Sand Control</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His unmatched Iron Sand abilities and combat prowess made him the most powerful choice to protect Suna.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/Fourth_Kazekage.webp" alt="Rasa">
+          <h3>Rasa</h3>
+          <h4>Fourth Kazekage</h4>
+          <p>Rose to power during Suna's financial crisis, using his Gold Dust abilities to fund the village while making the difficult decision to seal Shukaku within his own son.</p>
+          <div class="kage-ability">✨ Gold Dust Control</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His unique Gold Dust mining abilities literally saved Suna from bankruptcy and economic collapse.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/Gaara_Kazekage.webp" alt="Gaara">
+          <h3>Gaara</h3>
+          <h4>Fifth Kazekage</h4>
+          <p>Transformed from a feared weapon into a beloved leader after Naruto showed him the power of friendship. Became the youngest Kage ever at age 15.</p>
+          <div class="kage-ability">🏺 Sand Manipulation</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His incredible strength, combined with his newfound compassion and wisdom, inspired the village to trust him as their protector.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hidden Mist Village -->
+    <section class="village-section mist-village">
+      <div class="village-header">
+        <h2>🌊 Mizukage - Hidden Mist Village (Kirigakure)</h2>
+        <p>The Village Hidden in the Mist - Masters of Silent Killing</p>
+      </div>
+      
+      <div class="village-lore">
+        <p>The Mizukage must master the deadly arts of silent assassination and navigate the complex politics of the "Bloody Mist" village. Leadership often comes through surviving brutal trials and proving superior killing abilities in Kiri's harsh environment.</p>
+      </div>
+      
+      <div class="kage-grid">
+        <div class="kage-card">
+          <img src="img.kage/First_Mizukage.webp" alt="Byakuren">
+          <h3>Byakuren</h3>
+          <h4>First Mizukage</h4>
+          <p>Founded Kirigakure by uniting the scattered water-based clans through his mastery of mist techniques and establishing the village's assassination traditions.</p>
+          <div class="kage-ability">🌫️ Mist Techniques</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His superior stealth abilities and strategic vision united the water clans under one banner in the island nation.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/2nd.webp" alt="Gengetsu Hōzuki">
+          <h3>Gengetsu Hōzuki</h3>
+          <h4>Second Mizukage</h4>
+          <p>Master of the Hōzuki clan's water transformation techniques. His rivalry with the Second Tsuchikage culminated in their mutual destruction during combat.</p>
+          <div class="kage-ability">💧 Water Transformation</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His mastery of the Hōzuki clan's liquid form techniques made him nearly invincible in battle, earning leadership through strength.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/3rd_Mizukage.webp" alt="Yagura Karatachi">
+          <h3>Yagura Karatachi</h3>
+          <h4>Third Mizukage</h4>
+          <p>Perfect jinchūriki of the Three-Tails who unknowingly fell under Obito's genjutsu control, leading to the brutal "Bloody Mist" period of Kirigakure's history.</p>
+          <div class="kage-ability">🐢 Three-Tails Power</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His perfect control over the Three-Tails and immense power made him the strongest candidate, though his leadership was secretly manipulated.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/4rt_Mizukage.webp" alt="Mei Terumi">
+          <h3>Mei Terumi</h3>
+          <h4>Fifth Mizukage</h4>
+          <p>Rose to power after Yagura's death to reform Kirigakure and end the Bloody Mist era. Her dual kekkei genkai and diplomatic skills restored the village's reputation.</p>
+          <div class="kage-ability">🌋 Lava & Boil Release</div>
+          <div class="kage-reason">
+            <strong>Why She Became Kage:</strong> Her rare dual kekkei genkai abilities and vision for reform made her the ideal leader to rebuild Kiri's damaged reputation.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hidden Cloud Village -->
+    <section class="village-section cloud-village">
+      <div class="village-header">
+        <h2>⚡ Raikage - Hidden Cloud Village (Kumogakure)</h2>
+        <p>The Village Hidden in the Clouds - Lightning Fast Warriors</p>
+      </div>
+      
+      <div class="village-lore">
+        <p>The Raikage title is traditionally inherited by the strongest lightning user who can master the village's ultimate techniques. The position demands incredible physical strength, lightning speed, and the ability to lead Kumo's aggressive military culture.</p>
+      </div>
+      
+      <div class="kage-grid">
+        <div class="kage-card">
+          <img src="img.kage/First_Raikage.webp" alt="First Raikage A">
+          <h3>A</h3>
+          <h4>First Raikage</h4>
+          <p>Co-founded Kumogakure and established the village's lightning-based fighting traditions. Set the precedent for the Raikage name "A" and the village's military culture.</p>
+          <div class="kage-ability">⚡ Lightning Pioneer</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His mastery of lightning techniques and ability to unite the mountain clans made him the natural founding leader of Kumo.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/2nd_Raikage.webp" alt="Second Raikage A">
+          <h3>A</h3>
+          <h4>Second Raikage</h4>
+          <p>Inherited the position and attempted to bring peace between villages, but was betrayed and killed by the Gold and Silver Brothers during diplomatic negotiations.</p>
+          <div class="kage-ability">☮️ Peace Seeker</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> Inherited leadership and chose diplomacy over warfare, though his peaceful approach ultimately led to his assassination.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/third.raikage.webp" alt="Third Raikage A">
+          <h3>A</h3>
+          <h4>Third Raikage</h4>
+          <p>Known as the strongest Raikage with an indestructible body forged through extreme training. His legendary physical strength could match tailed beasts in combat.</p>
+          <div class="kage-ability">🛡️ Indestructible Shield</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His unmatched physical strength and ability to single-handedly fight the Eight-Tails proved he was the strongest warrior in Kumo.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/fourth.raikage.webp" alt="Fourth Raikage A">
+          <h3>A</h3>
+          <h4>Fourth Raikage</h4>
+          <p>Inherited his father's position and lightning techniques, becoming supreme commander of the Allied Shinobi Forces. His speed rivaled the Yellow Flash himself.</p>
+          <div class="kage-ability">⚡ Lightning Armor</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His incredible speed, mastery of lightning armor, and proven leadership skills made him the worthy successor to his legendary father.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hidden Stone Village -->
+    <section class="village-section stone-village">
+      <div class="village-header">
+        <h2>🪨 Tsuchikage - Hidden Stone Village (Iwagakure)</h2>
+        <p>The Village Hidden in the Stones - Unyielding Earth Masters</p>
+      </div>
+      
+      <div class="village-lore">
+        <p>The Tsuchikage must embody the unwavering strength of stone itself, mastering earth techniques while possessing the stubborn determination to protect Iwagakure from all threats. Leadership requires both physical endurance and tactical brilliance.</p>
+      </div>
+      
+      <div class="kage-grid">
+        <div class="kage-card">
+          <img src="img.kage/Ishikawa – First Tsuchikage,.webp" alt="Ishikawa">
+          <h3>Ishikawa</h3>
+          <h4>First Tsuchikage</h4>
+          <p>Founded Iwagakure by uniting earth-based clans through his mastery of earth techniques and establishing the village's culture of persistence and determination.</p>
+          <div class="kage-ability">⛰️ Earth Master</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His powerful earth techniques and unwavering determination to create a lasting village made him the foundation of Iwagakure.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/Mū – Second Tsuchikage.webp" alt="Mū">
+          <h3>Mū</h3>
+          <h4>Second Tsuchikage</h4>
+          <p>Master of the legendary Dust Release kekkei tōta and invisibility techniques. His advanced abilities elevated Iwagakure's military power significantly.</p>
+          <div class="kage-ability">👻 Dust Release</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His mastery of the ultimate Dust Release technique and strategic invisibility made him invaluable for Iwa's military superiority.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/Ōnoki – Third Tsuchikage.jpg" alt="Ōnoki">
+          <h3>Ōnoki</h3>
+          <h4>Third Tsuchikage</h4>
+          <p>Inherited Mū's Dust Release and led Iwagakure for decades with his stubborn determination. Despite his age, he fought valiantly in the Fourth Great Ninja War.</p>
+          <div class="kage-ability">⚛️ Particle Style</div>
+          <div class="kage-reason">
+            <strong>Why He Became Kage:</strong> His inheritance of Dust Release from Mū and his unwavering will to protect Iwa made him the clear successor.
+          </div>
+        </div>
+        
+        <div class="kage-card">
+          <img src="img.kage/Kurotsuchi – Fourth Tsuchikage.jpg" alt="Kurotsuchi">
+          <h3>Kurotsuchi</h3>
+          <h4>Fourth Tsuchikage</h4>
+          <p>Ōnoki's granddaughter who became the first female Tsuchikage, combining Lava Release mastery with modern leadership approaches to guide Iwa into a new era.</p>
+          <div class="kage-ability">🌋 Lava Release</div>
+          <div class="kage-reason">
+            <strong>Why She Became Kage:</strong> Her powerful Lava Release abilities, strategic mind, and Ōnoki's training made her the natural choice to modernize Iwagakure's leadership.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Moments Section -->
+    <section class="moments-section">
+      <h2>Legendary Moments</h2>
+      <div class="moments-grid">
+        <div class="moment-card">
+          <h3>Hashirama vs Madara</h3>
+          <p>The final battle at the Valley of the End between the God of Shinobi and the legendary Uchiha, ending their friendship and the Warring States Period.</p>
+          <div class="moment-icon">⚔️</div>
+        </div>
+        
+        <div class="moment-card">
+          <h3>Minato vs Nine-Tails</h3>
+          <p>The Yellow Flash's ultimate sacrifice, using the Reaper Death Seal to stop the rampaging Kurama and save Konoha at the cost of his life.</p>
+          <div class="moment-icon">🦊</div>
+        </div>
+        
+        <div class="moment-card">
+          <h3>Ōnoki vs Madara's Meteors</h3>
+          <p>The elderly Tsuchikage's incredible display of power, using Particle Style to destroy Madara's massive meteorites during the Fourth War.</p>
+          <div class="moment-icon">☄️</div>
+        </div>
+        
+        <div class="moment-card">
+          <h3>Naruto Unites the World</h3>
+          <p>The Seventh Hokage's achievement of true peace, ending the cycle of hatred and establishing lasting cooperation between all nations.</p>
+          <div class="moment-icon">🌍</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  
+  <footer class="footer">
+    <p>&copy; 2025 This website is for project purposes only.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/19cEEx5z1D/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/theycallme.maxx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/esplago_ivory/communities/explore" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script>
+     function startApp(event, url) {
+        event.preventDefault(); // Prevent default link navigation
+        const loadingScreen = document.getElementById('loadingScreen');
+        
+        // Show loading screen
+        loadingScreen.style.display = 'flex';
+        
+        // Navigate to the specified page after 3 seconds
+        setTimeout(() => {
+            window.location.href = url;
+        }, 3000);
+    }
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.querySelector('.hamburger');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (event) {
+      const isClickInsideSidebar = sidebar.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+
+      if (!isClickInsideSidebar && !isClickOnHamburger) {
+        sidebar.classList.remove('active');
+      }
+    });
+
+    hamburger.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  </script>
+
+</body>
+</html>
