@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naruto Fan Site - Clans</title>
+  <link rel="stylesheet" href="css/clans.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+ <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <!-- Simple Shuriken Image Animation -->
+            <div class="shuriken-container">
+                <img src="shuriken.png" alt="Shuriken" class="shuriken-image">
+            </div>
+            
+            <!-- Loading Dots Only -->
+            <div class="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="coverpage.html" onclick="startApp(event, 'coverpage.html')">></a></li>
+      <li><a href="index.html" onclick="startApp(event, 'index.html')">Home</a></li>
+      <li><a href="character.html" onclick="startApp(event, 'character.html')">Characters</a></li>
+      <li><a href="clans.html" onclick="startApp(event, 'clans.html')">Clans</a></li>
+      <li><a href="beast.html" onclick="startApp(event, 'beast.html')">Tailed Beasts</a></li>
+      <li><a href="villages.html" onclick="startApp(event, 'villages.html')">Villages</a></li>
+      <li><a href="jutsus.html" onclick="startApp(event, 'jutsus.html')">Jutsu</a></li>
+      <li><a href="legendary.html" onclick="startApp(event, 'legendary.html')">Legendary Kage</a></li>
+      <li><a href="ninjawar.html" onclick="startApp(event, 'ninjawar.html')">The Great Ninja War</a></li>
+      <li><a href="about.html" onclick="startApp(event, 'about.html')">About</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div class="clans-container">
+      <h1 class="page-title">Ninja Clans</h1>
+      <div class="clans">
+
+          <!-- Search Bar -->
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search Clans..." onkeyup="searchCharacters()">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
+        
+        <!-- Aburame Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/1.png" alt="Aburame Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Aburame Clan</h3>
+              <p class="clan-ability">Insect Manipulation</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Silent Guardians</h4>
+              <div class="clan-stats">
+                <span class="stat">Insect Jutsu</span>
+                <span class="stat">Tracking</span>
+                <span class="stat">Surveillance</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Young Shino stood motionless in the forest, his beetles spreading silently through the trees. "Why do you hide your emotions?" his teammate asked. Shino's response was quiet but profound: "Because my insects feel what I feel. In battle, calmness saves lives."</p>
+              
+              <p><strong>Description:</strong> The Aburame clan forms a symbiotic relationship with insects from birth. These bugs live inside their bodies, feeding on chakra in exchange for serving as weapons and scouts. Members are known for their stoic nature and incredible tracking abilities. Famous members include Shino Aburame and his father Shibi.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Akimichi Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/akamichi.png" alt="Akimichi Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Akimichi Clan</h3>
+              <p class="clan-ability">Expansion Jutsu</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Gentle Giants</h4>
+              <div class="clan-stats">
+                <span class="stat">Size Manipulation</span>
+                <span class="stat">Super Strength</span>
+                <span class="stat">Food Pills</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> "Don't call me fat!" Choji roared as his body expanded to massive proportions. His friends learned that day that the Akimichi's size wasn't weakness—it was their greatest strength. When Choji's friends were in danger, his gentle heart became an unstoppable force.</p>
+              
+              <p><strong>Description:</strong> The Akimichi clan specializes in techniques that allow them to manipulate their body size and weight. They can expand individual body parts or their entire body, greatly increasing their physical power. Known for their love of food and kind hearts, they form one-third of the famous Ino-Shika-Cho trio. Notable members include Choji and his father Choza.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fūma Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/3.png" alt="Fūma Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Fūma Clan</h3>
+              <p class="clan-ability">Weapon Mastery</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Fallen Warriors</h4>
+              <div class="clan-stats">
+                <span class="stat">Weapon Arts</span>
+                <span class="stat">Stealth</span>
+                <span class="stat">Loyalty</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> The Fūma shuriken spun through the air like a deadly windmill. Once proud warriors of their own village, the Fūma clan had fallen on hard times. Some became bandits, others sought new masters. "Honor isn't about who you serve," one Fūma ninja said, "but how faithfully you serve them."</p>
+              
+              <p><strong>Description:</strong> The Fūma clan was once a proud ninja family with their own village, but after its destruction, they scattered. Some members became bandits while others, like those who served Orochimaru, sought new allegiances. They are skilled with weapons, particularly the giant Fūma shuriken. Though minor, their legacy lives on through their legendary weapon techniques.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hatake Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/4.png" alt="Hatake Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Hatake Clan</h3>
+              <p class="clan-ability">White Chakra</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The White Fang Legacy</h4>
+              <div class="clan-stats">
+                <span class="stat">Sword Techniques</span>
+                <span class="stat">Lightning Release</span>
+                <span class="stat">Honor</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Kakashi looked at his father's white chakra blade, remembering the man who chose his comrades over the mission. "Sometimes, the most important thing isn't following the rules," Sakumo had taught him. "It's protecting the people who matter most." The Hatake clan may be small, but their hearts are vast.</p>
+              
+              <p><strong>Description:</strong> Though small, the Hatake clan has produced notable shinobi, including the legendary "White Fang" Sakumo and his son Kakashi. Known for their distinctive white chakra and exceptional sword skills, they value loyalty and protection of comrades above all else. Sakumo's sacrifice for his teammates became a defining moment that shaped Kakashi's philosophy and the clan's honor.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hoshigaki Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/5.png" alt="Hoshigaki Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Hoshigaki Clan</h3>
+              <p class="clan-ability">Shark Affinity</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Shark Warriors</h4>
+              <div class="clan-stats">
+                <span class="stat">Water Release</span>
+                <span class="stat">Shark Summoning</span>
+                <span class="stat">Brutal Combat</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Kisame grinned, showing his sharp teeth as sharks circled in the water around him. "In the ninja world, we're all just fish swimming in bloody waters," he laughed. The Hoshigaki were born predators, at home in any battle. Like their shark summons, they never stopped moving, never stopped hunting.</p>
+              
+              <p><strong>Description:</strong> The Hoshigaki clan from the Hidden Mist Village is known for producing fierce warriors with shark-like features and abilities. They have natural affinity with water release and shark summons. Kisame Hoshigaki, the most famous member, was known as the "Monster of the Hidden Mist" and wielded the legendary sword Samehada. The clan embodies the brutal, survival-of-the-fittest mentality of the Mist Village.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hyūga Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/hyuga.png" alt="Hyūga Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Hyūga Clan</h3>
+              <p class="clan-ability">Byakugan</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The All-Seeing Eyes</h4>
+              <div class="clan-stats">
+                <span class="stat">Byakugan</span>
+                <span class="stat">Gentle Fist</span>
+                <span class="stat">Chakra Points</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Neji looked at his caged bird seal with bitter eyes. "Fate cannot be changed," he believed. But watching Naruto fight against destiny itself, Neji learned that even the ancient traditions of the noble Hyūga clan could evolve. Sometimes the branch family could grow stronger than the main house.</p>
+              
+              <p><strong>Description:</strong> The Hyūga clan is one of Konoha's most prestigious families, possessing the Byakugan that grants near 360-degree vision and the ability to see chakra networks. They practice the Gentle Fist fighting style, striking chakra points to disable opponents. The clan maintains a complex hierarchy with main and branch families. Notable members include Hinata, Neji, and clan head Hiashi Hyūga.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inuzuka Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/6.png" alt="Inuzuka Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Inuzuka Clan</h3>
+              <p class="clan-ability">Beast Mimicry</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Wild Pack</h4>
+              <div class="clan-stats">
+                <span class="stat">Beast Techniques</span>
+                <span class="stat">Enhanced Senses</span>
+                <span class="stat">Pack Tactics</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Kiba and Akamaru moved as one, their bond deeper than words. "A ninja and their ninken share everything—loyalty, courage, even life itself," Kiba's mother Tsume taught him. In the Inuzuka clan, the partnership between human and dog wasn't just tradition—it was family. Together, they were unstoppable.</p>
+              
+              <p><strong>Description:</strong> The Inuzuka clan forms lifelong partnerships with ninken (ninja dogs), sharing a bond that enhances both human and canine abilities. They possess enhanced senses and can perform combination techniques with their animal partners. The clan is known for their wild, aggressive fighting style and fierce loyalty. Notable members include Kiba, his sister Hana, and their mother Tsume.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ishigaki Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/ishikagi.png" alt="Ishigaki Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Ishigaki Clan</h3>
+              <p class="clan-ability">Crystal Release</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Crystal Guardians</h4>
+              <div class="clan-stats">
+                <span class="stat">Crystal Release</span>
+                <span class="stat">Barrier Jutsu</span>
+                <span class="stat">Defense</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Crystals erupted from the ground like beautiful flowers of destruction. The Ishigaki clan member smiled sadly, knowing their power came with a terrible price. "Beauty and death often walk hand in hand," she whispered, watching her crystalline prison sparkle in the moonlight. Some gifts were too dangerous to fully embrace.</p>
+              
+              <p><strong>Description:</strong> The Ishigaki clan possesses the rare Crystal Release kekkei genkai, allowing them to create and manipulate crystal structures. This ability can be used for both offensive and defensive purposes, creating crystal barriers and weapons. However, the power comes with significant risks and side effects. The clan appears primarily in filler arcs but represents the diverse range of bloodline abilities in the ninja world.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Izuno Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/7.jpg" alt="Izuno Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Izuno Clan</h3>
+              <p class="clan-ability">Ancient Arts</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Forgotten Legacy</h4>
+              <div class="clan-stats">
+                <span class="stat">Ancient Techniques</span>
+                <span class="stat">Tradition</span>
+                <span class="stat">Mystery</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> The old scrolls spoke of the Izuno clan in whispered legends. "Some families are lost to history," the village elder explained, "but their techniques live on in the shadows." Though rarely seen, their influence shaped the hidden arts that modern ninja still used without knowing their true origin.</p>
+              
+              <p><strong>Description:</strong> The Izuno clan is mentioned in the deeper lore of the ninja world but remains largely mysterious. Little is known about their specific abilities or current status, making them one of the more enigmatic families in ninja history. They represent the many clans that have been lost to time or remain hidden from the main narrative, preserving ancient techniques and traditions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kaguya Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/8.png" alt="Kaguya Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Kaguya Clan</h3>
+              <p class="clan-ability">Bone Manipulation</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Living Weapons</h4>
+              <div class="clan-stats">
+                <span class="stat">Bone Jutsu</span>
+                <span class="stat">Regeneration</span>
+                <span class="stat">Close Combat</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Kimimaro pulled a sword from his spine, his bones harder than steel. "My body is my weapon," he said, facing his enemies without fear. The last of the Kaguya clan, he carried the blood of warriors who knew no retreat. Every bone in his body was a blade, every breath a promise of battle.</p>
+              
+              <p><strong>Description:</strong> The Kaguya clan possessed the kekkei genkai to manipulate their bone structure, growing bones as weapons and armor. Known for their aggressive nature and love of battle, they were nearly wiped out during a failed attack on the Hidden Mist Village. Their bones were incredibly durable, and they could regenerate them rapidly. Kimimaro was believed to be the last surviving member.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kamizuru Clan -->
+<div class="clan-section">
+  <div class="clan-image">
+    <img src="img.clan/kamizuri.png" alt="Kamizuru">
+    <div class="clan-overlay">
+      <h3 class="clan-name">Kamizuru Clan</h3>
+      <p class="clan-ability">Bee Manipulation</p>
+    </div>
+  </div>
+  <div class="clan-content">
+    <div class="clan-header">
+      <h4>Masters of the Hive</h4>
+      <div class="clan-stats">
+        <span class="stat">Bee Jutsu</span>
+        <span class="stat">Poison Techniques</span>
+        <span class="stat">Summoning Swarms</span>
+      </div>
+    </div>
+    <div class="clan-story">
+      <p><strong>Short Story:</strong> Hidden within the forests of Iwagakure, a Kamizuru shinobi whispered a command, and a swarm of bees rose into the sky. Their wings hummed like thunder, venom ready to strike. Enemies who underestimated their buzzing allies soon learned the sting of defeat.</p>
+      
+      <p><strong>Description:</strong> The Kamizuru Clan of Iwagakure specialized in bee-based ninjutsu, using swarms for offense, defense, and infiltration. Once respected as rivals to Konoha’s Aburame Clan, their power declined over time. In desperation, surviving members sought forbidden artifacts to restore their strength but failed. Despite their fall, the Kamizuru remain remembered as fierce shinobi who wielded the hive as their weapon.</p>
+    </div>
+  </div>
+</div>
+         <!-- Karatachi Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/10.png" alt="Karatachi Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Karatachi Clan</h3>
+              <p class="clan-ability">Mist Mastery</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Mist Leaders</h4>
+              <div class="clan-stats">
+                <span class="stat">Water Release</span>
+                <span class="stat">Leadership</span>
+                <span class="stat">Mist Techniques</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> The Fourth Mizukage Yagura stood in the thick mist, his small frame hiding immense power. "In the mist, appearance deceives," he said quietly. The Karatachi clan had always understood that in the Hidden Mist Village, strength came not from size, but from the ability to strike from the shadows when least expected.</p>
+              
+              <p><strong>Description:</strong> The Karatachi clan from the Hidden Mist Village produced the Fourth Mizukage, Yagura. Though small in stature, clan members are known for their exceptional abilities and leadership qualities. They embody the Hidden Mist's philosophy of using deception and misdirection in combat. The clan played a significant role in the village's history during some of its darkest periods.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kedōin Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/kedoin.png" alt="Kedōin Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Kedōin Clan</h3>
+              <p class="clan-ability">Disguise Arts</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Master Disguisers</h4>
+              <div class="clan-stats">
+                <span class="stat">Transformation</span>
+                <span class="stat">Infiltration</span>
+                <span class="stat">Espionage</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> The merchant's face shifted like water, revealing the true Kedōin beneath the disguise. "Identity is just another tool," they said with a smile that belonged to no one and everyone. In a world of deception, the Kedōin were artists, painting themselves as anyone they needed to be to complete their mission.</p>
+              
+              <p><strong>Description:</strong> The Kedōin clan specializes in advanced disguise and transformation techniques that go beyond normal ninja skills. They are masters of infiltration and espionage, able to assume false identities so convincingly that even experienced ninja can be fooled. Their techniques are invaluable for intelligence gathering and covert operations, making them highly sought after by villages needing skilled spies.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kurama Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/kurama.png" alt="Kurama Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Kurama Clan</h3>
+              <p class="clan-ability">Genjutsu Mastery</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Illusion Weavers</h4>
+              <div class="clan-stats">
+                <span class="stat">Powerful Genjutsu</span>
+                <span class="stat">Reality Manipulation</span>
+                <span class="stat">Mind Control</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Yakumo Kurama painted on her canvas, but the images came alive in reality. Her brush strokes created fire, her sketches became monsters. "When imagination becomes reality," she whispered, "the line between dream and nightmare disappears." The Kurama clan's genjutsu was so powerful it could affect the physical world itself.</p>
+              
+              <p><strong>Description:</strong> The Kurama clan possesses an incredibly rare and powerful genjutsu kekkei genkai that can make illusions affect reality. Their techniques are so advanced that they can cause physical damage through purely mental attacks. However, this power often comes with mental instability and requires careful control. Yakumo Kurama was one of the most prominent members, whose abilities were both a gift and a curse.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nara Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/12.png" alt="Nara Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Nara Clan</h3>
+              <p class="clan-ability">Shadow Manipulation</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Strategic Minds</h4>
+              <div class="clan-stats">
+                <span class="stat">Shadow Jutsu</span>
+                <span class="stat">Strategy</span>
+                <span class="stat">Analysis</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> "What a drag," Shikamaru sighed, watching clouds drift by. But when his friends were threatened, his lazy demeanor vanished. In seconds, his shadow stretched across the battlefield like a web, and his enemies found themselves trapped by the genius they had underestimated. Strategy over strength—that was the Nara way.</p>
+              
+              <p><strong>Description:</strong> The Nara clan specializes in shadow manipulation techniques, using their shadows to bind and control opponents. Known for their incredible intelligence and strategic thinking, they often serve as tacticians in important missions. They traditionally form alliances with the Akimichi and Yamanaka clans. The clan also manages the deer park in Konoha. Famous members include Shikamaru and his father Shikaku.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sarutobi Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/13.png" alt="Sarutobi Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Sarutobi Clan</h3>
+              <p class="clan-ability">Fire Mastery</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Will of Fire</h4>
+              <div class="clan-stats">
+                <span class="stat">Fire Release</span>
+                <span class="stat">Summoning</span>
+                <span class="stat">Leadership</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> The Third Hokage stood against Orochimaru, flames dancing around him like old friends. "The Will of Fire burns in every generation," Hiruzen declared. From grandfather to grandson, the Sarutobi clan embodied Konoha's spirit—never letting the flame of protection die, no matter the cost.</p>
+              
+              <p><strong>Description:</strong> The Sarutobi clan has produced several notable leaders for Konoha, including the Third Hokage Hiruzen. They specialize in fire release techniques and summoning jutsu, particularly with monkey summons. Known for their strong will and leadership qualities, they embody the "Will of Fire" philosophy. Notable members include Hiruzen, his son Asuma, and grandson Konohamaru.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Senju Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/senju.png" alt="Senju Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Senju Clan</h3>
+              <p class="clan-ability">Wood Release</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Forest Founders</h4>
+              <div class="clan-stats">
+                <span class="stat">Wood Release</span>
+                <span class="stat">Medical Jutsu</span>
+                <span class="stat">Leadership</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Hashirama extended his hand to his former enemy Madara. "Let's build a village where children don't have to fight," he said. With Wood Release, he literally grew Konoha from the ground up—trees becoming buildings, forests becoming protection. The Senju believed in unity over conflict, in growth over destruction.</p>
+              
+              <p><strong>Description:</strong> The Senju clan was one of Konoha's founding families, known for their immense chakra reserves and mastery of all shinobi arts. Hashirama Senju possessed the legendary Wood Release, which could control plant life. The clan believed in cooperation and founded the Hidden Leaf Village alongside the Uchiha. Their bloodline lives on through Tsunade. They were known as the "Clan of Love."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shimura Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/shimura.png" alt="Shimura Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Shimura Clan</h3>
+              <p class="clan-ability">Root Operations</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Hidden Foundation</h4>
+              <div class="clan-stats">
+                <span class="stat">Covert Ops</span>
+                <span class="stat">Wind Release</span>
+                <span class="stat">Sacrifice</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Danzo stood in the shadows, his bandaged arm hiding dark secrets. "Sometimes, to protect the light, someone must embrace the darkness," he said coldly. The Shimura clan understood that dirty work was necessary for a clean village. They bore the burden of ugly truths so others could live in peace.</p>
+              
+              <p><strong>Description:</strong> The Shimura clan produced Danzo Shimura, the controversial leader of Root and former advisor to the Hokage. Known for their willingness to make hard choices and operate in moral gray areas, they believe in protecting the village through any means necessary. The clan embodies the darker side of ninja philosophy, where the ends justify the means. Their legacy is complex and morally ambiguous.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Uchiha Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/uchiha.jpg.png" alt="Uchiha Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Uchiha Clan</h3>
+              <p class="clan-ability">Sharingan</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Cursed Eyes</h4>
+              <div class="clan-stats">
+                <span class="stat">Sharingan</span>
+                <span class="stat">Fire Release</span>
+                <span class="stat">Genjutsu</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Itachi watched his little brother train, knowing the terrible burden their bloodline carried. "The more you love, the stronger you become," he whispered, "but also the more you have to lose." The Sharingan awakened through trauma, making their greatest strength born from their deepest pain.</p>
+              
+              <p><strong>Description:</strong> Once one of Konoha's founding families, the Uchiha clan possessed the legendary Sharingan, granting them incredible visual powers and genjutsu abilities. Tragically, most were killed during the Uchiha Massacre, leaving only a few survivors. Their clan symbol, the fan, represents their mastery of fire techniques. Famous members include Sasuke, Itachi, Obito, and the legendary Madara Uchiha.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Uzumaki Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/15.png" alt="Uzumaki Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Uzumaki Clan</h3>
+              <p class="clan-ability">Sealing Jutsu</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Spiral Legacy</h4>
+              <div class="clan-stats">
+                <span class="stat">Sealing Jutsu</span>
+                <span class="stat">Longevity</span>
+                <span class="stat">Massive Chakra</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Kushina's red hair whipped around her as she performed the sealing jutsu. "The Uzumaki never give up," she told her newborn son Naruto, even as she sacrificed her life to seal the Nine-Tails. That indomitable spirit, that refusal to surrender—that was the true inheritance of the Uzumaki clan.</p>
+              
+              <p><strong>Description:</strong> The Uzumaki clan was renowned for their exceptional chakra reserves, longevity, and mastery of sealing techniques. Originally from the Land of Whirlpools, they were scattered when their village was destroyed. Known for their distinctive red hair and spiral symbol, they were closely allied with Konoha. Notable members include Naruto, his mother Kushina, and grandmother Mito.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yamanaka Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/16.png" alt="Yamanaka Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Yamanaka Clan</h3>
+              <p class="clan-ability">Mind Transfer</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Mind Walkers</h4>
+              <div class="clan-stats">
+                <span class="stat">Mind Jutsu</span>
+                <span class="stat">Telepathy</span>
+                <span class="stat">Interrogation</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Ino closed her eyes and reached out with her mind. "I can feel your thoughts," she whispered to her target. In the world of espionage, the Yamanaka were invaluable—able to extract secrets, communicate silently, and even take control of enemy minds. Their flower shop was the perfect cover for the village's mind specialists.</p>
+              
+              <p><strong>Description:</strong> The Yamanaka clan possesses techniques that allow them to manipulate minds, transfer consciousness, and read memories. They specialize in interrogation and espionage, making them invaluable to the village's intelligence operations. The clan runs a flower shop that doubles as a front for their more secretive activities. They form the final part of the Ino-Shika-Cho formation. Notable members include Ino and her father Inoichi.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yotsuki Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/Yotsuki.png" alt="Yotsuki Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Yotsuki Clan</h3>
+              <p class="clan-ability">Lightning Armor</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Thunder Warriors</h4>
+              <div class="clan-stats">
+                <span class="stat">Lightning Release</span>
+                <span class="stat">Physical Enhancement</span>
+                <span class="stat">Speed</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Lightning crackled around A's massive frame as he moved faster than the eye could follow. "In Kumogakure, strength is everything," he roared. The Yotsuki clan didn't just use lightning—they became it, their bodies transformed into living weapons by the power of thunder and storm.</p>
+              
+              <p><strong>Description:</strong> The Yotsuki clan from Kumogakure is known for producing powerful lightning users, including the Fourth and possibly Fifth Raikage. They specialize in lightning release techniques that enhance their physical abilities, granting incredible speed and strength. The clan embodies the Cloud Village's philosophy of physical power and direct confrontation. Their lightning armor technique makes them nearly invincible in close combat.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yūhi Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+            <img src="img.clan/17.png" alt="Yūhi Clan">
+            <div class="clan-overlay">
+              <h3 class="clan-name">Yūhi Clan</h3>
+              <p class="clan-ability">Genjutsu Mastery</p>
+            </div>
+          </div>
+          <div class="clan-content">
+            <div class="clan-header">
+              <h4>The Sunset Illusionists</h4>
+              <div class="clan-stats">
+                <span class="stat">Advanced Genjutsu</span>
+                <span class="stat">Teaching</span>
+                <span class="stat">Mental Techniques</span>
+              </div>
+            </div>
+            <div class="clan-story">
+              <p><strong>Short Story:</strong> Kurenai watched the sunset paint the sky in brilliant reds, reminding her of her family's legacy. "Genjutsu is like the evening light," she told her students, "beautiful but fleeting, yet capable of changing how you see everything." The Yūhi clan understood that reality was often what you made others believe it to be.</p>
+              
+              <p><strong>Description:</strong> The Yūhi clan specializes in genjutsu techniques, with Kurenai Yūhi being one of Konoha's most skilled genjutsu specialists. Known for their expertise in illusion techniques and teaching abilities, they play an important role in training the next generation of ninja. The clan's name, meaning "sunset," reflects their mastery over techniques that blur the line between reality and illusion, much like twilight blurs day and night.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yuki Clan -->
+        <div class="clan-section">
+          <div class="clan-image">
+           <img src="img.clan/18.png" alt="Yuki">
+          <div class="clan-overlay">
+             <h3 class="clan-name">Yuki Clan</h3>
+             <p class="clan-ability">Ice Release (Hyōton)</p>
+           </div>
+        </div>
+          <div class="clan-content">  
+              <div class="clan-header">
+              <h4>Children of Ice</h4>
+              <div class="clan-stats">
+                  <span class="stat">Ice Release</span>
+               <span class="stat">Water & Wind Combination</span>
+                 <span class="stat">Frozen Barriers</span>
+      </div>
+    </div>
+    <div class="clan-story">
+      <p><strong>Short Story:</strong> Amidst the snowy mists of Kirigakure, a lone shinobi raised his hands, and water froze mid-air, forming deadly mirrors of ice. His reflection multiplied, and blades of frost shot forth — an elegant yet deadly dance of frozen death.</p>
+      
+      <p><strong>Description:</strong> The Yuki Clan of Kirigakure possessed the kekkei genkai of Ice Release, combining water and wind chakra to create powerful frozen techniques. Feared for their abilities, the clan was persecuted during times of bloodline purges, leading to near extinction. Haku, one of its last known descendants, carried on the clan’s legacy with mastery over crystal-clear ice mirrors and lethal precision.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 This website is for project purposes only.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/19cEEx5z1D/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/theycallme.maxx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="hhttps://x.com/esplago_ivory/communities/explore" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script>
+     function startApp(event, url) {
+        event.preventDefault(); // Prevent default link navigation
+        const loadingScreen = document.getElementById('loadingScreen');
+        
+        // Show loading screen
+        loadingScreen.style.display = 'flex';
+        
+        // Navigate to the specified page after 3 seconds
+        setTimeout(() => {
+            window.location.href = url;
+        }, 3000);
+    }
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.querySelector('.hamburger');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (event) {
+      const isClickInsideSidebar = sidebar.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+
+      if (!isClickInsideSidebar && !isClickOnHamburger) {
+        sidebar.classList.remove('active');
+      }
+    });
+
+    hamburger.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+
+    
+    // Search functionality
+    function searchCharacters() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toLowerCase();
+      const grid = document.getElementById('charactersGrid');
+      const cards = grid.getElementsByClassName('character-card');
+
+      for (let i = 0; i < cards.length; i++) {
+        const name = cards[i].getAttribute('data-name').toLowerCase();
+        const characterName = cards[i].querySelector('.character-name').textContent.toLowerCase();
+        
+        if (name.includes(filter) || characterName.includes(filter)) {
+          cards[i].style.display = "";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+  
+
+</body>
+</html>

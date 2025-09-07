@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Naruto Fan Site</title>
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <!-- Simple Shuriken Image Animation -->
+            <div class="shuriken-container">
+                <img src="shuriken.png" alt="Shuriken" class="shuriken-image">
+            </div>
+            
+            <!-- Loading Dots Only -->
+            <div class="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="coverpage.html" onclick="startApp(event, 'coverpage.html')">></a></li>
+      <li><a href="index.html" onclick="startApp(event, 'index.html')">Home</a></li>
+      <li><a href="character.html" onclick="startApp(event, 'character.html')">Characters</a></li>
+      <li><a href="clans.html" onclick="startApp(event, 'clans.html')">Clans</a></li>
+      <li><a href="beast.html" onclick="startApp(event, 'beast.html')">Tailed Beasts</a></li>
+      <li><a href="villages.html" onclick="startApp(event, 'villages.html')">Villages</a></li>
+      <li><a href="jutsus.html" onclick="startApp(event, 'jutsus.html')">Jutsu</a></li>
+      <li><a href="legendary.html" onclick="startApp(event, 'legendary.html')">Legendary Kage</a></li>
+      <li><a href="ninjawar.html" onclick="startApp(event, 'ninjawar.html')">The Great Ninja War</a></li>
+      <li><a href="about.html" onclick="startApp(event, 'about.html')">About</a></li>
+    </ul>
+  </nav>
+
+  <main class="about-content">
+    
+    <!-- Hero Section -->
+    <div class="about-hero">
+      <h1 class="page-title">About Naruto</h1>
+      <p class="subtitle">The Epic Journey of a Young Ninja</p>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+      <div class="section-header">
+        <i class="fas fa-scroll"></i>
+        <h2>The Story Behind the Legend</h2>
+      </div>
+      <p class="intro-text">
+        <em>Naruto</em> is a groundbreaking Japanese anime and manga series created by the brilliant Masashi Kishimoto. 
+        It chronicles the extraordinary journey of Naruto Uzumaki, a spirited young ninja with an unwavering dream 
+        of becoming Hokage—the strongest shinobi and revered leader of the Hidden Leaf Village (Konohagakure).
+      </p>
+      <p>
+        What sets Naruto apart is not just its incredible action sequences or complex jutsu systems, but its profound 
+        exploration of human emotions, friendship, and the power of never giving up. Despite being ostracized by his 
+        village for having the Nine-Tails Fox demon sealed within him, Naruto's determination to gain recognition and 
+        protect those he loves drives him to overcome seemingly impossible odds.
+      </p>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="content-section">
+      <div class="section-header">
+        <i class="fas fa-clock"></i>
+        <h2>Journey Through Time</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1999-2014</div>
+          <div class="timeline-content">
+            <h3>Naruto Manga Era</h3>
+            <p>Masashi Kishimoto begins serializing Naruto in Weekly Shōnen Jump, creating a phenomenon that would span 15 years and 700 chapters.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2002-2007</div>
+          <div class="timeline-content">
+            <h3>Original Naruto Anime</h3>
+            <p>Naruto joins Team 7 with Sasuke and Sakura under Kakashi's guidance. The Chunin Exams, Orochimaru's invasion, and Sasuke's departure mark pivotal moments.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2007-2017</div>
+          <div class="timeline-content">
+            <h3>Naruto: Shippuden</h3>
+            <p>After 2.5 years of training, Naruto returns stronger. The Akatsuki threat intensifies, leading to the epic Fourth Great Ninja War and the final confrontation with Sasuke.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2017-Present</div>
+          <div class="timeline-content">
+            <h3>Boruto: Next Generations</h3>
+            <p>Naruto achieves his dream of becoming Hokage. The story continues with his son Boruto and a new generation facing technological advancement and Otsutsuki threats.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Themes Section -->
+    <section class="content-section">
+      <div class="section-header">
+        <i class="fas fa-heart"></i>
+        <h2>Core Themes & Messages</h2>
+      </div>
+      <div class="themes-grid">
+        <div class="theme-card">
+          <i class="fas fa-fist-raised"></i>
+          <h3>Never Give Up</h3>
+          <p>Naruto's unwavering determination teaches us that with enough perseverance, even the most impossible dreams can become reality.</p>
+        </div>
+        <div class="theme-card">
+          <i class="fas fa-users"></i>
+          <h3>Power of Friendship</h3>
+          <p>True strength comes not from being alone, but from the bonds we forge with others who believe in us and stand by our side.</p>
+        </div>
+        <div class="theme-card">
+          <i class="fas fa-balance-scale"></i>
+          <h3>Breaking Cycles</h3>
+          <p>The series explores breaking cycles of hatred and revenge, showing how understanding and forgiveness can change the world.</p>
+        </div>
+        <div class="theme-card">
+          <i class="fas fa-star"></i>
+          <h3>Finding Identity</h3>
+          <p>Each character's journey of self-discovery reminds us that we define who we are, not our circumstances or others' expectations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="content-section">
+      <div class="section-header">
+        <i class="fas fa-lightbulb"></i>
+        <h2>Did You Know?</h2>
+      </div>
+      <div class="facts-container">
+        <div class="fact-item">
+          <div class="fact-icon">🍜</div>
+          <p>Naruto's favorite food, Ichiraku Ramen, is based on a real ramen shop in Fukuoka, Japan that Kishimoto used to visit.</p>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">🌀</div>
+          <p>The name "Naruto" comes from narutomaki, a type of Japanese fish cake with a distinctive swirl pattern—the same swirl on his jacket!</p>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">👨‍🍳</div>
+          <p>Originally, Kishimoto wanted Naruto to be a chef rather than a ninja, but editors convinced him to change it to appeal to more readers.</p>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">☁️</div>
+          <p>The Akatsuki's red cloud symbol represents the bloodshed and pain from the endless wars that plagued the Hidden Rain Village.</p>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">📚</div>
+          <p>With over 250 million copies sold worldwide, Naruto is one of the best-selling manga series of all time.</p>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">🎌</div>
+          <p>The Hidden Leaf Village symbol was inspired by the actual leaf of a tree, representing growth, life, and the will of fire.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creator Section -->
+    <section class="content-section">
+      <div class="section-header">
+        <i class="fas fa-pencil-alt"></i>
+        <h2>About the Creator</h2>
+      </div>
+      <div class="creator-info">
+        <p>
+          <strong>Masashi Kishimoto</strong> began his journey as a manga artist with a simple dream: to create a story 
+          that would resonate with readers worldwide. Born in 1974 in Okayama Prefecture, Japan, Kishimoto was inspired 
+          by legendary manga like Dragon Ball and Akira. His dedication to character development and world-building has 
+          made Naruto a cultural phenomenon that transcends borders and generations.
+        </p>
+        <p>
+          Kishimoto's attention to detail, from the intricate hand signs for jutsu to the complex political relationships 
+          between ninja villages, creates a rich, immersive world that fans continue to explore and celebrate today.
+        </p>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="content-section">
+      <div class="section-header">
+        <i class="fas fa-globe"></i>
+        <h2>Global Impact & Legacy</h2>
+      </div>
+      <p>
+        Naruto's influence extends far beyond entertainment. The series has inspired countless individuals to pursue their 
+        dreams, overcome adversity, and value the relationships in their lives. From cosplay conventions to academic 
+        discussions about its philosophical themes, Naruto has become a cornerstone of modern pop culture.
+      </p>
+      <p>
+        The "Will of Fire"—the belief that the previous generation passes on their dreams and hopes to the next—continues 
+        to burn bright in fans around the world, making Naruto not just a story, but a way of life for many.
+      </p>
+    </section>
+
+    <!-- Closing Section -->
+    <section class="content-section final-section">
+      <div class="closing-message">
+        <i class="fas fa-fire"></i>
+        <h2>The Will of Fire Lives On</h2>
+        <p class="closing-text">
+          Whether you're a newcomer to the Hidden Leaf Village or a veteran shinobi who's followed Naruto's journey from 
+          the beginning, remember that the most important lesson isn't about becoming the strongest ninja—it's about never 
+          giving up on the people and dreams that matter most to you.
+        </p>
+        <p class="signature"><em>Dattebayo!</em></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 This website is for project purposes only.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/19cEEx5z1D/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/theycallme.maxx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/esplago_ivory/communities/explore" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script>
+      function startApp(event, url) {
+        event.preventDefault(); // Prevent default link navigation
+        const loadingScreen = document.getElementById('loadingScreen');
+        
+        // Show loading screen
+        loadingScreen.style.display = 'flex';
+        
+        // Navigate to the specified page after 3 seconds
+        setTimeout(() => {
+            window.location.href = url;
+        }, 3000);
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.querySelector('.hamburger');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (event) {
+      const isClickInsideSidebar = sidebar.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+
+      if (!isClickInsideSidebar && !isClickOnHamburger) {
+        sidebar.classList.remove('active');
+      }
+    });
+
+    hamburger.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/coverpage.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <!-- Simple Shuriken Image Animation -->
+            <div class="shuriken-container">
+                <img src="./shuriken.png" alt="Shuriken" class="shuriken-image">
+            </div>
+            
+            <!-- Loading Dots Only -->
+            <div class="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="img/knaruto.png" class="konoha-bg">
+    </div>
+        
+    <button onclick="startApp()" class="start-button">DIVE TO THE NINJA WORLD</button>
+
+    <script>
+        function startApp() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            
+            // Show loading screen
+            loadingScreen.style.display = 'flex';
+            
+            // Navigate to index page after 3 seconds
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

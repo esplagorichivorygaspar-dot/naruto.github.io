@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naruto Fan Site - Characters</title>
+  <link rel="stylesheet" href="css/character.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <!-- Simple Shuriken Image Animation -->
+            <div class="shuriken-container">
+                <img src="shuriken.png" alt="Shuriken" class="shuriken-image">
+            </div>
+            
+            <!-- Loading Dots Only -->
+            <div class="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="coverpage.html" onclick="startApp(event, 'coverpage.html')">></a></li>
+      <li><a href="index.html" onclick="startApp(event, 'index.html')">Home</a></li>
+      <li><a href="character.html" onclick="startApp(event, 'character.html')">Characters</a></li>
+      <li><a href="clans.html" onclick="startApp(event, 'clans.html')">Clans</a></li>
+      <li><a href="beast.html" onclick="startApp(event, 'beast.html')">Tailed Beasts</a></li>
+      <li><a href="villages.html" onclick="startApp(event, 'villages.html')">Villages</a></li>
+      <li><a href="jutsus.html" onclick="startApp(event, 'jutsus.html')">Jutsu</a></li>
+      <li><a href="legendary.html" onclick="startApp(event, 'legendary.html')">Legendary Kage</a></li>
+      <li><a href="ninjawar.html" onclick="startApp(event, 'ninjawar.html')">The Great Ninja War</a></li>
+      <li><a href="about.html" onclick="startApp(event, 'about.html')">About</a></li>
+    </ul>
+  </nav>
+
+
+<main class="main-content">
+  <h1 class="page-title">Characters</h1>
+
+  
+<!-- Search Bar -->
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search  ninja..." onkeyup="searchCharacters()">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
+  
+  <!-- Main Characters Section -->
+  <section class="main-characters-section">
+    <h2 class="section-title">Main Characters</h2>
+    <div class="cards-grid">
+        
+      <div class="character-card">
+        <div class="card-image">
+          <img src="naruto.jpg" alt="Naruto Uzumaki">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Naruto Uzumaki</h3>
+          <p class="character-description">The Nine-Tails Jinchūriki who, through determination and courage, grows into the hero of the Hidden Leaf and fulfills his dream of becoming Hokage.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="sasuke.jpg" alt="Sasuke Uchiha">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Sasuke Uchiha</h3>
+          <p class="character-description">Last survivor of the Uchiha clan massacre. Seeks power to avenge his family and later redemption for his dark path.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="sakura.jpg" alt="Sakura Haruno">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Sakura Haruno</h3>
+          <p class="character-description">Talented medical ninja and member of Team 7. Student of Tsunade with incredible strength and healing abilities.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="kakashi.jpg" alt="Kakashi Hatake">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Kakashi Hatake</h3>
+          <p class="character-description">The Copy Ninja and Sixth Hokage. Former ANBU captain who leads Team 7 and possesses the Sharingan.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- All Characters A-Z -->
+  <section class="characters-section">
+    <h2 class="section-title">All Characters</h2>
+    <div class="cards-grid">
+      
+      <!-- A -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="thirdraikage.jpg" alt="A (Third Raikage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">A (Third Raikage)</h3>
+          <p class="character-description">The strongest Raikage in history, known for his incredible taijutsu and Lightning Release armor. Died protecting his village.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="fourthraikage.jpg" alt="A (Fourth Raikage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">A (Fourth Raikage)</h3>
+          <p class="character-description">Leader of the Hidden Cloud Village known for his incredible speed and Lightning Release chakra mode. Killer B's adoptive brother.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="abiru.webp" alt="Abiru">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Abiru</h3>
+          <p class="character-description">A shinobi from the Hidden Rock Village who participated in various missions during the ninja wars.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Agari.webp" alt="Agari Kaisen">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Agari Kaisen</h3>
+          <p class="character-description">A skilled ninja known for his tactical abilities and service to his village during wartime.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="akamaru.jpg" alt="Akamaru">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Akamaru</h3>
+          <p class="character-description">Kiba Inuzuka's loyal canine companion. A ninken who fights alongside his partner using combination techniques.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Akatsuchi.webp" alt="Akatsuchi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Akatsuchi</h3>
+          <p class="character-description">A large shinobi from Iwagakure and bodyguard to the Third Tsuchikage Onoki. Master of Earth Release techniques.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Amachi.webp" alt="Amachi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Amachi</h3>
+          <p class="character-description">A former ninja turned scientist who conducted forbidden experiments on sea creatures and chakra enhancement.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="anko.jpg" alt="Anko Mitarashi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Anko Mitarashi</h3>
+          <p class="character-description">Former student of Orochimaru and proctor of the Chunin Exams. Bears the Cursed Seal of Heaven on her neck.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Ao.webp" alt="Ao">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Ao</h3>
+          <p class="character-description">Sensor ninja from the Hidden Mist with a transplanted Byakugan. Loyal bodyguard to the Fifth Mizukage.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Arashi.webp" alt="Arashi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Arashi</h3>
+          <p class="character-description">A skilled shinobi known for his wind-based techniques and service during the Great Ninja Wars.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Araya.webp" alt="Araya">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Araya</h3>
+          <p class="character-description">A Sand Village ninja specializing in puppet techniques and desert warfare tactics.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="asuma.jpg" alt="Asuma Sarutobi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Asuma Sarutobi</h3>
+          <p class="character-description">Son of the Third Hokage and sensei to Team 10. Uses chakra blades and has Wind Release nature. Father of Mirai.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="ayame.jpg" alt="Ayame">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Ayame</h3>
+          <p class="character-description">Daughter of Teuchi and waitress at Ichiraku Ramen. She is kind, cheerful, and always treats Naruto warmly as a valued customer and friend.</p>
+        </div>
+      </div>
+
+      <!-- B -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Baki.webp" alt="Baki">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Baki</h3>
+          <p class="character-description">Jonin from the Hidden Sand Village and former sensei to Gaara, Temari, and Kankuro. Wind Release specialist.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Baiu.webp" alt="Baiu">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Baiu</h3>
+          <p class="character-description">A shinobi known for his lightning-based techniques and participation in various village missions.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Biwako_Sarutobi.webp" alt="Biwako Sarutobi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Biwako Sarutobi</h3>
+          <p class="character-description">Wife of the Third Hokage Hiruzen and skilled medical ninja who assisted in Naruto's birth.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Black_Zetsu.webp" alt="Black Zetsu">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Black Zetsu</h3>
+          <p class="character-description">Manifestation of Kaguya Otsutsuki's will, manipulating events for centuries to revive his creator.</p>
+        </div>
+      </div>
+
+      <!-- C -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Shee.webp" alt="C (Shi)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">C (Shi)</h3>
+          <p class="character-description">A Cloud Village ninja and assistant to the Fourth Raikage, specializing in sensory techniques and intelligence.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Chiyo.webp" alt="Chiyo">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Chiyo</h3>
+          <p class="character-description">Legendary puppet master and medical ninja from the Sand Village. Grandmother of Sasori and creator of many puppets.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Chojuro.webp" alt="Chojuro">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Chojuro</h3>
+          <p class="character-description">Sixth Mizukage and one of the Seven Ninja Swordsmen. Wields the twin swords Hiramekarei with great skill.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Choji_Akimichi.webp" alt="Choji Akimichi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Choji Akimichi</h3>
+          <p class="character-description">Kind-hearted member of the Akimichi clan with body expansion techniques. Values friendship above all else.</p>
+        </div>
+      </div>
+
+      <!-- D -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Darui.jpg" alt="Darui">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Darui</h3>
+          <p class="character-description">Fifth Raikage and former bodyguard to the Fourth Raikage. Master of Lightning and Water Release techniques.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Deidara.webp" alt="Deidara">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Deidara</h3>
+          <p class="character-description">Artist-ninja from Iwagakure who considers explosions as art. Uses clay infused with chakra to create explosive sculptures.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Dosu_Kinuta.webp" alt="Dosu Kinuta">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Dosu Kinuta</h3>
+          <p class="character-description">Sound ninja who uses sound-based attacks through his Melody Arm device. Participated in the Chunin Exams.</p>
+        </div>
+      </div>
+
+      <!-- E -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="ebisu.jpg" alt="Ebisu">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Ebisu</h3>
+          <p class="character-description">Elite tutor known as the Closet Pervert. Specializes in training young ninja from prestigious clans.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="ebizo.jpg" alt="Ebizo">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Ebizo</h3>
+          <p class="character-description">Elder of the Hidden Sand Village and brother to Chiyo. Skilled in puppet techniques and village politics.</p>
+        </div>
+      </div>
+
+      <!-- F -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="fu.jpg" alt="Fū">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Fū (Seven-Tails Jinchuriki)</h3>
+          <p class="character-description">Cheerful ninja from Takigakure and jinchuriki of the Seven-Tails. Can fly using her tailed beast's abilities.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="fugaku.jpg" alt="Fugaku Uchiha">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Fugaku Uchiha</h3>
+          <p class="character-description">Former head of the Uchiha clan and father to Itachi and Sasuke. Possessed the Mangekyo Sharingan.</p>
+        </div>
+      </div>
+
+      <!-- G -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="gaara.jpg" alt="Gaara">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Gaara</h3>
+          <p class="character-description">Fifth Kazekage and former One-Tail Jinchuriki. Once feared as a monster, he became a beloved leader through Naruto's influence.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="genggetsu.jpg" alt="Gengetsu Hozuki">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Gengetsu Hozuki (Second Mizukage)</h3>
+          <p class="character-description">Second leader of the Hidden Mist Village known for his water techniques and rivalry with the Second Tsuchikage.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="ginkaku.jpg" alt="Ginkaku">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Ginkaku</h3>
+          <p class="character-description">One of the Gold and Silver Brothers from the Cloud Village who ate Nine-Tails chakra and gained its power.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="guren.jpg" alt="Guren">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Guren</h3>
+          <p class="character-description">Former follower of Orochimaru with the unique Crystal Release kekkei genkai. Becomes protective of the boy Yukimaru.</p>
+        </div>
+      </div>
+
+      <!-- H -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="haku.jpg" alt="Haku">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Haku</h3>
+          <p class="character-description">Zabuza's loyal companion with the rare Ice Release kekkei genkai. Lives only to serve his master's dreams.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="hamura.jpg" alt="Hamura Otsutsuki">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Hamura Otsutsuki</h3>
+          <p class="character-description">Younger son of Kaguya Otsutsuki and ancestor of the Hyuga clan. Helped seal the Ten-Tails with his brother.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="han.jpg" alt="Han">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Han (Five-Tails Jinchuriki)</h3>
+          <p class="character-description">Jinchuriki of the Five-Tails from Iwagakure. Wears steam-powered armor and uses boil-based techniques.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="hanabi.jpg" alt="Hanabi Hyuga">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Hanabi Hyuga</h3>
+          <p class="character-description">Hinata's younger sister and heir to the Hyuga clan. Talented user of the Byakugan and Gentle Fist style.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="hanzo.jpg" alt="Hanzo of the Salamander">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Hanzo of the Salamander</h3>
+          <p class="character-description">Legendary leader of the Hidden Rain Village who gave the Sannin their title. Known for his poisonous salamander.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="hashirama.jpg" alt="Hashirama Senju (First Hokage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Hashirama Senju (First Hokage)</h3>
+          <p class="character-description">The God of Shinobi who founded Konoha with Madara. Master of Wood Release and the most powerful ninja of his era.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="hayate.jpg" alt="Hayate Gekko">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Hayate Gekko</h3>
+          <p class="character-description">Sickly proctor of the Chunin Exams preliminary rounds. Master of the Moonlight sword technique.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="hidan.jpg" alt="Hidan">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Hidan</h3>
+          <p class="character-description">Immortal Akatsuki member who worships the god Jashin. Uses a ritual scythe and blood-based curse techniques.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src= "hiyashi.jpg" alt="Hiashi Hyuga">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Hiashi Hyuga</h3>
+          <p class="character-description">Head of the Hyuga clan and father to Hinata and Hanabi. Master of the Byakugan and Gentle Fist techniques.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="hiruzen.jpg" alt="Hiruzen Sarutobi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Hiruzen Sarutobi (Third Hokage)</h3>
+          <p class="character-description">The Professor who knew every jutsu in Konoha. Naruto's father figure and mentor to the Legendary Sannin.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="hizashi.jpg" alt="Hizashi Hyuga">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Hizashi Hyuga</h3>
+          <p class="character-description">Hiashi's twin brother from the branch family of the Hyuga clan. Neji's father who died to protect the main family.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="homura.jpg" alt="Homura Mitokado">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Homura Mitokado</h3>
+          <p class="character-description">Elder advisor of Konoha and former teammate of the Third Hokage. Part of the village council.</p>
+        </div>
+      </div>
+
+      <!-- I -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="ibiki.jpg" alt="Ibiki Morino">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Ibiki Morino</h3>
+          <p class="character-description">Head of Konoha's Torture and Interrogation Force. Proctor of the written portion of the Chunin Exams.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="ino.jpg" alt="Ino Yamanaka">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Ino Yamanaka</h3>
+          <p class="character-description">Mind-transfer specialist from the Yamanaka clan. Skilled in reconnaissance and mental invasion techniques.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="inoichi.jpg" alt="Inoichi Yamanaka">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Inoichi Yamanaka</h3>
+          <p class="character-description">Head of the Yamanaka clan and Ino's father. Expert in mind-reading and interrogation techniques.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="iruka.jpg" alt="Iruka Umino">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Iruka Umino</h3>
+          <p class="character-description">Academy instructor and Naruto's first father figure. Lost his parents to the Nine-Tails attack but still cared for Naruto.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="itachi.jpg" alt="Itachi Uchiha">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Itachi Uchiha</h3>
+          <p class="character-description">Sasuke's older brother who massacred the Uchiha clan to prevent a civil war. A genius ninja who sacrificed everything for peace.</p>
+        </div>
+      </div>
+
+      <!-- J -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="jinin.jpg" alt="Jinin Akebino">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Jinin Akebino</h3>
+          <p class="character-description">One of the Seven Ninja Swordsmen of the Mist who wielded the explosive blade Shibuki.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="jiraiya.jpg" alt="Jiraiya">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Jiraiya</h3>
+          <p class="character-description">The Toad Sage and one of the Legendary Sannin. Naruto's mentor and author of the Icha Icha series.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="jugo.jpg" alt="Jugo">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Jugo</h3>
+          <p class="character-description">Member of Sasuke's team Taka with the ability to absorb natural energy. Source of the Cursed Seal power.</p>
+        </div>
+      </div>
+
+      <!-- K -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="kabuto.jpg" alt="Kabuto Yakushi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Kabuto Yakushi</h3>
+          <p class="character-description">Former spy and Orochimaru's right hand who later becomes a sage. Master of medical ninjutsu and Edo Tensei.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="kankuro.jpg" alt="Kankuro">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Kankuro</h3>
+          <p class="character-description">Puppet master ninja and Gaara's brother. Uses chakra strings to control deadly puppets in combat.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="karui.jpg" alt="Karui">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Karui</h3>
+          <p class="character-description">Hot-tempered kunoichi from the Hidden Cloud Village and teammate of Omoi. Later marries Choji Akimichi.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="karin.jpg" alt="Karin">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Karin</h3>
+          <p class="character-description">Member of Sasuke's team Taka with powerful sensory abilities and healing powers through chakra absorption.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="kiba.jpg" alt="Kiba Inuzuka">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Kiba Inuzuka</h3>
+          <p class="character-description">Beast-like ninja who fights alongside his canine companion Akamaru using combination attacks and enhanced senses.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="killerbee.jpg" alt="Killer B">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Killer B</h3>
+          <p class="character-description">Eight-Tails Jinchuriki and rap-loving ninja from the Hidden Cloud. Perfect Jinchuriki who befriends his tailed beast.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="kimimaro.jpg" alt="Kimimaro">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Kimimaro</h3>
+          <p class="character-description">Last member of the Kaguya clan with the bone-manipulating kekkei genkai. Orochimaru's most loyal follower.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="kisame.jpg" alt="Kisame Hoshigaki">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Kisame Hoshigaki</h3>
+          <p class="character-description">The Monster of the Hidden Mist and Itachi's partner. Wields the legendary sword Samehada and has massive chakra reserves.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="konan.jpg" alt="Konan">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Konan</h3>
+          <p class="character-description">The Angel of Amegakure and only female member of the original Akatsuki. Uses paper-based ninjutsu techniques.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="konohamaru.jpg" alt="Konohamaru Sarutobi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Konohamaru Sarutobi</h3>
+          <p class="character-description">Grandson of the Third Hokage who looks up to Naruto as his rival and mentor. Later becomes a jonin sensei.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="kurenai.jpg" alt="Kurenai Yuhi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Kurenai Yuhi</h3>
+          <p class="character-description">Genjutsu specialist and sensei to Team 8. Mother of Mirai Sarutobi and former lover of Asuma.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="kushina.jpg" alt="Kushina Uzumaki">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Kushina Uzumaki</h3>
+          <p class="character-description">Former Nine-Tails Jinchuriki and Naruto's mother. Known as the Red Hot-Blooded Habanero for her fiery personality.</p>
+        </div>
+      </div>
+
+      <!-- M -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="madara.jpg" alt="Madara Uchiha">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Madara Uchiha</h3>
+          <p class="character-description">Legendary Uchiha leader and co-founder of Konoha. The main antagonist who seeks to cast the world in an eternal genjutsu.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Mangetsu.jpg" alt="Mangetsu Hozuki">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Mangetsu Hozuki</h3>
+          <p class="character-description">Suigetsu's older brother and member of the Seven Ninja Swordsmen. Could wield all seven swords of the Mist.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Mei.jpg" alt="Mei Terumi (Fifth Mizukage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Mei Terumi (Fifth Mizukage)</h3>
+          <p class="character-description">Leader of the Hidden Mist Village with unique Lava and Boil Release abilities. Helped end the Bloody Mist era.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Mifune.jpg" alt="Mifune">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Mifune</h3>
+          <p class="character-description">General of the Land of Iron and leader of the samurai. Neutral mediator who survived an encounter with Hanzo.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Mikoto.jpg" alt="Mikoto Uchiha">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Mikoto Uchiha</h3>
+          <p class="character-description">Mother of Itachi and Sasuke, wife of Fugaku. A kind woman who was killed during the Uchiha massacre.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Minato.jpg" alt="Minato Namikaze (Fourth Hokage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Minato Namikaze (Fourth Hokage)</h3>
+          <p class="character-description">The Yellow Flash of Konoha and Naruto's father. Master of the Flying Thunder God technique and hero of the Third Great Ninja War.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="moegi.jpg" alt="Moegi Kazamatsuri">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Moegi Kazamatsuri</h3>
+          <p class="character-description">Former member of the Konohamaru Corps who later becomes a jonin sensei. Develops Wood Release abilities.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Mu.jpg" alt="Mu (Second Tsuchikage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Mu (Second Tsuchikage)</h3>
+          <p class="character-description">Second leader of Iwagakure known for his Particle Style kekkei genkai and ability to become invisible.</p>
+        </div>
+      </div>
+
+      <!-- N -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Nagato.jpg" alt="Nagato (Pain)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Nagato (Pain)</h3>
+          <p class="character-description">Leader of the Akatsuki who controls six bodies through the Rinnegan. Seeks peace through understanding pain.</p>
+        </div>
+      </div>
+
+     
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Nawaki.jpg" alt="Nawaki Senju">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Nawaki Senju</h3>
+          <p class="character-description">Tsunade's younger brother who dreamed of becoming Hokage. Died young during the Second Great Ninja War.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Neji.jpg" alt="Neji Hyuga">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Neji Hyuga</h3>
+          <p class="character-description">Hyuga clan prodigy who overcame the fate of the branch family. Master of the Byakugan and Gentle Fist fighting style.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="NiiYugito.jpg" alt="Nii Yugito">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Nii Yugito (Two-Tails Jinchuriki)</h3>
+          <p class="character-description">Jonin from the Hidden Cloud Village and jinchuriki of the Two-Tails cat demon, Matatabi.</p>
+        </div>
+      </div>
+
+      <!-- O -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="obito.jpg" alt="Obito Uchiha">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Obito Uchiha</h3>
+          <p class="character-description">Kakashi's former teammate who became the masked man manipulating events from the shadows. Seeks to create a perfect world.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Onoki.jpg" alt="Onoki (Third Tsuchikage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Onoki (Third Tsuchikage)</h3>
+          <p class="character-description">The Fence Sitter and leader of Iwagakure. Master of Particle Style and one of the longest-serving Kage.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Orochimaru.jpg" alt="Orochimaru">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Orochimaru</h3>
+          <p class="character-description">One of the Legendary Sannin who seeks immortality and forbidden knowledge. Master of snake techniques and body modification.</p>
+        </div>
+      </div>
+
+      <!-- P -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Pakura.jpg" alt="Pakura">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Pakura</h3>
+          <p class="character-description">Hero of the Hidden Sand Village with the unique Scorch Release kekkei genkai. Betrayed by her own village.</p>
+        </div>
+      </div>
+
+      <!-- R -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Rasa.jpg" alt="Rasa (Fourth Kazekage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Rasa (Fourth Kazekage)</h3>
+          <p class="character-description">Gaara's father and former leader of the Sand Village. Master of Gold Dust techniques, killed by Orochimaru.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Rin.jpg" alt="Rin Nohara">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Rin Nohara</h3>
+          <p class="character-description">Medical ninja and teammate of Kakashi and Obito. Her death became Obito's motivation for his villainous path.</p>
+        </div>
+      </div>
+
+           <div class="character-card">
+        <div class="card-image">
+          <img src="rocklee.jpg" alt="Rock Lee">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Rock Lee</h3>
+          <p class="character-description">Taijutsu specialist who can't use ninjutsu or genjutsu. Proves that hard work can overcome natural talent through dedication.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Roshi.jpg" alt="Roshi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Roshi (Four-Tails Jinchuriki)</h3>
+          <p class="character-description">Former monk from Iwagakure and jinchuriki of the Four-Tails. Uses Lava Release techniques in combat.</p>
+        </div>
+      </div>
+
+      <!-- S -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Sai.jpg" alt="Sai">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Sai</h3>
+          <p class="character-description">Former Root member who replaces Sasuke in Team 7. Uses ink-based ninjutsu and struggles to understand emotions.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Sakon & Ukon.jpg" alt="Sakon & Ukon">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Sakon & Ukon</h3>
+          <p class="character-description">Twin brothers from the Sound Four who can merge their bodies together. Members of Orochimaru's elite guard.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Samui.jpg" alt="Samui">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Samui</h3>
+          <p class="character-description">Cool-headed kunoichi from the Hidden Cloud Village and leader of her team. Known for her calm demeanor.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Sasori.jpg" alt="Sasori">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Sasori</h3>
+          <p class="character-description">Red Sand Scorpion of Akatsuki who turned himself into a puppet. Grandson of Chiyo and master puppeteer.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Shibi.jpg" alt="Shibi Aburame">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Shibi Aburame</h3>
+          <p class="character-description">Head of the Aburame clan and Shino's father. Master of insect-based techniques and surveillance.</p>
+        </div>
+      </div>
+       <div class="character-card">
+        <div class="card-image">
+          <img src="Shikaku Nara.jpg" alt="Shikaku Nara">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Shikaku Nara</h3>
+          <p class="character-description">Head of the Nara clan and Shikamaru's father. Chief strategist of Konoha with incredible tactical intelligence.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Shikamaru.jpg" alt="Shikamaru Nara">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Shikamaru Nara</h3>
+          <p class="character-description">Genius strategist of the Nara clan with shadow manipulation abilities. Lazy but incredibly intelligent tactical ninja.</p>
+        </div>
+      </div>
+
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Shino.jpg" alt="Shino Aburame">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Shino Aburame</h3>
+          <p class="character-description">Quiet member of Team 8 who uses insects living in his body for tracking and combat. Logical and analytical ninja.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Shisui.jpg" alt="Shisui Uchiha">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Shisui Uchiha</h3>
+          <p class="character-description">Shisui the Teleporter, known for his Body Flicker Technique. Itachi's best friend who died to prevent civil war.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Suigetsu.jpg" alt="Suigetsu Hozuki">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Suigetsu Hozuki</h3>
+          <p class="character-description">Member of Team Taka with the ability to liquefy his body. Dreams of collecting all the swords of the Seven Swordsmen.</p>
+        </div>
+      </div>
+
+      <!-- T -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Tayuya.jpg" alt="Tayuya">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Tayuya</h3>
+          <p class="character-description">Only female member of the Sound Four who uses genjutsu through her flute music. Foul-mouthed and aggressive fighter.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Temari.jpg" alt="Temari">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Temari</h3>
+          <p class="character-description">Gaara's older sister and wind-style specialist. Strategic ninja who later becomes Shikamaru's wife.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="TenTen.jpg" alt="TenTen">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">TenTen</h3>
+          <p class="character-description">Weapons specialist from Team Guy who can summon and manipulate various ninja tools with perfect accuracy.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="teuchi.jpg" alt="Teuchi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Teuchi</h3>
+          <p class="character-description">Owner of Ichiraku Ramen and father of Ayame. A warm and supportive man who always welcomes Naruto and treats him like family..</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Tobirama.jpg" alt="Tobirama Senju">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Tobirama Senju (Second Hokage)</h3>
+          <p class="character-description">Hashirama's brother and creator of many forbidden jutsu. Known for his Water Release mastery and strategic mind.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Tonbee.webp" alt="Tonbei">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Tonbei</h3>
+          <p class="character-description">A skilled ninja known for his earth-based techniques and tactical support during various missions.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Torune.jpg" alt="Torune Aburame">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Torune Aburame</h3>
+          <p class="character-description">Member of Root and the Aburame clan who uses poisonous nano-sized insects. Shino's adopted brother.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Tsunade.jpg" alt="Tsunade Senju (Fifth Hokage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Tsunade Senju (Fifth Hokage)</h3>
+          <p class="character-description">The Legendary Sannin known as the world's greatest medical ninja. Granddaughter of the First Hokage with incredible strength.</p>
+        </div>
+      </div>
+
+      <!-- U -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Udon.jpg" alt="Udon Ise">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Udon Ise</h3>
+          <p class="character-description">Former member of the Konohamaru Corps who later becomes a jonin sensei specializing in Water Release.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Utakata.jpg" alt="utakata (six-tails jinchuriki)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Utakata (Six-Tails Jinchuriki)</h3>
+          <p class="character-description">Former ninja of Kirigakure and jinchuriki of the Six-Tails. Uses bubble-based ninjutsu techniques in combat.</p>
+        </div>
+      </div>
+
+      <!-- W -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="White Zetsu.jpg" alt="White Zetsu">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">White Zetsu</h3>
+          <p class="character-description">Artificial beings created from the First Hokage's cells. Used as soldiers and spies by Madara and Obito.</p>
+        </div>
+      </div>
+
+      <!-- Y -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="yahiko.jpg" alt="Yahiko">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Yahiko</h3>
+          <p class="character-description">Leader of the original Akatsuki who dreamed of peace. His body becomes the Deva Path of Pain after his death.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Yagura.jpg" alt="yagura karatachi (fourth mizukage)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Yagura Karatachi (Fourth Mizukage)</h3>
+          <p class="character-description">Former Mizukage and Three-Tails Jinchuriki who was controlled by Obito. Created the Bloody Mist era.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="yakumo.jpg" alt="Yakumo Kurama">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Yakumo Kurama</h3>
+          <p class="character-description">Member of the Kurama clan with powerful genjutsu abilities that can affect reality through her artwork.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="yamato.jpg" alt="Yamato (Tenzo)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Yamato (Tenzo)</h3>
+          <p class="character-description">Former ANBU captain with Wood Release abilities gained through experiments. Temporary replacement for Kakashi in Team 7.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Yashamaru.jpg" alt="Yashamaru">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Yashamaru</h3>
+          <p class="character-description">Gaara's uncle and only source of love before his death. His betrayal shaped Gaara's hatred toward humanity.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Yugao.jpg" alt="Yugao Uzuki">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Yugao Uzuki</h3>
+          <p class="character-description">ANBU member and former lover of Hayate Gekko. Skilled in kenjutsu and stealth operations.</p>
+        </div>
+      </div>
+
+      <!-- Z -->
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Zabuza.jpg" alt="Zabuza Momochi">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Zabuza Momochi</h3>
+          <p class="character-description">The Demon of the Hidden Mist and one of the Seven Ninja Swordsmen. Wields the executioner's blade Kubikiribocho.</p>
+        </div>
+      </div>
+
+      <div class="character-card">
+        <div class="card-image">
+          <img src="Zetsu(Black & White).jpg" alt="Zetsu (Black & White)">
+        </div>
+        <div class="card-content">
+          <h3 class="character-name">Zetsu (Black & White)</h3>
+          <p class="character-description">Mysterious Akatsuki member with two personalities. Intelligence gatherer and manipulator of major events.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+  <footer class="footer">
+    <p>&copy; 2025 This website is for project purposes only.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/19cEEx5z1D/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/theycallme.maxx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/esplago_ivory/communities/explore" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script>
+// Complete character lore database for ALL characters
+const characterLore = {
+  // Main Characters
+  "naruto uzumaki": "Born as the jinchūriki of the Nine-Tails, Naruto Uzumaki was shunned by the Hidden Leaf Village from birth. His parents, Minato Namikaze (Fourth Hokage) and Kushina Uzumaki, died sealing the Nine-Tails within him to protect the village. Growing up alone and despised, Naruto developed a mischievous personality to gain attention. Despite the hardships, he never gave up on his dream of becoming Hokage to gain acknowledgment from everyone. Through his unwavering determination, he formed bonds with his teammates Sasuke and Sakura, learned from his sensei Kakashi, and eventually befriended the Nine-Tails itself. His journey from a lonely outcast to the village's greatest hero exemplifies the power of never giving up and believing in oneself.",
+
+  "sasuke uchiha": "Sasuke Uchiha witnessed the massacre of his entire clan at the hands of his older brother Itachi when he was just seven years old. This traumatic event shaped his entire worldview, driving him to seek power at any cost to avenge his family. Initially a prodigy and the top student in his class, Sasuke's obsession with revenge led him down a dark path. He eventually left the Hidden Leaf Village to train under Orochimaru, one of the legendary Sannin, in pursuit of the power needed to kill Itachi. After learning the truth about Itachi's sacrifice and the village's role in the Uchiha massacre, Sasuke's hatred shifted toward the village itself. It was only through his final battle with Naruto and the revelation of true bonds that he found redemption and chose to protect the village from the shadows.",
+
+  "sakura haruno": "Sakura Haruno began her ninja career with a crush on Sasuke and rivalry with Naruto, but evolved into one of the most skilled medical ninjas in the world. Initially lacking in combat abilities compared to her teammates, she was often protected rather than fighting alongside them. This changed when she became the apprentice of Tsunade, the Fifth Hokage and greatest medical ninja alive. Under Tsunade's tutelage, Sakura developed incredible physical strength and advanced medical techniques. She learned to store chakra in her forehead seal, allowing her to use the Creation Rebirth technique. Her character development from a love-struck girl to a powerful kunoichi who could stand as an equal to her legendary teammates represents growth through dedication and hard work rather than inherited power.",
+
+  "kakashi hatake": "Known as the Copy Ninja, Kakashi Hatake's life has been marked by loss and the burden of survival. His father, Sakumo Hatake, committed suicide after being shamed for choosing his comrades over a mission, teaching Kakashi early on about the conflicts between duty and loyalty. During the Third Great Ninja War, Kakashi received his Sharingan from his dying teammate Obito Uchiha, along with a promise to protect their teammate Rin. However, he was later forced to kill Rin to prevent her from being used to destroy the Hidden Leaf Village. These traumatic experiences led him to become emotionally distant and strictly follow rules. As the sensei of Team 7, Kakashi learned to balance the lessons his father taught him with the ninja code, ultimately becoming the Sixth Hokage and helping to usher in an era of peace.",
+
+  // A Characters
+  "a (third raikage)": "The Third Raikage was renowned as the strongest Raikage in the history of the Hidden Cloud Village. His physical prowess was legendary, capable of fighting the Eight-Tails to a standstill and leaving permanent scars on it using only his bare hands. He possessed the Lightning Release Armor technique, which granted him incredible speed and defensive capabilities. His most famous technique was the Hell Stab, a devastating piercing attack using concentrated lightning chakra. The Third Raikage met his end during the Third Great Ninja War, where he single-handedly fought 10,000 enemy shinobi for three days and nights to allow his comrades to escape. His sacrifice and unwavering dedication to protecting his village cemented his legacy as one of the greatest Kage in history.",
+
+  "a (fourth raikage)": "The Fourth Raikage, known simply as A, inherited his predecessor's incredible physical abilities and Lightning Release techniques. He formed a legendary partnership with Killer B, whom he adopted as a brother, creating devastating combination attacks. A's personality was characterized by his quick temper and tendency to act first and think later, often destroying furniture and walls when angry. Despite his aggressive nature, he deeply cared for his village and brother. During the Fourth Great Ninja War, he initially opposed Naruto, believing jinchūriki should be kept away from the battlefield. However, after witnessing Naruto's determination and power, he came to respect him. His character represents the evolution from old-school thinking to accepting new possibilities for peace.",
+
+  "abiru": "Abiru was a skilled shinobi from Iwagakure who served during the tumultuous period of the Great Ninja Wars. Known for his earth-style techniques and tactical mind, he participated in numerous missions that helped shape the outcome of conflicts between the hidden villages. His dedication to his village and comrades made him a respected figure among his peers, though his story remains largely untold in the greater narrative of the ninja world.",
+
+  "agari kaisen": "Agari Kaisen was a ninja known for his exceptional tactical abilities and unwavering loyalty to his village. During wartime, he served as both a frontline combatant and strategic advisor, helping to coordinate complex missions that required both strength and intelligence. His ability to remain calm under pressure and make quick decisions in battle made him an invaluable asset to his team and village.",
+
+  "akamaru": "Akamaru is Kiba Inuzuka's faithful canine companion and fighting partner. From the Inuzuka clan's tradition of pairing with ninken, Akamaru has been with Kiba since puppyhood. Unlike ordinary dogs, Akamaru can use chakra and perform various ninja techniques alongside his partner. He can transform to look like Kiba, allowing them to perform their signature Man Beast Clone technique. Akamaru's loyalty and bond with Kiba goes beyond that of pet and owner - they are true partners who understand each other perfectly in battle. Over the years, Akamaru has grown from a small puppy who rode on Kiba's head to a massive dog capable of carrying multiple people and fighting powerful enemies.",
+
+  "akatsuchi": "Akatsuchi is a loyal shinobi from Iwagakure who served as the bodyguard and trusted aide to the Third Tsuchikage, Ōnoki. Known for his large stature and mastery of Earth Release techniques, Akatsuchi was often seen accompanying Ōnoki to important meetings and conferences between the hidden villages. His unwavering loyalty to his village and leader, combined with his formidable combat abilities, made him a key figure in Iwagakure's military structure. Despite his intimidating appearance, Akatsuchi possessed a level-headed personality and served as a voice of reason during tense political situations.",
+
+  "amachi": "Amachi was once a respected ninja who later became consumed by his scientific pursuits and forbidden experiments. After leaving his village, he established a laboratory where he conducted illegal research on sea creatures and chakra enhancement techniques. His experiments were aimed at creating artificial means of enhancing ninja abilities, but his methods were considered unethical and dangerous. Amachi's fall from a honored shinobi to a rogue scientist represents the dark path that can result from an obsession with power and knowledge without moral boundaries.",
+
+  "anko mitarashi": "Anko Mitarashi was once the student of the legendary Sannin Orochimaru before his defection from the Hidden Leaf Village. When Orochimaru began his forbidden experiments, he used Anko as a test subject for the Cursed Seal of Heaven, marking her neck with the curse mark. When Orochimaru abandoned the village, Anko was left behind, bearing both physical and emotional scars from her time as his student. Despite this traumatic past, she chose to remain loyal to the Hidden Leaf and became a Special Jōnin, eventually serving as a proctor for the Chūnin Exams. Her experience with Orochimaru's curse mark and intimate knowledge of his techniques made her valuable in combating his later schemes, though she always carried the burden of her connection to one of the village's greatest traitors.",
+
+  "ao": "Ao was a veteran shinobi from Kirigakure known for his exceptional sensory abilities and his transplanted Byakugan eye, which he acquired during a battle with a Hyūga clan member. This stolen dōjutsu granted him incredible perception abilities, making him one of the most effective reconnaissance specialists in the ninja world. Ao served as a loyal bodyguard to the Fifth Mizukage, Mei Terumī, and was instrumental in the village's recovery from the dark period of the 'Bloody Mist.' His pragmatic approach to ninja life and unwavering dedication to his village made him a respected figure, despite the controversial nature of his transplanted eye.",
+
+  "arashi": "Arashi was a skilled shinobi renowned for his mastery of wind-based techniques and his service during the Great Ninja Wars. His ability to manipulate air currents and create devastating wind attacks made him a formidable opponent on the battlefield. Arashi's tactical expertise and leadership skills earned him respect among his peers, and he played crucial roles in several key battles that helped shape the outcome of conflicts between the hidden villages.",
+
+  "araya": "Araya was a puppet master from Sunagakure who specialized in desert warfare and puppet techniques. Following in the tradition of the Sand Village's puppet arts, Araya developed unique combat styles that took advantage of the harsh desert environment. His puppets were specifically designed for desert conditions, incorporating sand-based attacks and defensive capabilities that made him a dangerous opponent in his home territory. His expertise in guerrilla warfare tactics made him valuable in protecting the Sand Village's borders.",
+
+  "asuma sarutobi": "Asuma Sarutobi, son of the Third Hokage Hiruzen Sarutobi, initially struggled with living in his father's shadow. In his youth, he had disagreements with his father's policies and left the village to serve as one of the Twelve Guardian Ninja protecting the Fire Daimyō. Eventually, he returned to the Hidden Leaf and became the jōnin leader of Team 10, consisting of Shikamaru Nara, Chōji Akimichi, and Ino Yamanaka. Asuma was known for his Wind Release techniques and his unique fighting style using chakra-enhanced trench knives. He had a romantic relationship with Kurenai Yūhi, and she was pregnant with their child when he was killed by the Akatsuki member Hidan. His death profoundly impacted his students, particularly Shikamaru, who sought to avenge their beloved sensei.",
+
+  "ayame": "Ayame is the kind-hearted daughter of Teuchi, the owner of Ichiraku Ramen shop. She has been working at the family restaurant since she was young, helping her father serve customers and manage the business. Ayame has always treated Naruto with warmth and kindness, never showing any of the prejudice that other villagers held against him due to the Nine-Tails sealed within him. To Naruto, Ichiraku Ramen became more than just his favorite food - it was one of the few places where he felt welcomed and accepted. Ayame's genuine care for Naruto, along with her father's, provided him with a sense of belonging during his lonely childhood years. Her consistent kindness represents the ordinary people who choose to see beyond prejudice and treat others with basic human decency.",
+
+  // B Characters
+  "baki": "Baki was a jōnin from Sunagakure who served as the leader of Team Baki, which consisted of Gaara, Temari, and Kankurō. As a Wind Release specialist, Baki was responsible for training the sand siblings and preparing them for the Chūnin Exams in Konohagakure. His role extended beyond just being a teacher; he was also involved in the political machinations of the Sand Village during the invasion of the Leaf Village. Despite participating in the attack on Konoha, Baki later supported the alliance between the Sand and Leaf villages, recognizing the benefits of cooperation over conflict. His experience and wisdom made him a valuable advisor during the village's transition to more peaceful relations with other hidden villages.",
+
+  "baiu": "Baiu was a shinobi known for his lightning-based techniques and his participation in various village missions during times of conflict. His mastery of Lightning Release jutsu made him effective in both offensive and defensive combat situations. Baiu's dedication to his duties and his ability to work effectively as part of a team made him a reliable asset during military operations and peacekeeping missions.",
+
+  "biwako sarutobi": "Biwako Sarutobi was the wife of the Third Hokage, Hiruzen Sarutobi, and a skilled medical ninja in her own right. She played a crucial role during Kushina Uzumaki's childbirth, serving as the head midwife when Naruto was born. Her medical expertise and calm demeanor made her invaluable during the dangerous process of maintaining the Nine-Tails' seal during childbirth. Tragically, Biwako was killed by the masked man (later revealed to be Obito Uchiha) during his attack on the night of Naruto's birth. Her death was one of the many losses suffered during that tragic event that changed the course of the Hidden Leaf Village's history.",
+
+  "black zetsu": "Black Zetsu is the physical manifestation of Kaguya Ōtsutsuki's will, created by her before she was sealed away by her sons, Hagoromo and Hamura. For over a thousand years, Black Zetsu manipulated events from the shadows with the ultimate goal of reviving his creator. He influenced the course of history by manipulating the Uchiha clan, particularly through the stone tablet that led to conflicts between the Uchiha and Senju clans. Black Zetsu was responsible for corrupting Madara Uchiha's interpretation of the Sage of Six Paths' teachings and orchestrating the cycles of hatred that plagued the ninja world. His patient, millennia-spanning plan ultimately succeeded in the Fourth Great Ninja War when he betrayed Madara and facilitated Kaguya's resurrection.",
+
+  // C Characters
+  "c (shi)": "C, also known as Shī, was a shinobi from Kumogakure who served as an assistant and advisor to the Fourth Raikage. Specializing in sensory techniques and intelligence gathering, C was often responsible for providing the Raikage with crucial information during missions and political meetings. His analytical mind and ability to remain calm under pressure made him an invaluable member of the Raikage's inner circle. C's expertise in communication and coordination proved essential during the Fourth Great Ninja War, where he helped manage the complex logistics of the Allied Shinobi Forces.",
+
+  "chiyo": "Chiyo was a legendary puppet master from Sunagakure and one of the most skilled medical ninjas of her generation. As the grandmother of Sasori, who later became a member of the Akatsuki, Chiyo carried the burden of her grandson's transformation into a human puppet. She was responsible for creating many of the puppet techniques that became standard in the Sand Village, including the famous puppet collection that Sasori inherited. Chiyo's medical expertise was legendary; she developed antidotes for various poisons and created life-giving techniques. Her ultimate sacrifice came when she used her One's Own Life Reincarnation technique to revive Gaara after he was killed by the Akatsuki's extraction of Shukaku, giving her own life to save the young Kazekage.",
+
+  "chojuro": "Chōjūrō is the Sixth Mizukage of Kirigakure and one of the Seven Ninja Swordsmen of the Mist, wielding the twin swords Hiramekarei. Initially timid and lacking confidence despite his considerable abilities, Chōjūrō gradually developed into a strong leader capable of guiding his village into a new era of peace. Under the guidance of the Fifth Mizukage Mei Terumī, he learned to overcome his self-doubt and embrace his role as a protector of the Mist Village. His mastery of Hiramekarei allows him to create various weapons from chakra, making him a versatile combatant. As Mizukage, Chōjūrō has worked to completely eliminate the dark legacy of the 'Bloody Mist' era and establish positive relationships with other hidden villages.",
+
+  "choji akimichi": "Chōji Akimichi is a kind-hearted ninja from the Akimichi clan, known for their body expansion techniques and their deep bonds with the Nara and Yamanaka clans through the Ino-Shika-Chō formation. Initially insecure about his weight and eating habits, Chōji's character development centered around gaining confidence in himself and his abilities. His friendship with Shikamaru Nara is one of the strongest bonds in the series, built on mutual understanding and loyalty. Chōji's combat style revolves around his clan's secret techniques, including the ability to convert calories into chakra and expand his body parts for devastating attacks. His gentle nature contrasts with his incredible strength, and he values friendship and food above all else. The word 'fat' is a trigger for him, causing him to enter an enraged state where his combat abilities increase dramatically.",
+
+  // D Characters
+  "darui": "Darui is the Fifth Raikage of Kumogakure, having succeeded A after the Fourth Great Ninja War. Known for his laid-back personality that contrasts sharply with his predecessor's hot-headed nature, Darui possesses unique abilities including Black Lightning and Storm Release techniques. As one of the Raikage's most trusted subordinates, he often served as the voice of reason and was responsible for carrying out important diplomatic missions. His mastery of multiple advanced nature transformations makes him one of the most versatile fighters in the Cloud Village. Despite his relaxed demeanor, Darui is serious about his responsibilities as Raikage and has worked to maintain the strong military tradition of Kumogakure while fostering peaceful relations with other villages.",
+
+  "deidara": "Deidara was a former ninja of Iwagakure who became a member of the criminal organization Akatsuki. Born with mouths in his palms and chest, Deidara possessed the unique ability to create explosive clay sculptures using his Explosive Release kekkei genkai. His artistic philosophy centered around the belief that true art is ephemeral, existing only in the moment of destruction. This led to his signature catchphrase 'Art is an explosion!' Deidara's pride in his art often put him at odds with his partner Sasori, who believed art should be eternal. His techniques ranged from small clay spiders to massive clay dragons, all designed to explode with devastating force. Deidara met his end in a final battle against Sasuke Uchiha, where he turned himself into a living bomb in an attempt to kill his opponent, staying true to his artistic beliefs until the very end.",
+
+  "dosu kinuta": "Dosu Kinuta was a shinobi from Otogakure and member of Team Dosu, participating in the Chūnin Exams under Orochimaru's orders. Armed with a unique sound-based weapon called the Melody Arm, Dosu could manipulate sound waves to disorient opponents and cause internal damage. His team was tasked with killing Sasuke Uchiha during the Forest of Death, but they failed in their mission. Dosu showed more intelligence and leadership than his teammates, often being the voice of reason. He was ultimately killed by Gaara during a solo attempt to prove his strength, demonstrating the brutal reality of the ninja world where ambition often leads to death.",
+
+  // E Characters
+  "ebisu": "Ebisu was a tokubetsu jōnin from Konohagakure known as the 'Closet Pervert' despite his attempts to maintain a professional demeanor. He served as a private tutor for elite ninja, particularly specializing in training members of prominent clans. Ebisu was assigned to train Naruto in chakra control but was knocked out by Naruto's Sexy Technique, leading to Jiraiya taking over Naruto's training instead. Despite his perverted tendencies (which he tried to hide), Ebisu was a competent ninja with strong beliefs about proper ninja conduct and training methods. His dedication to his students and his village made him a respected, if somewhat eccentric, member of Konoha's ninja corps.",
+
+  "ebizo": "Ebizo was Chiyo's younger brother and a respected elder of Sunagakure. Like his sister, he was a master of puppet techniques and served as one of the village's top strategists and advisors. Ebizo played crucial roles in village politics and military planning throughout his long life, helping to guide Sunagakure through various conflicts and political changes. His wisdom and experience made him invaluable during times of crisis, and he often served as a voice of reason in village decisions. After Chiyo's death, Ebizo continued to serve the village, providing guidance to younger generations and helping to maintain the Sand Village's traditions and techniques.",
+
+  // F Characters
+  "fū (seven-tails jinchuriki)": "Fū was the jinchūriki of Chōmei, the Seven-Tails, from Takigakure (Hidden Waterfall Village). Despite being feared and ostracized by her village due to the beast sealed within her, Fū maintained an upbeat and cheerful personality. She dreamed of making friends and being accepted by others, much like Naruto in his early years. Her unique ability allowed her to fly using insect-like wings produced by her bijuu's power. Tragically, Fū was captured by the Akatsuki and had the Seven-Tails extracted from her, resulting in her death. Her story represents another example of the tragic fate that many jinchūriki faced due to others' fear and the Akatsuki's plans.",
+
+  "fugaku uchiha": "Fugaku Uchiha was the leader of the Uchiha clan and father to Itachi and Sasuke Uchiha. As clan head, he was caught between his loyalty to Konoha and his clan's growing dissatisfaction with their treatment by the village leadership. Fugaku possessed the Mangekyō Sharingan but kept this secret, even from his own family. He led the planning for the Uchiha clan's attempted coup d'état against Konoha's government, believing it was the only way to secure his clan's future. When Itachi was forced to choose between his clan and village, Fugaku accepted his fate with dignity, allowing his eldest son to kill him and asking only that he take care of Sasuke. His death marked the end of the Uchiha clan's leadership and their dreams of political power within Konoha.",
+
+  // G Characters
+  "gaara": "Gaara of the Desert was the jinchūriki of the One-Tail Shukaku and the Fifth Kazekage of Sunagakure. Born prematurely due to his father's impatience to create a human weapon, Gaara's mother died giving birth to him, and her brother Yashamaru was assigned to care for him. However, the village feared Gaara's power, and even Yashamaru eventually tried to kill him under orders from the Fourth Kazekage. This betrayal, combined with Shukaku's influence, turned Gaara into a ruthless killer who found meaning only in battle and viewed others as prey. His encounter with Naruto during the Chūnin Exams began his transformation. Seeing someone who shared his pain but chose a different path, Gaara gradually learned to form bonds with others and became a beloved leader of his village. His character arc represents redemption through understanding and the power of human connection to overcome even the deepest trauma.",
+
+  "gengetsu hozuki (second mizukage)": "Gengetsu Hōzuki was the Second Mizukage of Kirigakure, known for his mastery of Water Release techniques and his ability to create mirages. He was a powerful shinobi who led his village during a turbulent period in its history. Gengetsu was known for his rivalry with the Second Tsuchikage Mū, and their conflicts often escalated into full battles. His techniques included the ability to turn his body into an oil-like substance and create illusions that could confuse and misdirect enemies. Gengetsu died in battle against Mū, but both managed to kill each other simultaneously, showing the level of their mutual animosity and power. During the Fourth Great Ninja War, he was resurrected by Kabuto's Edo Tensei technique and forced to fight against the Allied Shinobi Forces.",
+
+  "ginkaku": "Ginkaku was one half of the legendary Gold and Silver Brothers of Kumogakure, along with his brother Kinkaku. The brothers were known for their incredible strength and their possession of legendary tools of the Sage of Six Paths. Ginkaku and his brother were once swallowed by the Nine-Tails but survived by eating the fox's flesh from inside, gaining some of its chakra in the process. This gave them both a partial transformation ability similar to jinchūriki. During a peace treaty signing, the brothers staged a coup attempt that resulted in the death of the Second Hokage Tobirama Senju. Ginkaku wielded the Shichiseiken (Seven Star Sword) and the Kōkinjō (Golden Rope), tools that could capture and seal away an opponent's soul based on their most frequently spoken word.",
+
+  "guren": "Guren was a kunoichi who served under Orochimaru and possessed the unique Crystal Release kekkei genkai. She was completely devoted to Orochimaru and would do anything to gain his recognition and approval. Guren's crystal techniques allowed her to create and manipulate crystalline structures for both offensive and defensive purposes. She could encase enemies in crystal prisons, create crystal weapons, and even form protective barriers. Despite her loyalty to Orochimaru, Guren developed a maternal bond with Yūkimaru, a young boy with the ability to partially control the Three-Tails. This relationship began to change her perspective on what truly mattered in life, showing her a different kind of purpose beyond serving Orochimaru. Her character development explored themes of redemption, maternal love, and finding new meaning in life.",
+
+  // H Characters
+  "haku": "Haku was a rogue ninja from Kirigakure who possessed the rare Ice Release kekkei genkai. Orphaned during the civil wars in the Land of Water, where those with bloodline abilities were feared and persecuted, Haku was eventually found by Zabuza Momochi. Zabuza became the most important person in Haku's life, and Haku devoted himself completely to serving as Zabuza's tool and weapon. Despite his feminine appearance, Haku was male and an incredibly skilled shinobi who could move at tremendous speeds and create ice mirrors to attack from multiple angles simultaneously. His encounter with Team 7, particularly Naruto, challenged his worldview about being merely a tool. Haku's sacrifice to save Zabuza and his final words about finding someone precious to protect had a profound impact on Naruto's understanding of what it means to be truly strong.",
+
+  "hamura otsutsuki": "Hamura Ōtsutsuki was the younger son of Kaguya Ōtsutsuki and the younger brother of Hagoromo Ōtsutsuki (the Sage of Six Paths). Along with his brother, Hamura was born with powerful chakra and unique abilities inherited from their mother. When Kaguya became corrupted by the power of the God Tree and began consuming people with the Infinite Tsukuyomi, Hamura and Hagoromo were forced to fight against their own mother. After a long battle, they managed to seal Kaguya away, with Hagoromo becoming the jinchūriki of the Ten-Tails. Hamura chose to live on the moon to guard the seal containing their mother, becoming the ancestor of the Hyūga clan and other moon-dwelling Ōtsutsuki. His descendants inherited the Byakugan and were tasked with watching over Earth from the moon.",
+
+  "han (five-tails jinchuriki)": "Han was a shinobi from Iwagakure and the jinchūriki of Kokuō, the Five-Tails. Known for his incredible physical strength and his unique Steam Armor technique, Han could generate intense steam from his body to enhance his physical abilities and create a protective barrier around himself. His steam-based techniques made him a formidable opponent in combat, allowing him to move at high speeds and deliver devastating attacks. Like many jinchūriki, Han likely faced discrimination and fear from others due to the beast sealed within him. He was eventually captured by the Akatsuki organization and had the Five-Tails extracted from him, resulting in his death. During the Fourth Great Ninja War, he was resurrected by Kabuto's Edo Tensei technique and controlled by Obito to fight against the Allied Shinobi Forces.",
+
+  "hanabi hyuga": "Hanabi Hyūga is the younger daughter of Hiashi Hyūga and the younger sister of Hinata Hyūga. Despite being younger than Hinata, Hanabi showed more natural talent and aggression in combat, leading their father to consider making her the clan's heiress instead of Hinata. This created some tension between the sisters, though they maintained a caring relationship. Hanabi inherited the traditional Hyūga fighting style and the Byakugan dōjutsu, showing exceptional skill for her age. Her confident and direct personality contrasted with her sister's initially timid nature. After Hinata married Naruto and left the clan, Hanabi eventually became the official heiress of the Hyūga clan, carrying on their traditions and techniques into the next generation.",
+
+  "hanzo of the salamander": "Hanzō was the leader of Amegakure (Hidden Rain Village) and one of the most feared shinobi of his time, earning the title 'Hanzō of the Salamander' due to his partnership with a venomous salamander. His reputation was so fearsome that simply surviving a battle against him was considered an honor, which is how the legendary Sannin (Jiraiya, Tsunade, and Orochimaru) earned their title. Hanzō possessed incredible speed, skill with a kusarigama (chain-sickle), and the ability to use the salamander's poison in combat. Despite his power, Hanzō became paranoid and corrupt over time, fearing that others would surpass him. He was responsible for the death of Yahiko, leader of the original Akatsuki, which led to Nagato's transformation into Pain. Ultimately, Hanzō was killed by Pain as part of his quest for revenge and peace through power.",
+
+  "Hashirama Senju (First Hokage)": "Hashirama Senju was the First Hokage of Konohagakure and the founder of the hidden village system. Known as the 'God of Shinobi' for his incredible power, Hashirama possessed the unique Wood Release kekkei genkai, which allowed him to create and control plant life on a massive scale. His dream was to create a world where children didn't have to die in war, leading him to establish the first hidden village alongside his former rival and best friend, Madara Uchiha. Hashirama's charismatic leadership and immense strength made him a natural choice as Hokage. His cells possess unique properties that can suppress tailed beast chakra and regenerate tissue, making them highly sought after for various experiments. His death marked the end of an era, but his vision of peace through unity continued to influence future generations of ninja.",
+
+  "hayate gekko": "Hayate Gekkō was a tokubetsu jōnin from Konohagakure who served as the proctor for the preliminary rounds of the Chūnin Exams. He was known for his sickly appearance and chronic cough, but despite his frail health, he was a skilled swordsman specializing in kenjutsu. Hayate was in a relationship with fellow ninja Yūgao Uzuki, and they shared a deep bond. His keen observation skills made him an excellent choice for overseeing the preliminary matches, where he could assess each candidate's abilities fairly. Tragically, Hayate was killed by Baki after overhearing plans for the invasion of Konoha during the Chūnin Exams. His death served as one of the early casualties of Orochimaru's plot against the Leaf Village and deeply affected Yūgao, who continued to mourn his loss long after his death.",
+
+  "hidan": "Hidan was an S-rank missing-nin from Yugakure and a member of the criminal organization Akatsuki. He was the immortal, masochistic partner of Kakuzu and a zealot of the evil god Jashin. Hidan's immortality came from his religious practices and devotion to Jashin, making him nearly impossible to kill through conventional means. His signature technique involved consuming his opponent's blood and then injuring himself while connected to them through a ritual circle, causing his opponent to suffer the same injuries. Despite being immortal, Hidan could still feel pain, which he actually enjoyed due to his masochistic nature. He was responsible for the death of Asuma Sarutobi, which led to his eventual defeat by Shikamaru Nara, who buried him alive in pieces in a forest that would be eternally guarded by the Nara clan's deer.",
+
+  "hiashi hyuga": "Hiashi Hyūga is the head of the Hyūga clan's main branch and the father of Hinata and Hanabi Hyūga. As the clan leader, he initially appeared cold and demanding, particularly toward Hinata, whom he considered too weak to lead the clan. His harsh treatment stemmed from the clan's traditions and his belief that strength was necessary for survival in the ninja world. The turning point in Hiashi's character came during the Hyūga Affair, when his twin brother Hizashi sacrificed himself to protect both Hiashi and the village from potential war. This sacrifice, combined with seeing Hinata's growth and determination, gradually softened his attitude. He eventually came to respect Hinata's strength in her own way and accepted her relationship with Naruto, recognizing that true strength comes in many forms.",
+
+  "Hiruzen Sarutobi": "Hiruzen Sarutobi was the Third Hokage of Konohagakure, known as 'The Professor' for his mastery of all ninja techniques available in the village and 'The God of Shinobi' in his prime. He served two separate terms as Hokage, first succeeding the Second Hokage Tobirama Senju, and later returning to the position after the Fourth Hokage's death. Hiruzen was a compassionate leader who genuinely cared for his village and its people, treating many orphans like Naruto as his own grandchildren. He trained the legendary Sannin (Jiraiya, Tsunade, and Orochimaru) and was devastated when Orochimaru fell to darkness. His greatest regret was his inability to save his student from evil. Hiruzen made the ultimate sacrifice during Orochimaru's invasion of Konoha, using the Reaper Death Seal to partially seal his former student's abilities, dying in the process but protecting his beloved village.",
+
+  "hizashi hyuga": "Hizashi Hyūga was Hiashi Hyūga's twin brother and a member of the Hyūga clan's branch family. Despite being twins, the fact that Hizashi was born second relegated him to the branch family, where he was marked with the caged bird seal that bound him to serve the main family. This fate initially filled Hizashi with resentment toward his brother and the clan's system. He was the father of Neji Hyūga and a skilled ninja in his own right. Hizashi's defining moment came during the Hyūga Affair, when Kumo's attempt to kidnap Hinata resulted in diplomatic tensions. To prevent war and protect his brother, Hizashi voluntarily took Hiashi's place and was executed by Kumo. His sacrifice was an act of love and free will, not obligation, though this truth was hidden from Neji for years. His death haunted both Hiashi and Neji, shaping their characters significantly.",
+
+  "homura mitokado": "Homura Mitokado was one of the village elders of Konohagakure and a former teammate of the Third Hokage Hiruzen Sarutobi. Along with Koharu Utatane, he served as an advisor to the Hokage and was part of the village's governing council. Homura was trained under the Second Hokage Tobirama Senju and carried forward many of his sensei's pragmatic and sometimes harsh philosophies about village security. Throughout his long life, he made many difficult decisions for what he believed was the good of the village, including controversial choices regarding the Uchiha clan and jinchūriki. While his methods were often questioned, his dedication to Konoha's safety was never in doubt. His advanced age and experience made him a valuable advisor, though his traditional mindset sometimes clashed with more progressive approaches to village leadership.",
+
+  // I Characters
+  "ibiki morino": "Ibiki Morino is the head of Konoha's Torture and Interrogation Force and a tokubetsu jōnin known for his expertise in psychological warfare and information gathering. His intimidating appearance, marked by scars covering his head, reflects his harsh experiences and methods. Ibiki served as the proctor for the first stage of the Chūnin Exams, where he tested candidates' information-gathering abilities and mental fortitude rather than their combat skills. His methods, while harsh, were designed to simulate the real pressures ninja face when captured by enemies. Despite his fearsome reputation, Ibiki genuinely cares for his subordinates and village, understanding that sometimes harsh methods are necessary to protect innocent lives. His psychological techniques and ability to break even the most hardened criminals have made him invaluable to Konoha's security operations.",
+
+  "ino yamanaka": "Ino Yamanaka is a kunoichi from the Yamanaka clan, known for their mind-transfer techniques and their role in the Ino-Shika-Chō formation alongside the Nara and Akimichi clans. Initially portrayed as a shallow, boy-crazy girl who competed with Sakura over Sasuke, Ino's character developed significantly throughout the series. She inherited her clan's signature Mind Transfer Technique, which allows her to control an opponent's body by transferring her consciousness into them. As a member of Team 10 under Asuma Sarutobi, Ino learned to work effectively with Shikamaru and Chōji, developing strong bonds with her teammates. Her sensory abilities and mind techniques made her valuable in both combat and intelligence gathering. After the war, Ino took over her family's flower shop and continued to serve as a ninja, eventually starting her own family while maintaining her friendships and duties to the village.",
+
+  "inoichi yamanaka": "Inoichi Yamanaka was the head of the Yamanaka clan and Ino's father, serving as a key member of Konoha's Intelligence Division. His expertise in mind-reading and interrogation techniques made him invaluable for gathering information from captured enemies and analyzing threats to the village. Inoichi was also part of the previous generation's Ino-Shika-Chō formation alongside Shikaku Nara and Chōza Akimichi, maintaining strong friendships that extended to their children's generation. His calm demeanor and analytical mind made him an excellent leader and strategist. During the Fourth Great Ninja War, Inoichi served as the head of the Intelligence Division for the Allied Shinobi Forces, coordinating communications and information gathering across the entire army. He made the ultimate sacrifice during the war, dying alongside his longtime friends while maintaining crucial battlefield communications until the very end.",
+
+  "iruka umino": "Iruka Umino was a chūnin instructor at the Ninja Academy and one of the most important figures in Naruto's early life. Having lost his parents to the Nine-Tails attack, Iruka initially harbored resentment toward Naruto as the beast's container. However, he came to understand that Naruto was not the fox itself but rather its victim, and became the first person to truly acknowledge Naruto as a person rather than a monster. This recognition was pivotal in Naruto's development and self-worth. Iruka served as a father figure to Naruto, providing the love and support the young boy desperately needed. His dedication to his students and his belief in their potential made him an excellent teacher. Even as Naruto grew stronger and faced greater challenges, Iruka continued to support him, representing the unchanging foundation of care and acceptance that helped shape Naruto into a hero.",
+
+  "itachi uchiha": "Itachi Uchiha was a prodigy of the Uchiha clan who became one of the most tragic figures in the ninja world. Graduating from the Academy at age 7, becoming a Chūnin at 10, and awakening his Sharingan at 8, Itachi was hailed as a once-in-a-generation genius. However, the mounting tensions between the Uchiha clan and Konoha's leadership put him in an impossible position. Torn between loyalty to his clan and his village, Itachi ultimately chose to prevent a civil war by massacring his entire clan, sparing only his younger brother Sasuke. This act was carried out under orders from Konoha's leadership, making Itachi a double agent who lived as a criminal while secretly protecting his village. He joined Akatsuki to monitor their activities and stayed close to Sasuke's development. Itachi's life was further shortened by a terminal illness, and he orchestrated his own death at Sasuke's hands to free his brother from the curse of hatred, though this plan ultimately backfired. His story exemplifies the tragic cost of the ninja system and the lengths one will go to protect what they love most.",
+
+  // J Characters
+  "jinin akebino": "Jinin Akebino was one of the Seven Ninja Swordsmen of the Mist from Kirigakure, wielding the explosive blade Shibuki. He was known for his expertise in explosive techniques, using his sword to create devastating blast attacks that could level entire areas. Jinin participated in various missions during Kirigakure's darker periods, contributing to the village's fearsome reputation during the 'Bloody Mist' era. His mastery of Shibuki made him a formidable opponent capable of both close-range combat and long-distance explosive attacks. Like other members of the Seven Swordsmen, Jinin was eventually killed, and his sword was passed down to future generations. During the Fourth Great Ninja War, he was resurrected through Edo Tensei and forced to fight against the Allied Shinobi Forces, demonstrating his explosive techniques once more before being sealed.",
+
+  "jiraiya": "Jiraiya, known as the Toad Sage, was one of the legendary Sannin and one of the most influential characters in Naruto's development. Born in Konohagakure, Jiraiya was trained alongside Tsunade and Orochimaru under the Third Hokage. His specialty was Sage Mode, learned from the toads of Mount Myōboku, which granted him enhanced physical abilities and sensory perception. Beyond his combat prowess, Jiraiya was also known for his 'research' for his adult novels, though this was often a cover for his intelligence gathering as a spy for Konoha. He discovered and trained three war orphans in the Land of Rain - Nagato, Yahiko, and Konan - believing Nagato to be the prophesied Child of Destiny. Later, he became Naruto's mentor and father figure, teaching him the Rasengan and helping him control the Nine-Tails' power. Jiraiya's death while investigating Pain became a pivotal moment for Naruto's growth, and his influence continued to guide his student even after death.",
+
+  "jugo": "Jūgo was a member of Sasuke's team Taka and the original source of the enzyme used to create Orochimaru's curse seals. Born with a unique kekkei genkai that allowed him to absorb and emit natural energy, Jūgo suffered from uncontrollable violent rages when this energy built up in his body. His condition made him dangerous and unpredictable, leading him to isolate himself to protect others. Orochimaru discovered Jūgo and used samples of his body to create the curse seal, spreading a diluted version of Jūgo's power to others. Despite his violent tendencies, Jūgo possessed a gentle heart and formed a strong bond with Kimimaro, who was able to calm his rages. After Kimimaro's death, Jūgo joined Sasuke, seeing him as a successor to Kimimaro's calming influence. His loyalty to Sasuke was absolute, and he served as both a powerful ally and a source of healing through his cellular regeneration abilities.",
+
+  // K Characters
+  "kabuto yakushi": "Kabuto Yakushi was a spy who worked for various organizations throughout his life, ultimately becoming Orochimaru's right-hand man and later a major antagonist in his own right. Originally an orphan who lost his memories, Kabuto was raised by the nun Nonō Yakushi at an orphanage that secretly trained children as spies. His medical knowledge and espionage skills made him valuable to multiple parties, including Konoha, the Sound Village, and Akatsuki. After Orochimaru's defeat, Kabuto absorbed his master's remains and powers, eventually mastering Sage Mode through experimentation. During the Fourth Great Ninja War, he allied with Obito and used the forbidden Edo Tensei technique to resurrect countless dead ninja, creating an army of the undead. His identity crisis and desperate search for self-understanding drove many of his actions, until he was finally defeated by the combined efforts of Sasuke and Itachi.",
+
+  "kankuro": "Kankurō is a puppet master from Sunagakure and the middle child of the Fourth Kazekage, making him Gaara and Temari's brother. Initially hostile and aggressive, Kankurō served as Gaara's protector and handler when his younger brother was still unstable. His expertise in puppet techniques, inherited from his village's traditions, made him a skilled combatant capable of controlling multiple puppets simultaneously. Kankurō's puppets were equipped with various weapons and traps, allowing him to fight effectively at different ranges. After Gaara's transformation and ascension to Kazekage, Kankurō became one of his most trusted advisors and the leader of the Puppet Brigade. His loyalty to his siblings and village was unwavering, and he played crucial roles in defending Sunagakure against various threats. His character development showed growth from a somewhat sadistic teenager to a responsible leader and protective older brother.",
+
+  "karui": "Karui is a kunoichi from Kumogakure and a member of Team Samui. Known for her fiery temper and quick resort to violence when angry, Karui initially clashed with Naruto when seeking information about her sensei's killer. Her aggressive approach often put her at odds with more diplomatic solutions, but her loyalty to her village and teammates was never questioned. Karui wielded a sword in combat and was skilled in close-quarters fighting. Despite her initial hostility toward Naruto, she eventually came to respect him, especially after witnessing his dedication to protecting others. Her character represented the broader theme of understanding and forgiveness that ran throughout the series. After the war, Karui married Chōji Akimichi, symbolizing the growing bonds between the hidden villages and their commitment to peace.",
+
+  "karin": "Karin was a former subordinate of Orochimaru who later joined Sasuke's team Taka. Born into the Uzumaki clan, she possessed powerful chakra and unique healing abilities that could restore others by having them bite her skin. Her traumatic past included being used by various people for her healing abilities, creating trust issues and a desperate desire for someone who would value her as a person rather than a tool. Karin developed strong feelings for Sasuke, seeing him as someone who might finally appreciate her worth. Her sensory abilities were among the best in the ninja world, capable of detecting chakra signatures across vast distances and identifying individuals by their unique chakra. Despite Sasuke's cold treatment of her, Karin remained loyal to him throughout their time together. Her character arc explored themes of self-worth, belonging, and finding one's place in the world.",
+
+  "kiba inuzuka": "Kiba Inuzuka is a member of the Inuzuka clan, known for their partnership with ninja dogs and their enhanced senses. Partnered with his faithful companion Akamaru since childhood, Kiba developed a brash, confident personality that sometimes put him at odds with his teammates. As a member of Team 8 under Kurenai Yūhi, alongside Hinata Hyūga and Shino Aburame, Kiba specialized in tracking and reconnaissance missions. His clan's techniques allow him to communicate with dogs, enhance his physical abilities, and perform combination attacks with Akamaru. The signature technique of the Inuzuka clan is the Man Beast Clone, where Akamaru transforms to look like Kiba, allowing them to perform devastating spinning attacks. Despite his loud and sometimes arrogant demeanor, Kiba is fiercely loyal to his friends and village, and his keen senses make him an invaluable tracker and scout.",
+
+  "killer b": "Killer B, also known as Killer Bee, is a shinobi from Kumogakure and the jinchūriki of Gyūki, the Eight-Tails. Adopted by the Third Raikage and raised alongside the future Fourth Raikage A, Killer B developed a unique fighting style incorporating eight swords and his mastery over his tailed beast. Unlike most jinchūriki, B successfully befriended his tailed beast, achieving perfect cooperation and gaining access to incredible power. His eccentric personality, love of rap music, and carefree attitude mask his incredible strength and strategic mind. B served as a mentor to Naruto, helping him learn to control the Nine-Tails' power and understand the importance of friendship with one's tailed beast. His ability to fully transform into the Eight-Tails while maintaining his consciousness made him one of the most powerful shinobi alive.",
+
+  "kimimaro": "Kimimaro was the last surviving member of the Kaguya clan and one of Orochimaru's most loyal followers. Born with the rare kekkei genkai called Shikotsumyaku (Dead Bone Pulse), Kimimaro could manipulate his bone structure, growing bones as weapons and armor. His clan's bloodthirsty nature and love of battle led to their destruction, leaving Kimimaro as the sole survivor. Orochimaru found him and gave his life meaning by designating him as a potential vessel for his soul transfer technique. Kimimaro's unwavering devotion to Orochimaru stemmed from this sense of purpose and belonging. Despite his loyalty, he was afflicted with a terminal illness that limited his abilities and ultimately led to his death. His battle with Rock Lee and Gaara showcased his incredible power and determination, fighting until his last breath to serve his master's will.",
+
+  "kisame hoshigaki": "Kisame Hoshigaki was one of the Seven Ninja Swordsmen of the Mist and later a member of Akatsuki, partnered with Itachi Uchiha. Known as the 'Monster of the Hidden Mist' for his shark-like appearance and brutal fighting style, Kisame wielded the sentient sword Samehada, which could absorb chakra from opponents. His massive chakra reserves earned him the nickname 'Tailless Tailed Beast' for having chakra levels comparable to actual tailed beasts. Kisame's loyalty to Akatsuki's goals was absolute, and he formed a genuine friendship with Itachi despite their contrasting personalities. His past was marked by betrayal and disillusionment with the ninja world's deceptions, leading him to embrace Akatsuki's plan for a world without lies. When finally cornered, Kisame chose to commit suicide rather than reveal information, maintaining his loyalty to his beliefs until the end.",
+
+  "konan": "Konan was a kunoichi from Amegakure and a founding member of the original Akatsuki alongside Yahiko and Nagato. Known as the 'Angel of Amegakure' for her paper-based techniques and later for bringing peace to her war-torn village, Konan could transform her body into thousands of paper sheets for attack and defense. Her childhood was marked by the trauma of war, leading her to join with Yahiko and Nagato in their dream of bringing peace to the world. After Yahiko's death, she remained loyal to Nagato (Pain) and supported his increasingly extreme methods, though she never lost sight of their original dream. Konan's paper techniques were incredibly versatile, allowing her to create wings for flight, explosive tags for attacks, and defensive barriers. Her final battle against Obito demonstrated her tactical brilliance and unwavering determination to protect Nagato's legacy and the peace they had sought to create.",
+
+  "konohamaru sarutobi": "Konohamaru Sarutobi is the grandson of the Third Hokage Hiruzen Sarutobi and a member of Team Ebisu alongside Moegi and Udon. Initially introduced as a bratty child seeking to defeat Naruto to gain recognition, Konohamaru gradually developed into a capable ninja under Naruto's influence. His relationship with Naruto served as a mirror to Naruto's relationship with Iruka, showing how positive mentorship can shape young minds. Konohamaru learned several of Naruto's signature techniques, including the Rasengan and Shadow Clone Technique, adapting them to his own fighting style. His dream of becoming Hokage paralleled Naruto's journey, and he served as a representation of the next generation carrying forward the Will of Fire. As he matured, Konohamaru became a skilled jōnin and eventually took on his own genin team, continuing the cycle of mentorship and growth that defined Konoha's ninja traditions.",
+
+  "kurenai yuhi": "Kurenai Yūhi was a jōnin from Konohagakure who served as the leader of Team 8, consisting of Hinata Hyūga, Kiba Inuzuka, and Shino Aburame. Specializing in genjutsu (illusion techniques), Kurenai was one of Konoha's most skilled practitioners of this art form. Her team was particularly suited for tracking and reconnaissance missions, playing to each member's strengths in detection and analysis. Kurenai had a romantic relationship with Asuma Sarutobi, and she was pregnant with their child when he was killed by Hidan. This loss devastated her, but she found strength in raising their daughter Mirai and continuing to serve as a ninja. Her teaching style emphasized understanding each student's individual strengths and helping them develop confidence in their abilities, particularly important for Hinata's growth as a ninja.",
+
+  "kushina uzumaki": "Kushina Uzumaki was a kunoichi from Uzushiogakure who became the second jinchūriki of the Nine-Tails and the mother of Naruto Uzumaki. Known for her fiery personality and distinctive red hair, Kushina was brought to Konoha as a child to become the new Nine-Tails container when the previous jinchūriki, Mito Uzumaki, was aging. Her unique chakra and Uzumaki clan heritage made her particularly suited for containing the powerful beast. Initially feeling like an outsider in Konoha, Kushina found acceptance and love through her relationship with Minato Namikaze. Her dream was to become the first female Hokage, showing her ambition and determination. When the Nine-Tails was extracted during Naruto's birth, both Kushina and Minato made the ultimate sacrifice to protect their son and the village, sealing the beast within Naruto and leaving him with their love and hopes for his future.",
+
+  // M Characters
+  "madara uchiha": "Madara Uchiha was the legendary co-founder of Konohagakure alongside Hashirama Senju, with whom he shared a complex relationship of friendship and rivalry. Born during the warring clans era, Madara witnessed the deaths of four of his brothers in battle, shaping his worldview around conflict and power. Despite initially working with Hashirama to create a village where children wouldn't have to die in war, Madara eventually became convinced that the other clans would never truly accept the Uchiha. After reading the corrupted stone tablet left by Black Zetsu, Madara believed that infinite peace could only be achieved through the Infinite Tsukuyomi, a genjutsu that would trap everyone in a dream world. He faked his death at the Valley of the End and spent decades manipulating events from behind the scenes, eventually returning during the Fourth Great Ninja War. However, Madara was ultimately betrayed by Black Zetsu and used as a vessel for Kaguya's resurrection, realizing too late that he had been manipulated his entire life.",
+
+  "mangetsu hozuki": "Mangetsu Hōzuki was a prodigy from Kirigakure and the older brother of Suigetsu Hōzuki. He was the only person in history to master all seven swords of the Seven Ninja Swordsmen of the Mist, earning him legendary status within the village. Mangetsu's mastery of the Hydrification Technique allowed him to turn his body into water, making him nearly impossible to injure with physical attacks. His skill with various weapons and his tactical intelligence made him a formidable opponent in battle. Despite his incredible abilities, Mangetsu died young, leaving behind his younger brother Suigetsu, who idolized him and sought to follow in his footsteps. His legacy lived on through the stories told about his achievements and his influence on Suigetsu's development as a swordsman.",
+
+  "Mei Terumi (Fifth Mizukage)": "Mei Terumī was the Fifth Mizukage of Kirigakure, tasked with reforming her village after the dark period of the 'Bloody Mist' era. Possessing two kekkei genkai - Boil Release and Lava Release - Mei was an incredibly powerful kunoichi capable of devastating attacks using both acidic mist and molten rock. Her leadership style emphasized rebuilding trust both within the village and with other hidden villages, working to establish Kirigakure as a peaceful member of the ninja world community. Despite her serious responsibilities, Mei had a more lighthearted side and was known for her concerns about marriage and romance. Her efforts to reform Kirigakure and establish positive diplomatic relations were crucial in bringing about the era of peace that followed the Fourth Great Ninja War. She eventually stepped down as Mizukage, passing leadership to Chōjūrō while remaining a respected elder of the village.",
+
+  "mifune": "Mifune was the leader of the samurai of the Land of Iron, a neutral country that maintained its independence through the strength of its warrior class. Unlike ninja who relied on ninjutsu and genjutsu, Mifune and his samurai fought using only their swords and physical skills, earning respect for their honor and dedication. His most famous achievement was surviving an encounter with the legendary Hanzō of the Salamander, who was so impressed by the young samurai's fearlessness in the face of death that he gave Mifune the antidote to his poison and let him live. This encounter shaped Mifune's philosophy and cemented his reputation as a warrior of exceptional skill and courage. During the Fourth Great Ninja War, Mifune served as the supreme commander of the Allied Shinobi Forces' combat divisions, using his tactical expertise and leadership skills to coordinate the largest military alliance in ninja history.",
+
+  "mikoto uchiha": "Mikoto Uchiha was the wife of Fugaku Uchiha and the mother of Itachi and Sasuke Uchiha. As a member of the Uchiha clan, she possessed the Sharingan and was a skilled kunoichi in her own right, though she stepped back from active duty to focus on raising her children. Mikoto was known for her gentle and caring nature, which contrasted with the clan's typically prideful demeanor. She formed friendships outside the clan, including with Kushina Uzumaki, showing her ability to see beyond clan boundaries. Her relationship with her sons was loving and supportive, particularly with Sasuke, whom she doted on as the younger child. When the clan massacre occurred, Mikoto accepted her fate with dignity, understanding that Itachi was acting out of love for Sasuke and the village, even if she couldn't fully comprehend the political complexities that led to their tragedy.",
+
+"Minato Namikaze (Fourth Hokage)": "Minato Namikaze, known as the Yellow Flash of the Leaf, was the Fourth Hokage and one of the most revered shinobi in history. Born a commoner, Minato's exceptional talent and dedication earned him recognition and the love of Kushina Uzumaki, whom he eventually married. His signature technique, the Flying Thunder God, allowed him to teleport instantaneously to marked locations, making him nearly unbeatable in combat. During the Nine-Tails' attack on Konoha, Minato made the ultimate sacrifice to save his village, sealing the demon fox within his newborn son Naruto at the cost of both his and Kushina's lives. His decision to make Naruto the Nine-Tails' jinchūriki was based on his belief in his son's strength and his hope that Naruto would one day be seen as a hero rather than a monster. Minato's legacy lived on through his son, and his influence shaped Naruto's development even though they never had the chance to know each other in life.",
+
+  "moegi kazamatsuri": "Moegi Kazamatsuri was a member of the Konohamaru Corps alongside Konohamaru Sarutobi and Udon Ise. Initially portrayed as the most mature and responsible member of the trio, Moegi often served as the voice of reason when her teammates got carried away with their schemes. She possessed a crush on Konohamaru and was fiercely protective of him, often disciplining both him and Udon when they acted foolishly. As she grew older, Moegi developed into a capable kunoichi and eventually achieved jōnin rank, becoming the leader of a new Team 7 in the next generation. Her development from a young girl playing ninja to a respected team leader represented the continuous cycle of growth and mentorship that defined Konoha's ninja system.",
+
+  "mu (second tsuchikage)": "Mū was the Second Tsuchikage of Iwagakure, known for his unique abilities and his rivalry with the Second Mizukage Gengetsu Hōzuki. His most distinctive technique was the Dust Release, a kekkei tōta (bloodline selection) that allowed him to disintegrate matter at a molecular level, making it one of the most powerful offensive techniques in the ninja world. Mū also possessed the ability to become invisible and split his body, making him an extremely difficult opponent to track and fight. His philosophical approach to leadership emphasized the importance of being flexible and adapting to circumstances, which he passed on to his student Ōnoki. His death in mutual combat with Gengetsu demonstrated the intensity of their rivalry and the destructive potential of kage-level conflicts. During the Fourth Great Ninja War, he was resurrected by Edo Tensei and forced to fight against his own student and village.",
+
+  // N Characters
+  "nagato (pain)": "Nagato was a shinobi from Amegakure and the leader of Akatsuki, known to the world as Pain through his six bodies controlled by the Rinnegan. Born during the Second Shinobi World War, Nagato was orphaned when Konoha ninja killed his parents during a mission. He was later found by Jiraiya along with his friends Yahiko and Konan, and the Sannin trained them for three years, believing Nagato to be the prophesied Child of Destiny due to his Rinnegan. After Yahiko's death, orchestrated by Hanzō and Danzō, Nagato's worldview became twisted by grief and anger. He adopted the name Pain and sought to bring peace to the world through fear and suffering, believing that only by experiencing true pain could humanity understand the value of peace. His assault on Konoha and subsequent conversation with Naruto ultimately led to his redemption and sacrifice to revive those he had killed, dying with renewed faith in the possibility of true peace.",
+
+  "nawaki senju": "Nawaki Senju was the younger brother of Tsunade and the grandson of the First Hokage Hashirama Senju. Despite his prestigious lineage, Nawaki was a cheerful and optimistic young ninja who dreamed of becoming Hokage to protect his loved ones and village. His personality and dreams reminded Tsunade of their grandfather, and she was very protective of her younger brother. Tragically, Nawaki died at a young age during the Second Shinobi World War, stepping on an explosive trap during a mission the day after his twelfth birthday. His death devastated Tsunade and contributed to her hemophobia (fear of blood) and her initial reluctance to return to active duty as a ninja. Nawaki had planned to give Tsunade a present for her help in his training, which she treasured long after his death. His loss, along with that of Dan Katō, shaped Tsunade's character and her understanding of the pain of losing those precious to her.",
+
+  "neji hyuga": "Neji Hyūga was born into the branch family of the Hyūga clan, marked with the caged bird seal that bound him to serve the main family. This fate filled him with bitterness and resentment, particularly toward his cousin Hinata, whom he saw as weak and undeserving of her position as heiress. Neji believed that fate was predetermined and that people couldn't escape their destiny, a philosophy that put him in conflict with Naruto during the Chūnin Exams. However, Naruto's victory over him and subsequent revelation of the truth about his father's death began to change Neji's perspective. He learned that his father Hizashi had chosen to die to protect both his brother Hiashi and the village, making it a choice rather than an obligation. This revelation freed Neji from his hatred and allowed him to see that fate could be changed through one's own actions. He became one of the most skilled shinobi of his generation and ultimately died protecting Naruto and Hinata during the Fourth Great Ninja War, choosing his own path to the end.",
+
+  "nii yugito (two-tails jinchuriki)": "Nii Yugito, also known as Yugito Nii, was a kunoichi from Kumogakure and the jinchūriki of Matatabi, the Two-Tails. Unlike many jinchūriki who struggled with their tailed beasts, Yugito had achieved a relatively stable relationship with Matatabi and could partially transform using the cat's blue flames. Her control over her bijuu made her a valuable asset to her village and one of the more capable jinchūriki. Yugito was confident in her abilities and took pride in her strength, though this sometimes led to overconfidence in dangerous situations. She was eventually captured by the Akatsuki members Hidan and Kakuzu after a fierce battle, becoming one of the first jinchūriki to have their tailed beast extracted. Her capture and death served as a warning of Akatsuki's growing power and their systematic hunt for all tailed beasts.",
+
+  // O Characters  
+  "obito uchiha": "Obito Uchiha was Kakashi's teammate and the person who would later become the masked man manipulating events from behind the scenes. Born into the Uchiha clan but considered a failure due to his late manifestation of the Sharingan, Obito dreamed of becoming Hokage and was known for his kind heart and determination to protect his comrades. During a mission in the Third Great Ninja War, Obito was apparently killed in a cave-in after giving his newly awakened Sharingan to Kakashi. However, he was actually saved by Madara Uchiha, who found and rehabilitated him. Obito's worldview was shattered when he witnessed Rin's death at Kakashi's hands, not understanding the circumstances that forced Kakashi's action. This trauma, combined with Madara's manipulation, turned Obito against the world and made him determined to create a reality where such pain couldn't exist. He became the real leader of Akatsuki and orchestrated many of the series' major conflicts, until Naruto's influence finally helped him remember his original dream of becoming Hokage and protecting others.",
+
+  "onoki (third tsuchikage)": "Ōnoki was the Third Tsuchikage of Iwagakure and one of the longest-serving kage in history, leading his village for decades. Despite his small stature and advanced age, Ōnoki was incredibly powerful, possessing both the Dust Release kekkei tōta and the ability to fly, making him a formidable opponent even in his elderly years. His personality was often stubborn and prideful, leading to conflicts with other villages, but he genuinely cared for his people and village. Ōnoki's relationship with his student Deidara was complicated, as he was both proud of Deidara's artistic talents and disappointed by his eventual defection to Akatsuki. During the Fourth Great Ninja War, Ōnoki played a crucial role in the Allied Shinobi Forces, using his Dust Release to eliminate many reanimated enemies. His character arc included learning to trust the younger generation and letting go of old grudges, symbolized by his cooperation with former enemies for the greater good.",
+
+  "orochimaru": "Orochimaru is one of the legendary Sannin and one of the series' primary antagonists, though his role evolved significantly throughout the story. Originally a student of the Third Hokage alongside Jiraiya and Tsunade, Orochimaru became obsessed with learning all jutsu and achieving immortality after witnessing the deaths of many comrades in war. His forbidden experiments on human subjects and his attempt to steal his teacher's body led to his exile from Konoha. Orochimaru's quest for immortality involved transferring his soul between bodies, and he established the Hidden Sound Village as his base of operations. His manipulation of Sasuke and his invasion of Konoha during the Chūnin Exams were driven by his desire to obtain the Sharingan and destroy his former home. However, after being defeated multiple times and witnessing the Fourth Great Ninja War, Orochimaru's perspective began to change. His character represents the corruption that can result from an unchecked thirst for knowledge and power, but also the possibility of redemption through understanding.",
+
+  // P Characters
+  "pakura": "Pakura was a famous kunoichi from Sunagakure, known throughout the ninja world for her mastery of Scorch Release, a kekkei genkai that allowed her to create orbs of extreme heat that could mummify opponents by evaporating all moisture from their bodies. Her reputation earned her the nickname 'Pakura of the Scorch Release' and she was considered a hero in her village. Tragically, Pakura became a victim of political maneuvering when her own village betrayed her as part of a peace treaty negotiation with Kirigakure. She was sent on what she believed was a standard mission, only to be abandoned by her allies and killed by Kirigakure ninja. Her death was kept secret from the general population of Suna, who continued to revere her as a hero. During the Fourth Great Ninja War, she was resurrected by Kabuto's Edo Tensei and forced to fight against the Allied Shinobi Forces, where the truth of her betrayal was finally revealed.",
+
+  // R Characters
+  "rasa (fourth kazekage)": "Rasa was the Fourth Kazekage of Sunagakure and the father of Temari, Kankurō, and Gaara. His reign was marked by the village's financial struggles, leading him to make the controversial decision to turn his youngest son Gaara into a jinchūriki of the One-Tail Shukaku to create a ultimate weapon for the village. This decision was driven by desperation rather than malice, but it had devastating consequences for Gaara's childhood and mental state. Rasa possessed the Magnet Release kekkei genkai, allowing him to manipulate gold dust as a weapon and defensive tool. His techniques were particularly effective in desert environments, making him a formidable opponent. Rasa was eventually killed by Orochimaru, who then impersonated him during the invasion of Konoha. During the Fourth Great Ninja War, he was resurrected and had the opportunity to see how Gaara had grown, eventually acknowledging his son's strength and apologizing for the pain he had caused.",
+
+  "rin nohara": "Rin Nohara was a kunoichi from Konohagakure and a member of Team Minato alongside Kakashi Hatake and Obito Uchiha. She served as the team's medic, specializing in medical ninjutsu and healing techniques. Rin was kind-hearted and caring, often serving as the emotional center of her team and trying to mediate between Kakashi's coldness and Obito's enthusiasm. She harbored feelings for Kakashi, though he was initially too focused on missions to notice. Rin's fate became central to one of the series' most tragic events when she was kidnapped by Kirigakure ninja and had the Three-Tails sealed within her, with the plan being for her to return to Konoha and release the beast to destroy the village. Understanding the threat she posed, Rin chose to sacrifice herself by running into Kakashi's attack, dying by his hand to protect the village she loved. Her death traumatized both Kakashi and Obito, with the latter's inability to understand her sacrifice contributing to his fall into darkness.",
+
+  "rock lee": "Rock Lee is a shinobi from Konohagakure who, despite being unable to use ninjutsu or genjutsu, became a formidable warrior through pure dedication to taijutsu (hand-to-hand combat). Under the guidance of his sensei Might Guy, Lee embodied the philosophy that hard work can overcome natural talent, training relentlessly to compensate for his limitations. His fighting style, the Strong Fist, focused on causing external damage through powerful physical attacks. Lee's most distinctive techniques involved opening the Eight Gates, chakra limiters in the body that, when opened, grant tremendous power at the cost of severe physical damage. His unwavering determination and optimistic attitude made him an inspiration to others, particularly Naruto, who saw in Lee a kindred spirit who refused to give up despite facing seemingly insurmountable obstacles. Lee's character arc emphasized themes of perseverance, self-improvement, and the power of believing in oneself.",
+
+  "roshi": "Rōshi was a shinobi from Iwagakure and the jinchūriki of Son Gokū, the Four-Tails. Known for his mastery of lava-based techniques, Rōshi had achieved a relatively stable relationship with his tailed beast, allowing him to use its power effectively in combat. His abilities included creating and manipulating molten rock, making him a dangerous opponent in battle. Unlike some jinchūriki who were confined to their villages, Rōshi left Iwagakure to travel and train, seeking to better understand his powers and his relationship with the Four-Tails. This independence eventually led to his capture by Akatsuki, who extracted the tailed beast from him, resulting in his death. During the Fourth Great Ninja War, he was resurrected through Edo Tensei and controlled by Obito to fight against the Allied Shinobi Forces, where his full power as a perfect jinchūriki was displayed.",
+
+  // S Characters
+  "sai": "Sai was a member of Root, Danzō's secret organization within Konoha, before joining Team 7 as Sasuke's replacement. Trained from childhood to suppress his emotions and serve as a loyal operative, Sai initially appeared cold and emotionally distant, often making inappropriate comments due to his lack of understanding of normal social interactions. His artistic abilities were used to create ink creatures that could come to life and assist him in battle, making him a unique combatant. Sai's mission was originally to spy on Naruto and potentially eliminate Sasuke, but his time with Team 7 began to awaken emotions he had been trained to suppress. Through his friendship with Naruto and Sakura, Sai learned about bonds, loyalty, and the importance of protecting those precious to him. His character development from an emotionless tool to someone capable of genuine friendship represented the power of human connection to overcome even the most severe conditioning.",
+
+  "sakon & ukon": "Sakon and Ukon were twin brothers and members of Orochimaru's Sound Four (later Sound Five). They possessed a unique kekkei genkai that allowed them to merge their bodies together or with other people, sharing physical capabilities and making them difficult opponents to fight. Sakon was the dominant personality and typically the one in control of their shared body, while Ukon remained dormant most of the time. Their ability to separate and attack from multiple angles, or merge with enemies to attack from within, made them unpredictable and dangerous in combat. During the Sasuke Recovery Mission, they fought against Kiba Inuzuka and Akamaru, later battling Kankurō when he came to assist. Their arrogance and cruelty were typical of Orochimaru's followers, and they took pleasure in tormenting their opponents. They were ultimately defeated by Kankurō's puppets, dying when their hideout collapsed around them.",
+
+  "samui": "Samui was a kunoichi from Kumogakure and the leader of Team Samui, which included Karui and Omoi. Known for her calm and collected demeanor, Samui often served as the voice of reason for her more impulsive teammates. Her fighting style emphasized precision and efficiency, and she was skilled in both armed and unarmed combat. Samui's most distinctive characteristic was her tendency to use formal language and her dislike of 'hot' and 'cold' words, preferring to use synonyms instead. During the Five Kage Summit arc, she was tasked with escorting Killer B's teacher to meet with the Raikage, and later became involved in the search for information about Akatsuki. Her professional attitude and loyalty to her village made her a reliable operative, and she continued to serve Kumogakure faithfully throughout the series' events.",
+
+  "sasori": "Sasori was a member of Akatsuki and a master puppet user from Sunagakure, known as 'Sasori of the Red Sand' for his deadly puppet techniques. Orphaned at a young age when his parents were killed by Kakashi's father, Sakumo Hatake, Sasori was raised by his grandmother Chiyo, who taught him the art of puppetry. His loneliness and desire for something eternal led him to begin creating human puppets, eventually converting his own body into a puppet to achieve immortality. Sasori's philosophy was that art was eternal, putting him in opposition to his partner Deidara, who believed art was fleeting. His collection included over 100 human puppets, including the Third Kazekage, whom he had killed and converted. Despite his transformation, Sasori retained some human emotions, ultimately allowing himself to be killed by his grandmother's puppets in a moment of longing for his parents' embrace.",
+
+  "shibi aburame": "Shibi Aburame was a jōnin from Konohagakure and the father of Shino Aburame, as well as the head of the Aburame clan. Like all members of his clan, Shibi formed a symbiotic relationship with insects, allowing them to live in his body in exchange for using them in combat and reconnaissance. His calm and analytical personality was typical of the Aburame clan, and he was known for his logical approach to problem-solving. Shibi served on various missions throughout his career and was respected within the village for his reliability and skill. His relationship with his son Shino was somewhat distant, as was common in the Aburame clan, but he cared deeply for Shino's development as both a ninja and a person. During the Fourth Great Ninja War, Shibi fought alongside other Konoha ninja to defend the village and support the Allied Shinobi Forces.",
+
+  "shikaku nara": "Shikaku Nara was a jōnin from Konohagakure, the father of Shikamaru Nara, and the head of the Nara clan. Known for his exceptional intelligence and strategic thinking, Shikaku served as one of Konoha's primary strategists and was often consulted on important military decisions. He was part of the previous generation's Ino-Shika-Chō formation alongside Inoichi Yamanaka and Chōza Akimichi, maintaining lifelong friendships with his teammates. Shikaku's lazy demeanor masked a brilliant tactical mind, and he was capable of analyzing complex situations and developing effective strategies quickly. During the Fourth Great Ninja War, he served as the chief strategist for the Allied Shinobi Forces, coordinating battle plans and troop movements across multiple fronts. His ultimate sacrifice came when he died alongside his friends while maintaining crucial communications during the war, demonstrating his dedication to protecting the next generation.",
+
+  "shikamaru nara": "Shikamaru Nara is a shinobi from Konohagakure and a member of Team 10, known for his exceptional intelligence despite his lazy personality. Possessing an IQ over 200, Shikamaru often found normal activities boring and preferred to watch clouds and play strategic games. His clan's Shadow Possession Technique allowed him to control opponents by manipulating shadows, and he developed increasingly sophisticated applications of this ability. The death of his sensei Asuma Sarutobi became a defining moment for Shikamaru, motivating him to take on greater responsibilities and seek revenge against Hidan. His strategic brilliance made him valuable in both small-team missions and large-scale conflicts, and he often served as a tactical advisor despite his young age. Shikamaru's character development showed his growth from a lazy teenager to a responsible leader who understood the weight of protecting others.",
+
+  "shino aburame": "Shino Aburame was a member of Team 8 and a shinobi from the Aburame clan, known for their symbiotic relationship with insects. From birth, Shino's body served as a host for thousands of insects that lived within him, feeding on his chakra in exchange for serving him in battle. His quiet and analytical personality, combined with his sunglasses and high collar that concealed much of his face, made him appear mysterious and somewhat intimidating to others. Despite his reserved nature, Shino cared deeply for his teammates and was fiercely loyal to his friends. His insects provided him with reconnaissance capabilities, tracking abilities, and various combat applications, making him an invaluable asset on missions requiring stealth or information gathering. Shino's biggest frustration was being overlooked or forgotten by others, despite his contributions to the team's success.",
+
+  "shisui uchiha": "Shisui Uchiha was a member of the Uchiha clan and one of the most talented shinobi of his generation, known throughout the ninja world as 'Shisui of the Body Flicker' for his incredible speed. He possessed the Mangekyō Sharingan and its unique technique, Kotoamatsukami, which could manipulate others without them realizing they were being controlled. Shisui was deeply loyal to Konoha and sought to prevent the Uchiha clan's planned coup through peaceful means. His plan involved using his genjutsu on the clan leadership to stop the rebellion, but Danzō, fearing Shisui's power, attacked him and stole one of his eyes. Before Danzō could take the other eye, Shisui gave it to his best friend Itachi and committed suicide by jumping off a cliff, asking Itachi to protect the village and the Uchiha name. His death was a catalyst for Itachi's awakening of the Mangekyō Sharingan and his eventual role in the clan massacre.",
+
+  "suigetsu hozuki": "Suigetsu Hōzuki was a member of Sasuke's team Taka and a former prisoner of Orochimaru who was freed when Sasuke defeated the Sannin. Born into the Hōzuki clan of Kirigakure, Suigetsu possessed the Hydrification Technique, allowing him to turn his body into water to avoid physical attacks and pass through small spaces. His dream was to collect all seven swords of the Seven Ninja Swordsmen of the Mist, following in the footsteps of his deceased brother Mangetsu, who was the only person to master all seven blades. Suigetsu's personality was somewhat sadistic and he enjoyed fighting strong opponents, but he also showed loyalty to his teammates when they were in genuine danger. His shark-like teeth and somewhat unpredictable nature made him both a valuable ally and a dangerous enemy, depending on the circumstances.",
+
+  // T Characters
+  "tayuya": "Tayuya was a kunoichi and member of Orochimaru's Sound Four, known for her crude language, violent temper, and skill with musical genjutsu. She wielded a flute that could cast powerful illusions and summon creatures called Doki to fight for her. Her techniques combined music with genjutsu to disorient and control opponents, making her a unique and dangerous combatant. Tayuya's personality was abrasive and she often insulted both enemies and allies, showing little respect for anyone she considered weak. Despite her crude demeanor, she was fiercely loyal to Orochimaru and took pride in her abilities as one of his elite guards. During the Sasuke Recovery Mission, she fought against Shikamaru Nara, using her superior curse mark power to nearly defeat him before Temari arrived and killed her with a powerful wind attack.",
+
+  "temari": "Temari is a kunoichi from Sunagakure and the eldest child of the Fourth Kazekage, making her the older sister of Kankurō and Gaara. Initially introduced as a cold and calculating fighter during the Chūnin Exams, Temari wielded a giant iron fan that could create devastating wind attacks. Her tactical intelligence and powerful techniques made her a formidable opponent, and she took pride in her abilities as a wind user. After Gaara's transformation and the alliance between Suna and Konoha, Temari's personality softened somewhat, though she retained her direct and sometimes harsh manner of speaking. She eventually married Shikamaru Nara, moving to Konoha while maintaining her loyalty to her home village. Her character development showed growth from a weapon of war to a diplomatic bridge between villages, representing the possibility of peace through understanding and cooperation.",
+
+  "tenten": "TenTen was a kunoichi from Konohagakure and a member of Team Guy alongside Rock Lee and Neji Hyūga under the leadership of Might Guy. She specialized in bukijutsu (weapon techniques), with an expertise in a wide variety of ninja tools and weapons. Her fighting style involved summoning and throwing numerous weapons with incredible accuracy and speed, making her a formidable opponent at both long and medium range. TenTen's dream was to become a legendary kunoichi like Tsunade, and she worked tirelessly to improve her skills and prove herself as a capable warrior. Despite often being overshadowed by her more prominent teammates, TenTen was a skilled and dedicated ninja who played important support roles in many missions. Her weapon mastery and tactical knowledge made her valuable in situations requiring precision and versatility in combat.",
+
+  "teuchi": "Teuchi is the owner and head chef of Ichiraku Ramen, Naruto's favorite restaurant in Konohagakure. A kind-hearted man who, along with his daughter Ayame, treated Naruto with warmth and acceptance from childhood, never showing the prejudice that other villagers held against him due to the Nine-Tails sealed within him. Teuchi's ramen shop became a sanctuary for Naruto, one of the few places where he felt welcomed and valued as a customer and person. His genuine care for Naruto's well-being went beyond simple business, as he often showed concern for the young ninja's health and happiness. Though not a ninja himself, Teuchi represented the ordinary citizens who chose kindness over fear, and his establishment became a symbol of the bonds that could form between people regardless of their backgrounds or circumstances.",
+
+  "Tobirama Senju": "Tobirama Senju was the Second Hokage of Konohagakure and the younger brother of Hashirama Senju, the First Hokage. Known for his tactical genius and his creation of many fundamental ninja techniques, including the Shadow Clone Technique and the Flying Thunder God Technique, Tobirama was instrumental in establishing many of the systems and institutions that defined Konoha. His pragmatic and sometimes harsh approach to leadership contrasted with his brother's more idealistic vision, but both were necessary for the village's survival and growth. Tobirama was particularly wary of the Uchiha clan, having fought against them for years during the warring clans period, and his policies regarding them would have long-lasting consequences. He died during the First Shinobi World War while serving as a decoy to allow his subordinates to escape, naming Hiruzen Sarutobi as his successor. His legacy included not only his techniques but also his philosophy of putting the village's needs above individual desires.",
+
+  "tonbei": "Tonbei was a shinobi who appeared in various filler episodes and had limited screen time in the main series. As a supporting character, his role was primarily to provide background context for certain missions and events. His specific abilities and personality traits were not extensively developed in the main storyline, making him one of the many minor characters who populated the ninja world but didn't play significant roles in the central narrative.",
+
+  "torune aburame": "Torune Aburame was a member of the Aburame clan and one of Danzō's loyal Root operatives. Unlike other members of his clan who used standard insects, Torune's body hosted rare nano-sized, venomous insects called rinkaichū that could destroy an opponent's cells at the molecular level. His insects were so dangerous that even brief contact could be fatal, making him an extremely dangerous assassin. Torune was completely loyal to Danzō and carried out his orders without question, believing that his actions served the greater good of Konoha. His emotionless demeanor and deadly abilities made him one of Root's most feared operatives. During the Five Kage Summit, Torune fought alongside Fū against Sasuke's team, ultimately being captured and used by Kabuto for his Edo Tensei experiments, leading to his death and later resurrection as a reanimated corpse.",
+
+  "Tsunade Senju (Fifth Hokage))": "Tsunade Senju was the Fifth Hokage of Konohagakure and one of the legendary Sannin, known as the world's greatest medical ninja. Granddaughter of the First Hokage Hashirama Senju, she inherited incredible chakra control and physical strength that could shatter boulders with a single punch. Tsunade's life was marked by loss, including the deaths of her younger brother Nawaki and her lover Dan Katō, which led to her developing hemophobia and leaving the village for years. Her medical expertise was unparalleled, and she created many of the medical techniques and protocols used by ninja medics. When convinced to return as Hokage by Naruto, she brought stability and healing to a village recovering from Orochimaru's invasion. Her leadership during the Fourth Great Ninja War and her role in training Sakura as her successor demonstrated her commitment to protecting the next generation and ensuring that her knowledge would live on.",
+
+  // U Characters  
+  "udon ise": "Udon Ise was a member of the Konohamaru Corps alongside Konohamaru Sarutobi and Moegi Kazamatsuri. Characterized by his runny nose, glasses, and generally sickly appearance, Udon was often the most cautious member of the trio. Despite his timid nature, he was loyal to his friends and participated in their various schemes and adventures around the village. As he grew older, Udon developed into a capable ninja and eventually achieved jōnin rank, becoming a team leader himself. His transformation from a sickly child to a competent ninja represented the theme of growth and potential that ran throughout the series, showing that even those who seemed weak could become strong through dedication and proper guidance.",
+
+  "utakata (six-tails jinchuriki)": "Utakata was a missing-nin from Kirigakure and the jinchūriki of Saiken, the Six-Tails. He possessed the ability to create and manipulate soap bubbles, which could be used for both attack and defense, making his fighting style unique among jinchūriki. Utakata had a complicated relationship with his former master, whom he believed had tried to extract the Six-Tails from him, leading to his defection from the village. His journey as a fugitive was marked by distrust of others and a desire to live freely without being used as a weapon. Eventually, Utakata was captured by Akatsuki member Pain and had the Six-Tails extracted from him, resulting in his death. His story reflected the common tragedy of jinchūriki being viewed as weapons rather than people, and the difficulty of finding acceptance in a world that feared their power.",
+
+  // W Characters
+  "white zetsu": "White Zetsu was the other half of the plant-like being known as Zetsu, created from humans who were caught in the Infinite Tsukuyomi cast by Kaguya Ōtsutsuki long ago. Unlike Black Zetsu, who was Kaguya's will made manifest, White Zetsu retained some individual personality traits and was generally more talkative and curious. His abilities included camouflage, shape-shifting, and spore techniques that could drain chakra from opponents. White Zetsu often served as Akatsuki's spy and reconnaissance specialist, able to merge with plant matter and travel underground undetected. During the Fourth Great Ninja War, thousands of White Zetsu clones were used as foot soldiers, though they proved less effective against the Allied Shinobi Forces than anticipated. His cheerful demeanor contrasted with his role as a tool of war, representing the tragedy of beings created solely for conflict.",
+
+  // Y Characters
+  "yahiko": "Yahiko was one of the founding members of the original Akatsuki alongside Nagato and Konan, serving as the group's charismatic leader with dreams of bringing peace to the war-torn Land of Rain. Orphaned during the Second Shinobi World War, Yahiko was trained by Jiraiya for three years and developed a philosophy of achieving peace through understanding and cooperation rather than force. His natural leadership abilities and optimistic outlook made him the heart of the group, inspiring others to follow his vision of a better world. Tragically, Yahiko was killed during Hanzō and Danzō's plot to destroy the Akatsuki, choosing to impale himself on Nagato's kunai rather than allow his friends to be used against each other. His death marked the end of the original Akatsuki's peaceful mission and Nagato's transformation into Pain. Yahiko's body was later used as Pain's Deva Path, with Nagato believing he was honoring his friend's memory by making him the 'face' of their new organization.",
+
+  "yagura karatachi (fourth mizukage)": "Yagura Karatachi was the Fourth Mizukage of Kirigakure and the jinchūriki of the Three-Tails, Isobu. Despite his youthful appearance, Yagura was a powerful shinobi capable of full transformation into his tailed beast while retaining his consciousness. His reign was marked by the 'Bloody Mist' era, during which the village's graduation exam required students to kill their fellow classmates, creating a culture of violence and fear. Unknown to most, Yagura was being manipulated by Obito Uchiha through genjutsu for years, with his harsh policies being influenced by this control rather than his own desires. His mastery of water techniques and his tailed beast abilities made him a formidable opponent in combat. After his death, the truth about his manipulation was revealed, helping to explain the village's dark period and allowing for its eventual reformation under better leadership.",
+
+  "yakumo kurama": "Yakumo Kurama was a kunoichi from the Kurama clan, known for their powerful genjutsu abilities. She possessed an extremely potent kekkei genkai that allowed her to make her illusions affect reality, making her potentially one of the most dangerous genjutsu users alive. However, her power came with severe physical limitations, as her frail body couldn't handle the strain of her abilities. Kurenai was initially assigned as her sensei but was forced to seal away Yakumo's abilities when they became too dangerous to control. This led to resentment and a complicated relationship between teacher and student. Yakumo's story explored themes of power versus control, the responsibility that comes with great abilities, and the tragedy of having strength that one cannot safely use. Her character arc dealt with finding purpose and acceptance despite limitations.",
+
+  "Yamato (Tenzo)": "Yamato, whose real name is Tenzō, was a former Root operative who became the temporary leader of Team 7 after Kakashi was hospitalized. He was one of Orochimaru's experimental subjects and the only survivor of the tests involving the First Hokage's DNA, granting him the ability to use Wood Release techniques. His Wood Release was particularly effective at suppressing tailed beast chakra, making him valuable in controlling Naruto's Nine-Tails power during training. Yamato's personality was generally calm and responsible, though he could be stern when necessary, especially when dealing with Naruto's more reckless tendencies. His past as a Root operative and his connection to Orochimaru's experiments made him understanding of others who had experienced trauma and manipulation. His ability to create wooden constructs and his role as Naruto's supervisor during the latter's training made him an important mentor figure in Naruto's development.",
+
+  "yashamaru": "Yashamaru was Gaara's uncle and the younger brother of Gaara's mother. He served as Gaara's caretaker and was one of the few people who showed the young jinchūriki any kindness during his childhood. As a medical ninja, Yashamaru was gentle and caring, qualities that made him well-suited to care for Gaara despite the danger posed by the One-Tail sealed within him. However, under orders from the Fourth Kazekage (his brother-in-law), Yashamaru was eventually forced to attempt to assassinate Gaara as a test of the beast's power. When the assassination failed, Yashamaru told Gaara that even he had never loved him, claiming that no one could love a monster. This betrayal was devastating to young Gaara and contributed significantly to his psychological trauma and hatred of others. Yashamaru's actions, though done under orders, marked the end of Gaara's last connection to human compassion until his eventual encounter with Naruto.",
+
+  "yugao uzuki": "Yūgao Uzuki was a member of Konoha's ANBU and the lover of Hayate Gekkō. She specialized in kenjutsu and was skilled in stealth and assassination techniques typical of ANBU operatives. Her relationship with Hayate was one of genuine love and mutual respect, making his death during the Chūnin Exams particularly devastating for her. After Hayate's murder, Yūgao struggled with grief and a desire for revenge, though she continued to serve her duties as an ANBU member. Her dedication to both her fallen lover's memory and her village demonstrated the personal sacrifices that ninja often had to make. Yūgao's story represented the human cost of the ninja world's conflicts and the strength required to continue fighting despite personal loss.",
+
+  // Z Characters
+  "zabuza momochi": "Zabuza Momochi was a rogue ninja from Kirigakure, known as the 'Demon of the Hidden Mist' for his ruthless efficiency and mastery of silent assassination techniques. One of the Seven Ninja Swordsmen of the Mist, Zabuza wielded the massive blade Kubikiribōchō and was capable of killing enemies without making a sound, earning his fearsome reputation. His attempt to assassinate the Fourth Mizukage and stage a coup resulted in his exile from the village. Zabuza's encounter with Team 7 during the Land of Waves mission served as Naruto and his teammates' introduction to the harsh realities of the ninja world. Despite his ruthless nature, Zabuza formed a genuine bond with Haku, who served as his devoted companion and tool. His final battle showed that even the most hardened killers could be moved by loyalty and sacrifice, as he avenged Haku's death by killing Gatō and his mercenaries before dying from his wounds.",
+
+  "zetsu (black & white)": "Zetsu was a unique being composed of two distinct personalities: Black Zetsu, the manifestation of Kaguya Ōtsutsuki's will, and White Zetsu, created from humans caught in ancient Infinite Tsukuyomi. This dual nature often led to conversations between the two halves, with Black Zetsu being more serious and manipulative while White Zetsu was more curious and talkative. As a member of Akatsuki, Zetsu served primarily as a spy and information gatherer, using his ability to merge with plant matter and travel underground undetected. His plant-like appearance and unusual abilities made him one of the most mysterious members of the organization. The revelation that Black Zetsu had been manipulating events for over a thousand years to revive Kaguya made him one of the series' most significant antagonists, despite his seemingly passive role for most of the story."
+};
+// Function to show character lore in styled modal
+function showCharacterLore(characterName, imageSrc) {
+  const lore = characterLore[characterName.toLowerCase()];
+  if (!lore) {
+    alert("Lore not available for " + characterName + " yet.");
+    return;
+  }
+  // Create modal HTML
+  const modalHTML = `
+    <div class="lore-modal" id="loreModal">
+      <div class="lore-modal-content">
+        <div class="lore-modal-header">
+          <h2 class="lore-modal-title">${characterName}</h2>
+          <button class="lore-close-btn" onclick="closeLoreModal()">&times;</button>
+        </div>
+        <div class="lore-modal-body">
+          <img src="${imageSrc}" alt="${characterName}" class="lore-character-image">
+          <div class="lore-text">${lore}</div>
+        </div>
+      </div>
+    </div>
+  `;
+  // Add modal to page
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+  
+  // Show modal
+  document.getElementById('loreModal').style.display = 'block';
+  
+  // Prevent body scrolling
+  document.body.style.overflow = 'hidden';
+}
+//loading functionality
+ function startApp(event, url) {
+        event.preventDefault(); // Prevent default link navigation
+        const loadingScreen = document.getElementById('loadingScreen');
+        
+        // Show loading screen
+        loadingScreen.style.display = 'flex';
+        
+        // Navigate to the specified page after 3 seconds
+        setTimeout(() => {
+            window.location.href = url;
+        }, 3000);
+    }
+
+// Function to close lore modal
+function closeLoreModal() {
+  const modal = document.getElementById('loreModal');
+  if (modal) {
+    modal.remove();
+  }
+  document.body.style.overflow = 'auto';
+}
+// Function for functional search bar
+function searchCharacters() {
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  const characterCards = document.querySelectorAll('.character-card');
+  
+  characterCards.forEach(card => {
+    const characterName = card.querySelector('.character-name').textContent.toLowerCase();
+    const characterDescription = card.querySelector('.character-description').textContent.toLowerCase();
+    
+    if (characterName.includes(searchTerm) || characterDescription.includes(searchTerm)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+// Function to toggle sidebar
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('active');
+}
+// Add click event listeners when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.card-image img');
+  
+  images.forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      const characterName = this.alt;
+      const imageSrc = this.src;
+      showCharacterLore(characterName, imageSrc);
+    });
+  });
+  
+  // Close modal when clicking outside
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('lore-modal')) {
+      closeLoreModal();
+    }
+  });
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeLoreModal();
+    }
+  });
+});
+</script>
+</script>
+</body>
+</html>
